@@ -1,0 +1,435 @@
+{
+  "version": "0.20.1",
+  "files": [
+    {
+      "name": "Amaral-The-Game-0.20.1-Windows-Setup.exe",
+      "size": 139677560,
+      "sha256": "7076b821b6a49f9467905bb698d5a83aa30f06916da1d2459446e3dd232ce3a3",
+      "chunks": [
+        {
+          "path": "parts/0/0000",
+          "offset": 0,
+          "length": 737280,
+          "sha": "faeaf15259b2bb22350c83f3e7d996f33324a2b3"
+        },
+        {
+          "path": "parts/0/0001",
+          "offset": 737280,
+          "length": 737280,
+          "sha": "7f48e90f6068c45298175bee604bf4189401383c"
+        },
+        {
+          "path": "parts/0/pack0002",
+          "offset": 1474560,
+          "length": 2949120,
+          "sha": "cbf193025cfd9282a0ed064e057b617b785d367b"
+        },
+        {
+          "path": "parts/0/packet0000",
+          "offset": 4423680,
+          "length": 11796480,
+          "sha": "c07ee29d8bf00e59c979f7632c65e75038e49461"
+        },
+        {
+          "path": "parts/0/packet0001",
+          "offset": 16220160,
+          "length": 11796480,
+          "sha": "ef7d7aafe3ef210a78c1c0b2cf1239101dd6fd1c"
+        },
+        {
+          "path": "parts/0/packet0002",
+          "offset": 28016640,
+          "length": 11796480,
+          "sha": "8ae9bb0ea14a49586d5e20d71184b9b9e92d121a"
+        },
+        {
+          "path": "parts/0/packet0003",
+          "offset": 39813120,
+          "length": 11796480,
+          "sha": "5e1cec49f31ecb78ce9f7c933088e2aca7ccd4dd"
+        },
+        {
+          "path": "parts/0/packet0004",
+          "offset": 51609600,
+          "length": 11796480,
+          "sha": "5b9ca3083c0e94606bf9cb77cf144b23c55c745b"
+        },
+        {
+          "path": "parts/0/packet0005",
+          "offset": 63406080,
+          "length": 11796480,
+          "sha": "eb7c34c1b86e070931aeae6e49a33b4118a1e074"
+        },
+        {
+          "path": "parts/0/packet0006",
+          "offset": 75202560,
+          "length": 11796480,
+          "sha": "b4945e07b71cd2fd759c705c9c4f342fd7d8afed"
+        },
+        {
+          "path": "parts/0/packet0007",
+          "offset": 86999040,
+          "length": 11796480,
+          "sha": "1a2b6d8226ec5af7fc8caf89278a533fea7cfc4f"
+        },
+        {
+          "path": "parts/0/packet0008",
+          "offset": 98795520,
+          "length": 11796480,
+          "sha": "c0f35e0a271c93df5d33b6e3aa02c8b6bd569641"
+        },
+        {
+          "path": "parts/0/packet0009",
+          "offset": 110592000,
+          "length": 11796480,
+          "sha": "26957139e358107378d62adf9c28f5e1f889537e"
+        },
+        {
+          "path": "parts/0/packet0010",
+          "offset": 122388480,
+          "length": 11796480,
+          "sha": "c0c763fbd062b64742c360acdf5c6e2fdd09f03e"
+        },
+        {
+          "path": "parts/0/packet0011",
+          "offset": 134184960,
+          "length": 5492600,
+          "sha": "c953f09d1f3b6fdeb1a547ad52a3682d71bf6b26"
+        }
+      ]
+    },
+    {
+      "name": "Amaral-The-Game-0.20.1-Unity-Source.zip",
+      "size": 174238159,
+      "sha256": "1fb1bc13658f9366ebd2720e7500a1e59b7027b974d1534d43fd01a0d23fe5cb",
+      "chunks": [
+        {
+          "path": "parts/1/packet0000",
+          "offset": 0,
+          "length": 11796480,
+          "sha": "533a1c62a24cf5343d995a87eeee61075ac9684a"
+        },
+        {
+          "path": "parts/1/packet0001",
+          "offset": 11796480,
+          "length": 11796480,
+          "sha": "766263fec7f9529fb64096ed0724df3c7f911b23"
+        },
+        {
+          "path": "parts/1/packet0002",
+          "offset": 23592960,
+          "length": 11796480,
+          "sha": "f98227c4a77ecd9f7d2e62f52db76eda42f9f084"
+        },
+        {
+          "path": "parts/1/packet0003",
+          "offset": 35389440,
+          "length": 11796480,
+          "sha": "06aa8705e9a01d2251f2ecbb391b0269379fa0b0"
+        },
+        {
+          "path": "parts/1/packet0004",
+          "offset": 47185920,
+          "length": 11796480,
+          "sha": "82a098e07e2695f6b6fe4974b949e808685324dc"
+        },
+        {
+          "path": "parts/1/resume0000",
+          "offset": 58982400,
+          "length": 5898240,
+          "sha": "19360cde4c03271831d59cd9efecf9e16354db1f"
+        },
+        {
+          "path": "parts/1/resume0001",
+          "offset": 64880640,
+          "length": 5898240,
+          "sha": "7001d34fe99902590d0bf6d52014deb030beadc0"
+        },
+        {
+          "path": "parts/1/resume0002",
+          "offset": 70778880,
+          "length": 5898240,
+          "sha": "c42883fe8485f2d378f115deb16d09814f793b04"
+        },
+        {
+          "path": "parts/1/resume0003",
+          "offset": 76677120,
+          "length": 5898240,
+          "sha": "275b464b56ad4bd7ffcab97a20d020f91554943e"
+        },
+        {
+          "path": "parts/1/resume0004",
+          "offset": 82575360,
+          "length": 5898240,
+          "sha": "f5556da4f966b0391001b919e70ece40019e70ea"
+        },
+        {
+          "path": "parts/1/resume0005",
+          "offset": 88473600,
+          "length": 5898240,
+          "sha": "48e481e71ea356058727afc5028868b6af0f7612"
+        },
+        {
+          "path": "parts/1/resume0006",
+          "offset": 94371840,
+          "length": 5898240,
+          "sha": "da87aaa1ecf90d7952953c3fbb13c2d704db0ad5"
+        },
+        {
+          "path": "parts/1/resume0007",
+          "offset": 100270080,
+          "length": 5898240,
+          "sha": "ae4d6b9948d0affdf104e25b30a7661138335700"
+        },
+        {
+          "path": "parts/1/resume0008",
+          "offset": 106168320,
+          "length": 5898240,
+          "sha": "2d1a21f1137459b7acfa52966fb2ac1241dbdd1d"
+        },
+        {
+          "path": "parts/1/resume0009",
+          "offset": 112066560,
+          "length": 5898240,
+          "sha": "408938441516c0d706a6f99f46bb400020e8d0f9"
+        },
+        {
+          "path": "parts/1/resume0010",
+          "offset": 117964800,
+          "length": 5898240,
+          "sha": "55b8223fe8a3bdd534ea8d223154188f64548055"
+        },
+        {
+          "path": "parts/1/resume0011",
+          "offset": 123863040,
+          "length": 5898240,
+          "sha": "5afcbf439f2505f075f94e63e795ecae862a3fb3"
+        },
+        {
+          "path": "parts/1/resume0012",
+          "offset": 129761280,
+          "length": 5898240,
+          "sha": "30853038112d42d42443d60a492a3ec6242b9c8f"
+        },
+        {
+          "path": "parts/1/resume0013",
+          "offset": 135659520,
+          "length": 5898240,
+          "sha": "224e9d51dcdcba430baff80dada192b71078cbed"
+        },
+        {
+          "path": "parts/1/resume0014",
+          "offset": 141557760,
+          "length": 5898240,
+          "sha": "2211b3aca555eded88750114939ffbed2adde41d"
+        },
+        {
+          "path": "parts/1/resume0015",
+          "offset": 147456000,
+          "length": 5898240,
+          "sha": "06d1dc497f4385fcebf8a2aa957087f7d7191fef"
+        },
+        {
+          "path": "parts/1/resume0016",
+          "offset": 153354240,
+          "length": 5898240,
+          "sha": "6dcdb131fbd64d763a0ffeb7c4afab87101782db"
+        },
+        {
+          "path": "parts/1/resume0017",
+          "offset": 159252480,
+          "length": 5898240,
+          "sha": "3d88ecd55cfc5345340e24490bc1fc710a187f94"
+        },
+        {
+          "path": "parts/1/resume0018",
+          "offset": 165150720,
+          "length": 5898240,
+          "sha": "aa7536af7ea22563d22feda71bab1e9dbadbb22b"
+        },
+        {
+          "path": "parts/1/resume0019",
+          "offset": 171048960,
+          "length": 3189199,
+          "sha": "e66eb9785f25912e2e7b405a5ba8f61beb289370"
+        }
+      ]
+    },
+    {
+      "name": "Amaral-The-Game-0.20.1-Windows-Portable.zip",
+      "size": 160937510,
+      "sha256": "d5c4970c116bb0476169455ccccdb1b4de07a8f94e517e661b7ec0af02deca37",
+      "chunks": [
+        {
+          "path": "parts/2/resume0000",
+          "offset": 0,
+          "length": 5898240,
+          "sha": "616d26af34f7e5c15436851bd82c76e79c2b0a77"
+        },
+        {
+          "path": "parts/2/resume0001",
+          "offset": 5898240,
+          "length": 5898240,
+          "sha": "b9ca41983860bc69f86c45d06706e39f7087c924"
+        },
+        {
+          "path": "parts/2/resume0002",
+          "offset": 11796480,
+          "length": 5898240,
+          "sha": "2804cbf60880cbca01610f8742ce26c3f97f4ed7"
+        },
+        {
+          "path": "parts/2/resume0003",
+          "offset": 17694720,
+          "length": 5898240,
+          "sha": "a2ae17919785917d6d806526cccd196c0522dd28"
+        },
+        {
+          "path": "parts/2/resume0004",
+          "offset": 23592960,
+          "length": 5898240,
+          "sha": "d4b2ccad54d2a48fd77587a5afe4f0a99382f00d"
+        },
+        {
+          "path": "parts/2/resume0005",
+          "offset": 29491200,
+          "length": 5898240,
+          "sha": "df22926f48715f897614ab62d7e48f9bd7a25ec2"
+        },
+        {
+          "path": "parts/2/resume0006",
+          "offset": 35389440,
+          "length": 5898240,
+          "sha": "a90b8613c6370e07c3ad3de9abae21562ec87cb1"
+        },
+        {
+          "path": "parts/2/resume0007",
+          "offset": 41287680,
+          "length": 5898240,
+          "sha": "fa2da9f66ede6cac1d5cd8b437bd7ed70542337a"
+        },
+        {
+          "path": "parts/2/resume0008",
+          "offset": 47185920,
+          "length": 5898240,
+          "sha": "fee0c560ad504c05018b1ab7ba18b4d67120dd6b"
+        },
+        {
+          "path": "parts/2/resume0009",
+          "offset": 53084160,
+          "length": 5898240,
+          "sha": "58a6f0fab1af632290c7eeb3fed2baa3db8cd5db"
+        },
+        {
+          "path": "parts/2/resume0010",
+          "offset": 58982400,
+          "length": 5898240,
+          "sha": "76a5baeaed011fed26fcdfa2179dd4f2e5ce5ebe"
+        },
+        {
+          "path": "parts/2/resume0011",
+          "offset": 64880640,
+          "length": 5898240,
+          "sha": "b3f893093048ac8792928a8c675d7a979b93f7e8"
+        },
+        {
+          "path": "parts/2/resume0012",
+          "offset": 70778880,
+          "length": 5898240,
+          "sha": "5f50c5980852bf6547c8595b837d301bcebadc87"
+        },
+        {
+          "path": "parts/2/resume0013",
+          "offset": 76677120,
+          "length": 5898240,
+          "sha": "3afd022d62ed4be617b07c81425116d327311ec9"
+        },
+        {
+          "path": "parts/2/resume0014",
+          "offset": 82575360,
+          "length": 5898240,
+          "sha": "860e9e4d4f7a74ad442113a3c8c9ae1b460489eb"
+        },
+        {
+          "path": "parts/2/resume0015",
+          "offset": 88473600,
+          "length": 5898240,
+          "sha": "6f82f52dcddc3be1eaa3ed2a0c19e654880fe3ee"
+        },
+        {
+          "path": "parts/2/resume0016",
+          "offset": 94371840,
+          "length": 5898240,
+          "sha": "c34b123bf97cdf8295b27bd72da51cb2d12965f8"
+        },
+        {
+          "path": "parts/2/resume0017",
+          "offset": 100270080,
+          "length": 5898240,
+          "sha": "43b4533569a4ac5fd686b2152c26b76070e6d4e2"
+        },
+        {
+          "path": "parts/2/resume0018",
+          "offset": 106168320,
+          "length": 5898240,
+          "sha": "6a00f5172ef390a27233f9addf4a24abad4c53f4"
+        },
+        {
+          "path": "parts/2/resume0019",
+          "offset": 112066560,
+          "length": 5898240,
+          "sha": "16f6a6bfdf7826fb0c673af060b2b6aad3dc475b"
+        },
+        {
+          "path": "parts/2/resume0020",
+          "offset": 117964800,
+          "length": 5898240,
+          "sha": "abc7f1ca165e956b39055e3229f301149b8cc17b"
+        },
+        {
+          "path": "parts/2/resume0021",
+          "offset": 123863040,
+          "length": 5898240,
+          "sha": "bec36042776aaed16625385a8b7bef29ba99e120"
+        },
+        {
+          "path": "parts/2/resume0022",
+          "offset": 129761280,
+          "length": 5898240,
+          "sha": "099ccca5cfc556f3dbdea152bd89a7b1c78dcc39"
+        },
+        {
+          "path": "parts/2/resume0023",
+          "offset": 135659520,
+          "length": 5898240,
+          "sha": "166cdddba2b83a9d09a8db4cc8dac33d0841c87b"
+        },
+        {
+          "path": "parts/2/resume0024",
+          "offset": 141557760,
+          "length": 5898240,
+          "sha": "fbc02590be31d67a66f09bc84046de541f269774"
+        },
+        {
+          "path": "parts/2/resume0025",
+          "offset": 147456000,
+          "length": 5898240,
+          "sha": "8af2689de95203bf3ac452cb2016b2b98c3a147f"
+        },
+        {
+          "path": "parts/2/resume0026",
+          "offset": 153354240,
+          "length": 5898240,
+          "sha": "b6c879f558407cb7699f9098839b68606fc5161e"
+        },
+        {
+          "path": "parts/2/resume0027",
+          "offset": 159252480,
+          "length": 1685030,
+          "sha": "62980b98e06fcfabfa0642734f97495bdc69fca6"
+        }
+      ]
+    }
+  ],
+  "stagingCommit": "f28b8db877b28275b92a9e3efbfc78695575459b"
+}
