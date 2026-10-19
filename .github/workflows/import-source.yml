@@ -1,55 +1,132 @@
-name: Importar projeto Unity da release
+name: Publicar demo Windows 0.20.1
 on:
-  release:
-    types: [published]
   workflow_dispatch:
+  push:
+    paths:
+      - Packaging/distribution-manifest.json
 permissions:
   contents: write
 concurrency:
-  group: import-unity-source
+  group: publish-demo-0201
   cancel-in-progress: false
 jobs:
-  import:
-    if: github.repository == 'ziezobr/Amaral-The-Game' && (github.event_name == 'workflow_dispatch' || github.event.release.tag_name == 'v0.20.1')
+  publish:
+    if: github.repository == 'ziezobr/Amaral-The-Game'
     runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ziezobr/Amaral-The-Game
     steps:
       - uses: actions/checkout@v4
         with:
           ref: main
-      - name: Baixar e verificar fontes da demo 0.20.1
-        shell: bash
-        run: |
-          curl --fail --location --retry 3 --output "$RUNNER_TEMP/unity-source.zip" "https://github.com/ziezobr/Amaral-The-Game/releases/download/v0.20.1/Amaral-The-Game-0.20.1-Unity-Source.zip"
-          echo "1fb1bc13658f9366ebd2720e7500a1e59b7027b974d1534d43fd01a0d23fe5cb  $RUNNER_TEMP/unity-source.zip" | sha256sum --check
-      - name: Restaurar o projeto Unity
+      - name: Identificar pacote preparado
+        id: distribution
         shell: python
         run: |
-          import os, pathlib, zipfile
-          root = pathlib.Path.cwd().resolve()
-          with zipfile.ZipFile(pathlib.Path(os.environ['RUNNER_TEMP']) / 'unity-source.zip') as z:
+          import json, os, pathlib
+          data=json.loads(pathlib.Path('Packaging/distribution-manifest.json').read_text())
+          assert data['version']=='0.20.1'
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:
+              f.write('commit='+data['stagingCommit']+'\n')
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ steps.distribution.outputs.commit }}
+          path: _release_staging
+          persist-credentials: false
+      - name: Reconstruir e verificar os pacotes
+        shell: python
+        run: |
+          import hashlib,json,pathlib
+          data=json.loads(pathlib.Path('Packaging/distribution-manifest.json').read_text())
+          out=pathlib.Path('_release_output')
+          out.mkdir(exist_ok=True)
+          for asset in data['files']:
+              digest=hashlib.sha256()
+              position=0
+              with (out/asset['name']).open('wb') as target:
+                  for chunk in sorted(asset['chunks'],key=lambda c:c['offset']):
+                      assert chunk['offset']==position
+                      path=pathlib.PurePosixPath(chunk['path'])
+                      assert path.parts[0]=='parts' and '..' not in path.parts
+                      block=(pathlib.Path('_release_staging')/path).read_bytes()
+                      assert len(block)==chunk['length']
+                      target.write(block)
+                      digest.update(block)
+                      position+=len(block)
+              assert position==asset['size']
+              assert digest.hexdigest()==asset['sha256']
+              print('SHA-256 OK: '+asset['name'])
+          (out/'SHA256SUMS.txt').write_text(''.join(a['sha256']+'  '+a['name']+'\n' for a in data['files']))
+      - name: Importar fontes completas da Unity
+        shell: python
+        run: |
+          import pathlib,zipfile
+          root=pathlib.Path.cwd().resolve()
+          with zipfile.ZipFile('_release_output/Amaral-The-Game-0.20.1-Unity-Source.zip') as z:
               for info in z.infolist():
-                  relative = pathlib.PurePosixPath(info.filename)
-                  if relative.is_absolute() or '..' in relative.parts or '.github' in relative.parts:
-                      raise RuntimeError('Caminho de arquivo invalido')
-                  if not (root / info.filename).resolve().is_relative_to(root):
-                      raise RuntimeError('Arquivo fora do projeto')
+                  path=pathlib.PurePosixPath(info.filename)
+                  assert not path.is_absolute() and '..' not in path.parts and '.github' not in path.parts
+                  assert (root/info.filename).resolve().is_relative_to(root)
               z.extractall(root)
-      - name: Versionar fontes completas
+      - name: Versionar o projeto completo
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add Assets Packages ProjectSettings Packaging Design Validation README.md .gitignore '*.md'
           if ! git diff --cached --quiet; then
-            git commit -m "Importar projeto Unity completo da demo 0.20.1"
+            git commit -m "Publicar projeto Unity completo da demo 0.20.1"
             git push origin HEAD:main
           fi
-      - name: Associar a tag da demo ao projeto completo
+      - name: Preparar notas da demo
+        shell: python
+        run: |
+          from pathlib import Path
+          Path('_release_output/NOTES.md').write_text("""## Jogar no Windows
+          Baixe **Amaral-The-Game-0.20.1-Windows-Setup.exe**, execute e abra Amaral The Game no menu Iniciar.
+          A versao portatil funciona extraindo todo o ZIP e executando PontoCego.exe.
+          
+          ## Demo 2D
+          Cidade conectada de Patos de Minas, missoes, combate, transporte com Higor, ciclo dia/noite e clima.
+          Riberal, oficina, Mocambo, ferro-velho e esconderijo de Mateus receberam revisao visual.
+          
+          ## Validacao
+          Build Windows Release, instalacao e desinstalacao testadas. Os 218 arquivos instalados conferem por SHA-256.
+          O jogo instalado executou e gerou sete capturas de revisao visual sem excecoes no log.
+          O conjunto consolidado da demo registra 100 verificacoes distintas aprovadas; 25 foram repetidas apos a revisao visual.
+          Esta e uma demo em desenvolvimento, sem promessa de cinco horas de campanha. Instalador sem assinatura digital.
+          
+          ## Fontes e integridade
+          Projeto completo no repositorio e em Unity-Source.zip, para Unity 6000.6.6f1.
+          Os tres pacotes foram reconstruidos e conferidos por SHA-256 antes da publicacao.
+          """,encoding='utf-8')
+      - name: Enviar arquivos e publicar a release
         shell: bash
         run: |
-          previous_tag="$(git ls-remote origin refs/tags/v0.20.1 | cut -f1)"
-          if [ -n "$previous_tag" ]; then
-            git push "--force-with-lease=refs/tags/v0.20.1:$previous_tag" origin HEAD:refs/tags/v0.20.1
-          else
-            git push origin HEAD:refs/tags/v0.20.1
+          if gh release view v0.20.1 >/dev/null 2>&1; then
+            echo "A release ja existe; recusando sobrescrever uma publicacao existente."
+            exit 1
           fi
+          gh release create v0.20.1 --draft --target "$(git rev-parse HEAD)" --title "Amaral The Game — Demo 0.20.1 para Windows" --notes-file _release_output/NOTES.md
+          gh release upload v0.20.1 _release_output/*.exe _release_output/*.zip _release_output/SHA256SUMS.txt
+          gh release edit v0.20.1 --draft=false
+      - name: Confirmar anexos publicados
+        shell: python
+        run: |
+          import json,pathlib,subprocess
+          release=json.loads(subprocess.check_output(['gh','api','repos/ziezobr/Amaral-The-Game/releases/tags/v0.20.1']))
+          assert not release['draft']
+          files=json.loads(pathlib.Path('Packaging/distribution-manifest.json').read_text())['files']
+          assets={a['name']:a for a in release['assets']}
+          for expected in files:
+              actual=assets[expected['name']]
+              assert actual['size']==expected['size']
+              if actual.get('digest'):
+                  assert actual['digest']=='sha256:'+expected['sha256']
+          assert 'SHA256SUMS.txt' in assets
+          print('PUBLICACAO_VERIFICADA: '+release['html_url'])
+      - name: Remover somente a branch temporaria de envio
+        shell: bash
+        run: git push origin --delete release-upload-0201
