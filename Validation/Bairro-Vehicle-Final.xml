@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="4" result="Passed" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-18 16:11:22Z" end-time="2026-10-18 16:11:25Z" duration="2,7458867">
+  <test-suite type="TestSuite" id="1054" name="Ponto Cego" fullname="Ponto Cego" runstate="Runnable" testcasecount="38" result="Passed" start-time="2026-10-18 16:11:22Z" end-time="2026-10-18 16:11:25Z" duration="2.745887" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1039" name="PontoCego.Tests.PlayMode.dll" fullname="D:/The Amaral Game/V 1.0/Library/ScriptAssemblies/PontoCego.Tests.PlayMode.dll" runstate="Runnable" testcasecount="32" result="Passed" start-time="2026-10-18 16:11:22Z" end-time="2026-10-18 16:11:25Z" duration="2.728965" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="4012" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1040" name="PontoCego" fullname="PontoCego" runstate="Runnable" testcasecount="32" result="Passed" start-time="2026-10-18 16:11:22Z" end-time="2026-10-18 16:11:25Z" duration="2.727900" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1041" name="Tests" fullname="PontoCego.Tests" runstate="Runnable" testcasecount="32" result="Passed" start-time="2026-10-18 16:11:22Z" end-time="2026-10-18 16:11:25Z" duration="2.720155" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1023" name="NeighborhoodTests" fullname="PontoCego.Tests.NeighborhoodTests" classname="PontoCego.Tests.NeighborhoodTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-18 16:11:22Z" end-time="2026-10-18 16:11:25Z" duration="2.717372" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1026" name="CarsDriveAndAllowSafeExitAmongPedestrians" fullname="PontoCego.Tests.NeighborhoodTests.CarsDriveAndAllowSafeExitAmongPedestrians" methodname="CarsDriveAndAllowSafeExitAmongPedestrians" classname="PontoCego.Tests.NeighborhoodTests" runstate="Runnable" seed="758796946" result="Passed" start-time="2026-10-18 16:11:22Z" end-time="2026-10-18 16:11:23Z" duration="0.740655" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1025" name="DeliveryRewardsOnlyOnceAndResourcesRequirePurchase" fullname="PontoCego.Tests.NeighborhoodTests.DeliveryRewardsOnlyOnceAndResourcesRequirePurchase" methodname="DeliveryRewardsOnlyOnceAndResourcesRequirePurchase" classname="PontoCego.Tests.NeighborhoodTests" runstate="Runnable" seed="497849703" result="Passed" start-time="2026-10-18 16:11:23Z" end-time="2026-10-18 16:11:24Z" duration="1.466053" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1024" name="MainMissionReturnsToNeighborhoodWithoutSkippingProgress" fullname="PontoCego.Tests.NeighborhoodTests.MainMissionReturnsToNeighborhoodWithoutSkippingProgress" methodname="MainMissionReturnsToNeighborhoodWithoutSkippingProgress" classname="PontoCego.Tests.NeighborhoodTests" runstate="Runnable" seed="1159700715" result="Passed" start-time="2026-10-18 16:11:24Z" end-time="2026-10-18 16:11:25Z" duration="0.361772" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1027" name="UberListsInstalledPhasesAndPreservesEquipmentDuringTravel" fullname="PontoCego.Tests.NeighborhoodTests.UberListsInstalledPhasesAndPreservesEquipmentDuringTravel" methodname="UberListsInstalledPhasesAndPreservesEquipmentDuringTravel" classname="PontoCego.Tests.NeighborhoodTests" runstate="Runnable" seed="2092719952" result="Passed" start-time="2026-10-18 16:11:25Z" end-time="2026-10-18 16:11:25Z" duration="0.126136" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: D:\The Amaral Game\V 1.0\Validation\Bairro-Vehicle-Final.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

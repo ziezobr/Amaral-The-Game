@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="31" result="Failed(Child)" total="31" passed="30" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-18 15:58:33Z" end-time="2026-10-18 15:59:21Z" duration="48,0296927">
+  <test-suite type="TestSuite" id="1053" name="Ponto Cego" fullname="Ponto Cego" runstate="Runnable" testcasecount="37" result="Failed" site="Child" start-time="2026-10-18 15:58:33Z" end-time="2026-10-18 15:59:21Z" duration="48.029693" total="31" passed="30" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1038" name="PontoCego.Tests.PlayMode.dll" fullname="D:/The Amaral Game/V 1.0/Library/ScriptAssemblies/PontoCego.Tests.PlayMode.dll" runstate="Runnable" testcasecount="31" result="Failed" site="Child" start-time="2026-10-18 15:58:33Z" end-time="2026-10-18 15:59:21Z" duration="48.012598" total="31" passed="30" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="17636" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1039" name="PontoCego" fullname="PontoCego" runstate="Runnable" testcasecount="31" result="Failed" site="Child" start-time="2026-10-18 15:58:33Z" end-time="2026-10-18 15:59:21Z" duration="48.011814" total="31" passed="30" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1040" name="Tests" fullname="PontoCego.Tests" runstate="Runnable" testcasecount="31" result="Failed" site="Child" start-time="2026-10-18 15:58:33Z" end-time="2026-10-18 15:59:21Z" duration="48.011427" total="31" passed="30" failed="1" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestFixture" id="1001" name="BossTests" fullname="PontoCego.Tests.BossTests" classname="PontoCego.Tests.BossTests" runstate="Runnable" testcasecount="9" result="Passed" start-time="2026-10-18 15:58:33Z" end-time="2026-10-18 15:58:45Z" duration="12.118327" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1010" name="AttackSpriteMatchesTheLockedAimDirection" fullname="PontoCego.Tests.BossTests.AttackSpriteMatchesTheLockedAimDirection" methodname="AttackSpriteMatchesTheLockedAimDirection" classname="PontoCego.Tests.BossTests" runstate="Runnable" seed="2007185551" result="Passed" start-time="2026-10-18 15:58:33Z" end-time="2026-10-18 15:58:33Z" duration="0.714804" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1005" name="BossDemoRestoresTheFightWithoutTouchingCampaignSave" fullname="PontoCego.Tests.BossTests.BossDemoRestoresTheFightWithoutTouchingCampaignSave" methodname="BossDemoRestoresTheFightWithoutTouchingCampaignSave" classname="PontoCego.Tests.BossTests" runstate="Runnable" seed="1286173265" result="Passed" start-time="2026-10-18 15:58:33Z" end-time="2026-10-18 15:58:33Z" duration="0.161255" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1004" name="BossHasAbilitiesAndEntersSecondPhase" fullname="PontoCego.Tests.BossTests.BossHasAbilitiesAndEntersSecondPhase" methodname="BossHasAbilitiesAndEntersSecondPhase" classname="PontoCego.Tests.BossTests" runstate="Runnable" seed="1867670097" result="Passed" start-time="2026-10-18 15:58:33Z" end-time="2026-10-18 15:58:34Z" duration="0.108702" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1008" name="DefeatingABossDuringRecoveryDoesNotFreezeItsDeathAnimation" fullname="PontoCego.Tests.BossTests.DefeatingABossDuringRecoveryDoesNotFreezeItsDeathAnimation" methodname="DefeatingABossDuringRecoveryDoesNotFreezeItsDeathAnimation" classname="PontoCego.Tests.BossTests" runstate="Runnable" seed="972324568" result="Passed" start-time="2026-10-18 15:58:34Z" end-time="2026-10-18 15:58:38Z" duration="4.493890" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1006" name="FlashStunCancelsTheBossWindupAndGroundWarnings" fullname="PontoCego.Tests.BossTests.FlashStunCancelsTheBossWindupAndGroundWarnings" methodname="FlashStunCancelsTheBossWindupAndGroundWarnings" classname="PontoCego.Tests.BossTests" runstate="Runnable" seed="130012678" result="Passed" start-time="2026-10-18 15:58:38Z" end-time="2026-10-18 15:58:41Z" duration="3.066320" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1009" name="RepeatedFlashCannotPermanentlyStunABoss" fullname="PontoCego.Tests.BossTests.RepeatedFlashCannotPermanentlyStunABoss" methodname="RepeatedFlashCannotPermanentlyStunABoss" classname="PontoCego.Tests.BossTests" runstate="Runnable" seed="1920761117" result="Passed" start-time="2026-10-18 15:58:41Z" end-time="2026-10-18 15:58:42Z" duration="0.882273" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1007" name="ThirdMeleeHitIsAStrongerFinisher" fullname="PontoCego.Tests.BossTests.ThirdMeleeHitIsAStrongerFinisher" methodname="ThirdMeleeHitIsAStrongerFinisher" classname="PontoCego.Tests.BossTests" runstate="Runnable" seed="1734940150" result="Passed" start-time="2026-10-18 15:58:42Z" end-time="2026-10-18 15:58:43Z" duration="1.468437" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1003" name="WarningCannotDamageThroughWalls" fullname="PontoCego.Tests.BossTests.WarningCannotDamageThroughWalls" methodname="WarningCannotDamageThroughWalls" classname="PontoCego.Tests.BossTests" runstate="Runnable" seed="1552397056" result="Passed" start-time="2026-10-18 15:58:43Z" end-time="2026-10-18 15:58:44Z" duration="0.361750" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1002" name="WarningWaitsBeforeDamageAndPausesDuringDialogue" fullname="PontoCego.Tests.BossTests.WarningWaitsBeforeDamageAndPausesDuringDialogue" methodname="WarningWaitsBeforeDamageAndPausesDuringDialogue" classname="PontoCego.Tests.BossTests" runstate="Runnable" seed="960386409" result="Passed" start-time="2026-10-18 15:58:44Z" end-time="2026-10-18 15:58:45Z" duration="0.838182" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1011" name="CampaignFlowTests" fullname="PontoCego.Tests.CampaignFlowTests" classname="PontoCego.Tests.CampaignFlowTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-10-18 15:58:45Z" end-time="2026-10-18 15:59:05Z" duration="20.481858" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1012" name="CampaignCanProgressFromKidnappingToEnding" fullname="PontoCego.Tests.CampaignFlowTests.CampaignCanProgressFromKidnappingToEnding" methodname="CampaignCanProgressFromKidnappingToEnding" classname="PontoCego.Tests.CampaignFlowTests" runstate="Runnable" seed="1864031630" result="Passed" start-time="2026-10-18 15:58:45Z" end-time="2026-10-18 15:59:05Z" duration="20.479696" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="Timeout" value="180000" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1013" name="CombatTests" fullname="PontoCego.Tests.CombatTests" classname="PontoCego.Tests.CombatTests" runstate="Runnable" testcasecount="6" result="Failed" site="Child" start-time="2026-10-18 15:59:05Z" end-time="2026-10-18 15:59:10Z" duration="5.046602" total="6" passed="5" failed="1" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="1016" name="BulletsStopAtWallsAndDamageWithoutWall" fullname="PontoCego.Tests.CombatTests.BulletsStopAtWallsAndDamageWithoutWall" methodname="BulletsStopAtWallsAndDamageWithoutWall" classname="PontoCego.Tests.CombatTests" runstate="Runnable" seed="1636655223" result="Passed" start-time="2026-10-18 15:59:05Z" end-time="2026-10-18 15:59:06Z" duration="0.681024" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1018" name="DeathLocksPlayerAndMedkitsHealOnlyWhenNeeded" fullname="PontoCego.Tests.CombatTests.DeathLocksPlayerAndMedkitsHealOnlyWhenNeeded" methodname="DeathLocksPlayerAndMedkitsHealOnlyWhenNeeded" classname="PontoCego.Tests.CombatTests" runstate="Runnable" seed="1386269694" result="Passed" start-time="2026-10-18 15:59:06Z" end-time="2026-10-18 15:59:07Z" duration="0.641257" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1019" name="EveryCampaignPhaseHasReachableObjectivesAndSafeSpawn" fullname="PontoCego.Tests.CombatTests.EveryCampaignPhaseHasReachableObjectivesAndSafeSpawn" methodname="EveryCampaignPhaseHasReachableObjectivesAndSafeSpawn" classname="PontoCego.Tests.CombatTests" runstate="Runnable" seed="1685924134" result="Failed" start-time="2026-10-18 15:59:07Z" end-time="2026-10-18 15:59:07Z" duration="0.317834" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[  Expected: greater than 1
+  But was:  1
+]]></message>
+                <stack-trace><![CDATA[at PontoCego.Tests.CombatTests+<EveryCampaignPhaseHasReachableObjectivesAndSafeSpawn>d__7.MoveNext () [0x00139] in D:\The Amaral Game\V 1.0\Assets\PontoCego\Tests\PlayMode\CombatTests.cs:65
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@80f691d4262b\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+]]></stack-trace>
+              </failure>
+            </test-case>
+            <test-case id="1015" name="HealthFiltersFriendlyDamageAndDeathFiresOnce" fullname="PontoCego.Tests.CombatTests.HealthFiltersFriendlyDamageAndDeathFiresOnce" methodname="HealthFiltersFriendlyDamageAndDeathFiresOnce" classname="PontoCego.Tests.CombatTests" runstate="Runnable" seed="770385272" result="Passed" start-time="2026-10-18 15:59:07Z" end-time="2026-10-18 15:59:07Z" duration="0.061043" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1017" name="PlayerMeleeDamagesAndStunsEnemy" fullname="PontoCego.Tests.CombatTests.PlayerMeleeDamagesAndStunsEnemy" methodname="PlayerMeleeDamagesAndStunsEnemy" classname="PontoCego.Tests.CombatTests" runstate="Runnable" seed="1359048241" result="Passed" start-time="2026-10-18 15:59:07Z" end-time="2026-10-18 15:59:07Z" duration="0.298707" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1014" name="StaminaIsHiddenUntilUsedAndHidesAfterRecovery" fullname="PontoCego.Tests.CombatTests.StaminaIsHiddenUntilUsedAndHidesAfterRecovery" methodname="StaminaIsHiddenUntilUsedAndHidesAfterRecovery" classname="PontoCego.Tests.CombatTests" runstate="Runnable" seed="1724727016" result="Passed" start-time="2026-10-18 15:59:07Z" end-time="2026-10-18 15:59:10Z" duration="3.044133" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1020" name="MocamboTests" fullname="PontoCego.Tests.MocamboTests" classname="PontoCego.Tests.MocamboTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-18 15:59:10Z" end-time="2026-10-18 15:59:14Z" duration="4.236652" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1021" name="ParkHasReadableSignAndReachableMissionPoints" fullname="PontoCego.Tests.MocamboTests.ParkHasReadableSignAndReachableMissionPoints" methodname="ParkHasReadableSignAndReachableMissionPoints" classname="PontoCego.Tests.MocamboTests" runstate="Runnable" seed="1995063589" result="Passed" start-time="2026-10-18 15:59:10Z" end-time="2026-10-18 15:59:10Z" duration="0.068096" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1022" name="PivoThrowsBallsThenEntersSecondPhase" fullname="PontoCego.Tests.MocamboTests.PivoThrowsBallsThenEntersSecondPhase" methodname="PivoThrowsBallsThenEntersSecondPhase" classname="PontoCego.Tests.MocamboTests" runstate="Runnable" seed="1456840458" result="Passed" start-time="2026-10-18 15:59:10Z" end-time="2026-10-18 15:59:14Z" duration="4.167232" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1023" name="NeighborhoodTests" fullname="PontoCego.Tests.NeighborhoodTests" classname="PontoCego.Tests.NeighborhoodTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-18 15:59:14Z" end-time="2026-10-18 15:59:17Z" duration="2.044622" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1026" name="CarsDriveAndAllowSafeExitAmongPedestrians" fullname="PontoCego.Tests.NeighborhoodTests.CarsDriveAndAllowSafeExitAmongPedestrians" methodname="CarsDriveAndAllowSafeExitAmongPedestrians" classname="PontoCego.Tests.NeighborhoodTests" runstate="Runnable" seed="21694175" result="Passed" start-time="2026-10-18 15:59:14Z" end-time="2026-10-18 15:59:15Z" duration="0.343571" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1025" name="DeliveryRewardsOnlyOnceAndResourcesRequirePurchase" fullname="PontoCego.Tests.NeighborhoodTests.DeliveryRewardsOnlyOnceAndResourcesRequirePurchase" methodname="DeliveryRewardsOnlyOnceAndResourcesRequirePurchase" classname="PontoCego.Tests.NeighborhoodTests" runstate="Runnable" seed="367091098" result="Passed" start-time="2026-10-18 15:59:15Z" end-time="2026-10-18 15:59:16Z" duration="1.443998" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1024" name="MainMissionReturnsToNeighborhoodWithoutSkippingProgress" fullname="PontoCego.Tests.NeighborhoodTests.MainMissionReturnsToNeighborhoodWithoutSkippingProgress" methodname="MainMissionReturnsToNeighborhoodWithoutSkippingProgress" classname="PontoCego.Tests.NeighborhoodTests" runstate="Runnable" seed="1958084291" result="Passed" start-time="2026-10-18 15:59:16Z" end-time="2026-10-18 15:59:17Z" duration="0.255432" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1027" name="SceneTests" fullname="PontoCego.Tests.SceneTests" classname="PontoCego.Tests.SceneTests" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-10-18 15:59:17Z" end-time="2026-10-18 15:59:21Z" duration="4.081011" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1031" name="CameraAndAuthoredSpritesAreAssigned" fullname="PontoCego.Tests.SceneTests.CameraAndAuthoredSpritesAreAssigned" methodname="CameraAndAuthoredSpritesAreAssigned" classname="PontoCego.Tests.SceneTests" runstate="Runnable" seed="2091988171" result="Passed" start-time="2026-10-18 15:59:17Z" end-time="2026-10-18 15:59:17Z" duration="0.050676" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1034" name="DialogueLocksMovementUntilDismissed" fullname="PontoCego.Tests.SceneTests.DialogueLocksMovementUntilDismissed" methodname="DialogueLocksMovementUntilDismissed" classname="PontoCego.Tests.SceneTests" runstate="Runnable" seed="302052507" result="Passed" start-time="2026-10-18 15:59:17Z" end-time="2026-10-18 15:59:17Z" duration="0.199840" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1029" name="DodgeCannotTunnelThroughPaintedDeskCollision" fullname="PontoCego.Tests.SceneTests.DodgeCannotTunnelThroughPaintedDeskCollision" methodname="DodgeCannotTunnelThroughPaintedDeskCollision" classname="PontoCego.Tests.SceneTests" runstate="Runnable" seed="120380942" result="Passed" start-time="2026-10-18 15:59:17Z" end-time="2026-10-18 15:59:17Z" duration="0.449473" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1037" name="EveryOfficeObjectiveIsReachableAroundFurniture" fullname="PontoCego.Tests.SceneTests.EveryOfficeObjectiveIsReachableAroundFurniture" methodname="EveryOfficeObjectiveIsReachableAroundFurniture" classname="PontoCego.Tests.SceneTests" runstate="Runnable" seed="324106413" result="Passed" start-time="2026-10-18 15:59:17Z" end-time="2026-10-18 15:59:17Z" duration="0.087445" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1030" name="GamepadMovesAndAimsIndependently" fullname="PontoCego.Tests.SceneTests.GamepadMovesAndAimsIndependently" methodname="GamepadMovesAndAimsIndependently" classname="PontoCego.Tests.SceneTests" runstate="Runnable" seed="581594395" result="Passed" start-time="2026-10-18 15:59:17Z" end-time="2026-10-18 15:59:18Z" duration="0.284665" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1036" name="InteractionCannotReachThroughWalls" fullname="PontoCego.Tests.SceneTests.InteractionCannotReachThroughWalls" methodname="InteractionCannotReachThroughWalls" classname="PontoCego.Tests.SceneTests" runstate="Runnable" seed="394979313" result="Passed" start-time="2026-10-18 15:59:18Z" end-time="2026-10-18 15:59:18Z" duration="0.064714" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1032" name="PaintedMapKeepsItsOriginalAspectAndCollisionScale" fullname="PontoCego.Tests.SceneTests.PaintedMapKeepsItsOriginalAspectAndCollisionScale" methodname="PaintedMapKeepsItsOriginalAspectAndCollisionScale" classname="PontoCego.Tests.SceneTests" runstate="Runnable" seed="965710639" result="Passed" start-time="2026-10-18 15:59:18Z" end-time="2026-10-18 15:59:18Z" duration="0.038450" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1035" name="PhotographyRequiresClearLineOfSight" fullname="PontoCego.Tests.SceneTests.PhotographyRequiresClearLineOfSight" methodname="PhotographyRequiresClearLineOfSight" classname="PontoCego.Tests.SceneTests" runstate="Runnable" seed="797516130" result="Passed" start-time="2026-10-18 15:59:18Z" end-time="2026-10-18 15:59:19Z" duration="0.953303" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1033" name="PrologueFollowsClockBossColleaguesAndLens" fullname="PontoCego.Tests.SceneTests.PrologueFollowsClockBossColleaguesAndLens" methodname="PrologueFollowsClockBossColleaguesAndLens" classname="PontoCego.Tests.SceneTests" runstate="Runnable" seed="93658387" result="Passed" start-time="2026-10-18 15:59:19Z" end-time="2026-10-18 15:59:20Z" duration="1.102582" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1028" name="RealRigidbodyMovesAndStops" fullname="PontoCego.Tests.SceneTests.RealRigidbodyMovesAndStops" methodname="RealRigidbodyMovesAndStops" classname="PontoCego.Tests.SceneTests" runstate="Runnable" seed="1936671146" result="Passed" start-time="2026-10-18 15:59:20Z" end-time="2026-10-18 15:59:21Z" duration="0.845647" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: D:\The Amaral Game\V 1.0\Validation\Bairro-Tests.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

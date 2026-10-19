@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="4" result="Passed" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-18 21:59:23Z" end-time="2026-10-18 21:59:31Z" duration="8,0914239">
+  <test-suite type="TestSuite" id="1083" name="Ponto Cego" fullname="Ponto Cego" runstate="Runnable" testcasecount="60" result="Passed" start-time="2026-10-18 21:59:23Z" end-time="2026-10-18 21:59:31Z" duration="8.091424" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1064" name="PontoCego.Tests.PlayMode.dll" fullname="D:/The Amaral Game/V 1.0/Library/ScriptAssemblies/PontoCego.Tests.PlayMode.dll" runstate="Runnable" testcasecount="51" result="Passed" start-time="2026-10-18 21:59:23Z" end-time="2026-10-18 21:59:31Z" duration="8.067590" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="20908" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1065" name="PontoCego" fullname="PontoCego" runstate="Runnable" testcasecount="51" result="Passed" start-time="2026-10-18 21:59:23Z" end-time="2026-10-18 21:59:31Z" duration="8.065737" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1066" name="Tests" fullname="PontoCego.Tests" runstate="Runnable" testcasecount="51" result="Passed" start-time="2026-10-18 21:59:23Z" end-time="2026-10-18 21:59:31Z" duration="8.048423" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1013" name="ChaseMusicTests" fullname="PontoCego.Tests.ChaseMusicTests" classname="PontoCego.Tests.ChaseMusicTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-10-18 21:59:23Z" end-time="2026-10-18 21:59:26Z" duration="3.077212" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1014" name="UserTrackLoopsPausesAndFadesOutWithChase" fullname="PontoCego.Tests.ChaseMusicTests.UserTrackLoopsPausesAndFadesOutWithChase" methodname="UserTrackLoopsPausesAndFadesOutWithChase" classname="PontoCego.Tests.ChaseMusicTests" runstate="Runnable" seed="2073067199" result="Passed" start-time="2026-10-18 21:59:23Z" end-time="2026-10-18 21:59:26Z" duration="3.043157" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1029" name="MenuMusicTests" fullname="PontoCego.Tests.MenuMusicTests" classname="PontoCego.Tests.MenuMusicTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-10-18 21:59:26Z" end-time="2026-10-18 21:59:27Z" duration="0.139095" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1030" name="MenuUsesSuppliedTrackAndHasOneListener" fullname="PontoCego.Tests.MenuMusicTests.MenuUsesSuppliedTrackAndHasOneListener" methodname="MenuUsesSuppliedTrackAndHasOneListener" classname="PontoCego.Tests.MenuMusicTests" runstate="Runnable" seed="151168105" result="Passed" start-time="2026-10-18 21:59:26Z" end-time="2026-10-18 21:59:27Z" duration="0.129951" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1039" name="NewContentTests" fullname="PontoCego.Tests.NewContentTests" classname="PontoCego.Tests.NewContentTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-18 21:59:27Z" end-time="2026-10-18 21:59:30Z" duration="3.575223" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1043" name="TaxiHonorsTenSecondsAndActuallyArrives" fullname="PontoCego.Tests.NewContentTests.TaxiHonorsTenSecondsAndActuallyArrives" methodname="TaxiHonorsTenSecondsAndActuallyArrives" classname="PontoCego.Tests.NewContentTests" runstate="Runnable" seed="58948414" result="Passed" start-time="2026-10-18 21:59:27Z" end-time="2026-10-18 21:59:30Z" duration="3.570573" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="Timeout" value="30000" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1051" name="SceneTests" fullname="PontoCego.Tests.SceneTests" classname="PontoCego.Tests.SceneTests" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-10-18 21:59:30Z" end-time="2026-10-18 21:59:31Z" duration="1.243329" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1054" name="GamepadMovesAndAimsIndependently" fullname="PontoCego.Tests.SceneTests.GamepadMovesAndAimsIndependently" methodname="GamepadMovesAndAimsIndependently" classname="PontoCego.Tests.SceneTests" runstate="Runnable" seed="2095549839" result="Passed" start-time="2026-10-18 21:59:30Z" end-time="2026-10-18 21:59:31Z" duration="1.227288" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: D:\The Amaral Game\V 1.0\Validation\Final0183-Targeted.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

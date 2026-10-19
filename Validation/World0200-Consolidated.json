@@ -1,0 +1,577 @@
+{
+  "version": "0.20.0",
+  "uniqueTests": 94,
+  "passed": 94,
+  "testRuns": [
+    "World0200-Final-EditMode.xml",
+    "World0200-Final-PlayMode.xml",
+    "World0200-Final-Retry.xml"
+  ],
+  "note": "Latest result per unique case. Full PlayMode run: 68/70; both failing harness cases were corrected and rerun successfully without changing runtime code. EditMode:24/24.",
+  "cases": [
+    {
+      "name": "PontoCego.Tests.MateusTests.AlliesCannotProvokeMateus",
+      "result": "Passed",
+      "evidence": "World0200-Final-EditMode.xml",
+      "seconds": 0.027871
+    },
+    {
+      "name": "PontoCego.Tests.MateusTests.FirstCounterHasOnePercentChance",
+      "result": "Passed",
+      "evidence": "World0200-Final-EditMode.xml",
+      "seconds": 0.001484
+    },
+    {
+      "name": "PontoCego.Tests.MateusTests.RepeatedAggressionEscalatesButIsCapped",
+      "result": "Passed",
+      "evidence": "World0200-Final-EditMode.xml",
+      "seconds": 0.006204
+    },
+    {
+      "name": "PontoCego.Tests.MotorTests.AnalogInputRetainsPartialMagnitude",
+      "result": "Passed",
+      "evidence": "World0200-Final-EditMode.xml",
+      "seconds": 0.005219
+    },
+    {
+      "name": "PontoCego.Tests.MotorTests.DefaultActionsSupportGamepadAndKeyboard",
+      "result": "Passed",
+      "evidence": "World0200-Final-EditMode.xml",
+      "seconds": 0.024119
+    },
+    {
+      "name": "PontoCego.Tests.MotorTests.DiagonalHasSameSpeedAsCardinal",
+      "result": "Passed",
+      "evidence": "World0200-Final-EditMode.xml",
+      "seconds": 0.003187
+    },
+    {
+      "name": "PontoCego.Tests.MotorTests.DodgeDistanceIsStableAcrossFixedTimesteps",
+      "result": "Passed",
+      "evidence": "World0200-Final-EditMode.xml",
+      "seconds": 0.001154
+    },
+    {
+      "name": "PontoCego.Tests.MotorTests.DodgeLocksDirectionAndRejectsRequestsDuringCooldown",
+      "result": "Passed",
+      "evidence": "World0200-Final-EditMode.xml",
+      "seconds": 0.001281
+    },
+    {
+      "name": "PontoCego.Tests.MotorTests.SprintExhaustsThenRecovers",
+      "result": "Passed",
+      "evidence": "World0200-Final-EditMode.xml",
+      "seconds": 0.001437
+    },
+    {
+      "name": "PontoCego.Tests.MotorTests.StopRemovesMomentum",
+      "result": "Passed",
+      "evidence": "World0200-Final-EditMode.xml",
+      "seconds": 0.007093
+    },
+    {
+      "name": "PontoCego.Tests.UiAccessibilityTests.EasingIsBoundedAndMonotonic",
+      "result": "Passed",
+      "evidence": "World0200-Final-EditMode.xml",
+      "seconds": 0.00201
+    },
+    {
+      "name": "PontoCego.Tests.UiAccessibilityTests.LargePanelsHaveSmallCornersWhileIconsAndButtonsKeepPills",
+      "result": "Passed",
+      "evidence": "World0200-Final-EditMode.xml",
+      "seconds": 0.000912
+    },
+    {
+      "name": "PontoCego.Tests.UiAccessibilityTests.LifeAndStaminaHaveDifferentColorsInEveryPalette",
+      "result": "Passed",
+      "evidence": "World0200-Final-EditMode.xml",
+      "seconds": 0.001021
+    },
+    {
+      "name": "PontoCego.Tests.UiAccessibilityTests.MenuAnimationUsesExplicitDeltaAndReducedMotionIsImmediate",
+      "result": "Passed",
+      "evidence": "World0200-Final-EditMode.xml",
+      "seconds": 0.00088
+    },
+    {
+      "name": "PontoCego.Tests.UiAccessibilityTests.SmartHudKeepsCriticalInformationOpaque",
+      "result": "Passed",
+      "evidence": "World0200-Final-EditMode.xml",
+      "seconds": 0.002773
+    },
+    {
+      "name": "PontoCego.Tests.UiAccessibilityTests.TextScaleIsBoundedForFixedInterfaceColumns",
+      "result": "Passed",
+      "evidence": "World0200-Final-EditMode.xml",
+      "seconds": 0.002587
+    },
+    {
+      "name": "PontoCego.Tests.WeatherModelTests.ClearWeatherNeverMakesNegativeWetness",
+      "result": "Passed",
+      "evidence": "World0200-Final-EditMode.xml",
+      "seconds": 0.001103
+    },
+    {
+      "name": "PontoCego.Tests.WeatherModelTests.PuddlesRemainAfterRainAndDryGradually",
+      "result": "Passed",
+      "evidence": "World0200-Final-EditMode.xml",
+      "seconds": 0.000521
+    },
+    {
+      "name": "PontoCego.Tests.WeatherModelTests.RainAndWindTransitionWithoutAnAbruptJump",
+      "result": "Passed",
+      "evidence": "World0200-Final-EditMode.xml",
+      "seconds": 0.000477
+    },
+    {
+      "name": "PontoCego.Tests.WeatherModelTests.ZeroOrInvalidTimeDoesNotCorruptWeather",
+      "result": "Passed",
+      "evidence": "World0200-Final-EditMode.xml",
+      "seconds": 0.000399
+    },
+    {
+      "name": "PontoCego.Tests.WorldLightModelTests.SunAndMoonDirectionsStayContinuousThroughTwilight",
+      "result": "Passed",
+      "evidence": "World0200-Final-EditMode.xml",
+      "seconds": 0.055494
+    },
+    {
+      "name": "PontoCego.Tests.WorldLightModelTests.TinyClockChangesDoNotFlipTheProjectedShadow(6.115f)",
+      "result": "Passed",
+      "evidence": "World0200-Final-EditMode.xml",
+      "seconds": 0.00079
+    },
+    {
+      "name": "PontoCego.Tests.WorldLightModelTests.TinyClockChangesDoNotFlipTheProjectedShadow(17.885f)",
+      "result": "Passed",
+      "evidence": "World0200-Final-EditMode.xml",
+      "seconds": 0.000167
+    },
+    {
+      "name": "PontoCego.Tests.WorldLightModelTests.TinyClockChangesDoNotFlipTheProjectedShadow(24.0f)",
+      "result": "Passed",
+      "evidence": "World0200-Final-EditMode.xml",
+      "seconds": 0.000123
+    },
+    {
+      "name": "PontoCego.Tests.AdaptiveUiTests.LowHealthKeepsHudFullyVisible",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 25.168027
+    },
+    {
+      "name": "PontoCego.Tests.AdaptiveUiTests.PauseHidesPhoneWithoutLosingAppOrGameplayLock",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 5.377617
+    },
+    {
+      "name": "PontoCego.Tests.AdaptiveUiTests.PhoneAnimationContinuesWhileSimulationIsPaused",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 3.499051
+    },
+    {
+      "name": "PontoCego.Tests.AdaptiveUiTests.PhoneDoesNotUnlockAnExistingCutscene",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 1.339036
+    },
+    {
+      "name": "PontoCego.Tests.AmbienceVisibilityTests.AmbienceBootsWithoutExtraListenerAndPausesWithSimulation",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 1.620737
+    },
+    {
+      "name": "PontoCego.Tests.AmbienceVisibilityTests.ClockMixHasCorrectEndpointsAndConstantPower",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 0.005801
+    },
+    {
+      "name": "PontoCego.Tests.AmbienceVisibilityTests.CullingNeverDisablesPhysicsAndRestoresRendererState",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 0.046953
+    },
+    {
+      "name": "PontoCego.Tests.AmbienceVisibilityTests.QuestAndCombatActorsAreExcludedFromStaticCulling",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 0.086798
+    },
+    {
+      "name": "PontoCego.Tests.BossTests.AttackSpriteMatchesTheLockedAimDirection",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 1.110602
+    },
+    {
+      "name": "PontoCego.Tests.BossTests.BossDemoRestoresTheFightWithoutTouchingCampaignSave",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 1.024932
+    },
+    {
+      "name": "PontoCego.Tests.BossTests.BossHasAbilitiesAndEntersSecondPhase",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 1.197862
+    },
+    {
+      "name": "PontoCego.Tests.BossTests.DefeatingABossDuringRecoveryDoesNotFreezeItsDeathAnimation",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 5.53925
+    },
+    {
+      "name": "PontoCego.Tests.BossTests.FlashStunCancelsTheBossWindupAndGroundWarnings",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 3.857771
+    },
+    {
+      "name": "PontoCego.Tests.BossTests.RepeatedFlashCannotPermanentlyStunABoss",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 1.60929
+    },
+    {
+      "name": "PontoCego.Tests.BossTests.ThirdMeleeHitIsAStrongerFinisher",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 2.285884
+    },
+    {
+      "name": "PontoCego.Tests.BossTests.WarningCannotDamageThroughWalls",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 0.735353
+    },
+    {
+      "name": "PontoCego.Tests.BossTests.WarningWaitsBeforeDamageAndPausesDuringDialogue",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 1.1518
+    },
+    {
+      "name": "PontoCego.Tests.CampaignFlowTests.CampaignCanProgressFromKidnappingToEnding",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 38.967815
+    },
+    {
+      "name": "PontoCego.Tests.ChaseMusicTests.UserTrackLoopsPausesAndFadesOutWithChase",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 13.72441
+    },
+    {
+      "name": "PontoCego.Tests.CitySceneryTests.BuildingsKeepStreetsClearAndMapFootprintsMatch",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 2.728546
+    },
+    {
+      "name": "PontoCego.Tests.CitySceneryTests.CursorSupportsPhonePauseDeathAndReturnToMenu",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 2.407168
+    },
+    {
+      "name": "PontoCego.Tests.CityTrafficTests.TrafficBrakesForPedestrianAndResumesWhenLaneClears",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 4.454913
+    },
+    {
+      "name": "PontoCego.Tests.CombatTests.BulletsStopAtWallsAndDamageWithoutWall",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 15.772928
+    },
+    {
+      "name": "PontoCego.Tests.CombatTests.DeathLocksPlayerAndMedkitsHealOnlyWhenNeeded",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 4.596112
+    },
+    {
+      "name": "PontoCego.Tests.CombatTests.EveryCampaignPhaseHasReachableObjectivesAndSafeSpawn",
+      "result": "Passed",
+      "evidence": "World0200-Final-Retry.xml",
+      "seconds": 14.553428
+    },
+    {
+      "name": "PontoCego.Tests.CombatTests.HealthFiltersFriendlyDamageAndDeathFiresOnce",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 12.176251
+    },
+    {
+      "name": "PontoCego.Tests.CombatTests.PlayerMeleeDamagesAndStunsEnemy",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 17.126671
+    },
+    {
+      "name": "PontoCego.Tests.CombatTests.StaminaIsHiddenUntilUsedAndHidesAfterRecovery",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 15.483369
+    },
+    {
+      "name": "PontoCego.Tests.ContinuousWorldTests.EveryDistrictEntranceConnectsToTheCityThroughRealCollisions",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 39.537355
+    },
+    {
+      "name": "PontoCego.Tests.ContinuousWorldTests.EveryMissionKeepsReachableObjectivesInItsWorldDistrict",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 82.11207
+    },
+    {
+      "name": "PontoCego.Tests.ContinuousWorldTests.NorthernDistrictsCannotSortThePlayerBehindTheMap",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 5.111934
+    },
+    {
+      "name": "PontoCego.Tests.ContinuousWorldTests.PhysicalTriggerKeepsTheSamePlayerCameraAndLoadedScene",
+      "result": "Passed",
+      "evidence": "World0200-Final-Retry.xml",
+      "seconds": 2.595815
+    },
+    {
+      "name": "PontoCego.Tests.ContinuousWorldTests.ReplayingAMissionRecreatesItsActorsWithoutDuplicatingTheWorld",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 2.901477
+    },
+    {
+      "name": "PontoCego.Tests.ContinuousWorldTests.WorldCoordinatesAndMissionStepAreSavedSeparately",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 4.898603
+    },
+    {
+      "name": "PontoCego.Tests.LandscapeIntegrationTests.SixLandmarksConnectToTheSameWorldAndRewardOnlyOnce",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 3.596743
+    },
+    {
+      "name": "PontoCego.Tests.MenuMusicTests.MenuUsesSuppliedTrackAndHasOneListener",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 0.164127
+    },
+    {
+      "name": "PontoCego.Tests.MocamboTests.ParkHasReadableSignAndReachableMissionPoints",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 0.890367
+    },
+    {
+      "name": "PontoCego.Tests.MocamboTests.PivoThrowsBallsThenEntersSecondPhase",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 4.57078
+    },
+    {
+      "name": "PontoCego.Tests.NeighborhoodTests.CarsDriveAndAllowSafeExitAmongPedestrians",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 2.461673
+    },
+    {
+      "name": "PontoCego.Tests.NeighborhoodTests.DeliveryRewardsOnlyOnceAndResourcesRequirePurchase",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 3.536355
+    },
+    {
+      "name": "PontoCego.Tests.NeighborhoodTests.MainMissionReturnsToNeighborhoodWithoutSkippingProgress",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 2.255811
+    },
+    {
+      "name": "PontoCego.Tests.NeighborhoodTests.UberListsInstalledPhasesAndPreservesEquipmentDuringTravel",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 6.542294
+    },
+    {
+      "name": "PontoCego.Tests.NewContentTests.AllMissionsContainPcPartsAndWorkbenchRequiresSixTypes",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 2.753586
+    },
+    {
+      "name": "PontoCego.Tests.NewContentTests.FleetAndCitizensUseSuppliedReferences",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 1.51852
+    },
+    {
+      "name": "PontoCego.Tests.NewContentTests.HudReflectsRealDamageAndSprintDoesNotConsumeHealth",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 2.082355
+    },
+    {
+      "name": "PontoCego.Tests.NewContentTests.PauloGateRequiresAssemblyAndBossesHaveCorrectPhaseCounts",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 2.054215
+    },
+    {
+      "name": "PontoCego.Tests.NewContentTests.TaxiHonorsTenSecondsAndActuallyArrives",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 4.478174
+    },
+    {
+      "name": "PontoCego.Tests.RebuiltCityTests.InteriorRevealsWithoutChangingPlayerCameraOrPhysics",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 3.500687
+    },
+    {
+      "name": "PontoCego.Tests.RebuiltCityTests.MainOutdoorBackdropsAreReplacedAndPedestrianRoutesAvoidStaticWalls",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 2.548445
+    },
+    {
+      "name": "PontoCego.Tests.ReleaseRepairTests.GoldenRewardsRequireThreeErrandsAndReturn",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 5.363208
+    },
+    {
+      "name": "PontoCego.Tests.ReleaseRepairTests.InteractionInputActuallyCollectsHiddenPart",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 2.353926
+    },
+    {
+      "name": "PontoCego.Tests.ReleaseRepairTests.PersistentPartsAreAccessibleAndSixTypesExist",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 2.24665
+    },
+    {
+      "name": "PontoCego.Tests.ReleaseRepairTests.TaxiBoardsDrivesWholeRouteAndDisembarks",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 4.532433
+    },
+    {
+      "name": "PontoCego.Tests.ReleaseRepairTests.TaxiUsesGrayPeugeotAndCleanCivilianFrames",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 1.548844
+    },
+    {
+      "name": "PontoCego.Tests.RoadNetworkTests.CanonicalGraphHasNoDuplicateEdgesOrInteriorCollinearOverlaps",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 1.541258
+    },
+    {
+      "name": "PontoCego.Tests.RoadNetworkTests.SidewalkSurfacesNeverCrossAnyAsphaltLane",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 1.50073
+    },
+    {
+      "name": "PontoCego.Tests.SceneTests.CameraAndAuthoredSpritesAreAssigned",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 0.658484
+    },
+    {
+      "name": "PontoCego.Tests.SceneTests.DialogueLocksMovementUntilDismissed",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 0.518994
+    },
+    {
+      "name": "PontoCego.Tests.SceneTests.DodgeCannotTunnelThroughPaintedDeskCollision",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 0.770694
+    },
+    {
+      "name": "PontoCego.Tests.SceneTests.EveryOfficeObjectiveIsReachableAroundFurniture",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 0.889052
+    },
+    {
+      "name": "PontoCego.Tests.SceneTests.GamepadMovesAndAimsIndependently",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 0.995134
+    },
+    {
+      "name": "PontoCego.Tests.SceneTests.InteractionCannotReachThroughWalls",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 0.484782
+    },
+    {
+      "name": "PontoCego.Tests.SceneTests.PaintedMapKeepsItsOriginalAspectAndCollisionScale",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 0.407476
+    },
+    {
+      "name": "PontoCego.Tests.SceneTests.PhotographyRequiresClearLineOfSight",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 1.824388
+    },
+    {
+      "name": "PontoCego.Tests.SceneTests.PrologueFollowsClockBossColleaguesAndLens",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 3.711051
+    },
+    {
+      "name": "PontoCego.Tests.SceneTests.RealRigidbodyMovesAndStops",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 1.609747
+    },
+    {
+      "name": "PontoCego.Tests.WeatherSceneTests.StormOutsideRendersRainAbovePlayer",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 4.2851
+    },
+    {
+      "name": "PontoCego.Tests.WeatherSceneTests.WeatherKnowsRoofsAndStopsDrawingInTheMenu",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 1.762632
+    },
+    {
+      "name": "PontoCego.Tests.WeatherSceneTests.WeatherPoolIsBoundedAndNeverAddsPhysicsObstacles",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 2.328998
+    },
+    {
+      "name": "PontoCego.Tests.WorldStoryProgressTests.StoryObjectivesCanReachEndingInsideOneWorld",
+      "result": "Passed",
+      "evidence": "World0200-Final-PlayMode.xml",
+      "seconds": 17.206399
+    }
+  ]
+}

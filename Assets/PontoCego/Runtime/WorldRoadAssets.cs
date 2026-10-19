@@ -1,0 +1,1 @@
+using UnityEngine; namespace PontoCego{public sealed class WorldRoadAssets:MonoBehaviour{public AudioClip chaseMusic;public Sprite[] riding;public Sprite gol,chain,bmx,skate,cristyan,ribeiro,smoke;}}

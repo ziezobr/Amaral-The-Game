@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="6" result="Passed" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-18 04:09:00Z" end-time="2026-10-18 04:09:17Z" duration="16,9492052">
+  <test-suite type="TestSuite" id="1036" name="Ponto Cego" fullname="Ponto Cego" runstate="Runnable" testcasecount="23" result="Passed" start-time="2026-10-18 04:09:00Z" end-time="2026-10-18 04:09:17Z" duration="16.949205" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1031" name="PontoCego3D.Tests.dll" fullname="D:/The Amaral Game/V 1.0/Library/ScriptAssemblies/PontoCego3D.Tests.dll" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-18 04:09:00Z" end-time="2026-10-18 04:09:17Z" duration="16.932646" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="18892" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1032" name="PontoCego3D" fullname="PontoCego3D" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-18 04:09:00Z" end-time="2026-10-18 04:09:17Z" duration="16.931699" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1033" name="Tests" fullname="PontoCego3D.Tests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-18 04:09:00Z" end-time="2026-10-18 04:09:17Z" duration="16.931226" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1024" name="DistrictTests" fullname="PontoCego3D.Tests.DistrictTests" classname="PontoCego3D.Tests.DistrictTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-18 04:09:00Z" end-time="2026-10-18 04:09:17Z" duration="16.929101" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1028" name="AttacksRespectRangeWallsAndDodgeProtection" fullname="PontoCego3D.Tests.DistrictTests.AttacksRespectRangeWallsAndDodgeProtection" methodname="AttacksRespectRangeWallsAndDodgeProtection" classname="PontoCego3D.Tests.DistrictTests" runstate="Runnable" seed="281605459" result="Passed" start-time="2026-10-18 04:09:00Z" end-time="2026-10-18 04:09:02Z" duration="2.056751" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1030" name="CameraAvoidsWallsBehindPlayer" fullname="PontoCego3D.Tests.DistrictTests.CameraAvoidsWallsBehindPlayer" methodname="CameraAvoidsWallsBehindPlayer" classname="PontoCego3D.Tests.DistrictTests" runstate="Runnable" seed="30026764" result="Passed" start-time="2026-10-18 04:09:02Z" end-time="2026-10-18 04:09:04Z" duration="2.455070" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1029" name="CiviliansFleeFromCombat" fullname="PontoCego3D.Tests.DistrictTests.CiviliansFleeFromCombat" methodname="CiviliansFleeFromCombat" classname="PontoCego3D.Tests.DistrictTests" runstate="Runnable" seed="875447291" result="Passed" start-time="2026-10-18 04:09:04Z" end-time="2026-10-18 04:09:05Z" duration="0.457902" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1026" name="LocomotionUsesSkinningAndAnimatedBones" fullname="PontoCego3D.Tests.DistrictTests.LocomotionUsesSkinningAndAnimatedBones" methodname="LocomotionUsesSkinningAndAnimatedBones" classname="PontoCego3D.Tests.DistrictTests" runstate="Runnable" seed="1214266609" result="Passed" start-time="2026-10-18 04:09:05Z" end-time="2026-10-18 04:09:06Z" duration="1.572884" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1027" name="MovementIsRelativeToCameraAndNormalizesDiagonals" fullname="PontoCego3D.Tests.DistrictTests.MovementIsRelativeToCameraAndNormalizesDiagonals" methodname="MovementIsRelativeToCameraAndNormalizesDiagonals" classname="PontoCego3D.Tests.DistrictTests" runstate="Runnable" seed="1536818181" result="Passed" start-time="2026-10-18 04:09:06Z" end-time="2026-10-18 04:09:12Z" duration="5.391334" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1025" name="PedestriansHaveNavigationAndActuallyWalk" fullname="PontoCego3D.Tests.DistrictTests.PedestriansHaveNavigationAndActuallyWalk" methodname="PedestriansHaveNavigationAndActuallyWalk" classname="PontoCego3D.Tests.DistrictTests" runstate="Runnable" seed="1862881767" result="Passed" start-time="2026-10-18 04:09:12Z" end-time="2026-10-18 04:09:17Z" duration="4.959198" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: D:\The Amaral Game\V 1.0\Validation\District3D-Tests.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="5" result="Failed(Child)" total="5" passed="4" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-19 06:13:41Z" end-time="2026-10-19 06:16:55Z" duration="194,3499185">
+  <test-suite type="TestSuite" id="1108" name="Ponto Cego" fullname="Ponto Cego" runstate="Runnable" testcasecount="78" result="Failed" site="Child" start-time="2026-10-19 06:13:41Z" end-time="2026-10-19 06:16:55Z" duration="194.349919" total="5" passed="4" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1089" name="PontoCego.Tests.PlayMode.dll" fullname="D:/The Amaral Game/V 1.0/Library/ScriptAssemblies/PontoCego.Tests.PlayMode.dll" runstate="Runnable" testcasecount="69" result="Failed" site="Child" start-time="2026-10-19 06:13:41Z" end-time="2026-10-19 06:16:55Z" duration="194.328158" total="5" passed="4" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="13692" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1090" name="PontoCego" fullname="PontoCego" runstate="Runnable" testcasecount="69" result="Failed" site="Child" start-time="2026-10-19 06:13:41Z" end-time="2026-10-19 06:16:55Z" duration="194.325972" total="5" passed="4" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1091" name="Tests" fullname="PontoCego.Tests" runstate="Runnable" testcasecount="69" result="Failed" site="Child" start-time="2026-10-19 06:13:41Z" end-time="2026-10-19 06:16:55Z" duration="194.306735" total="5" passed="4" failed="1" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestFixture" id="1054" name="NewContentTests" fullname="PontoCego.Tests.NewContentTests" classname="PontoCego.Tests.NewContentTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-19 06:13:41Z" end-time="2026-10-19 06:13:44Z" duration="3.415388" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1055" name="FleetAndCitizensUseSuppliedReferences" fullname="PontoCego.Tests.NewContentTests.FleetAndCitizensUseSuppliedReferences" methodname="FleetAndCitizensUseSuppliedReferences" classname="PontoCego.Tests.NewContentTests" runstate="Runnable" seed="471010986" result="Passed" start-time="2026-10-19 06:13:41Z" end-time="2026-10-19 06:13:44Z" duration="3.390131" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1083" name="WeatherSceneTests" fullname="PontoCego.Tests.WeatherSceneTests" classname="PontoCego.Tests.WeatherSceneTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-19 06:13:44Z" end-time="2026-10-19 06:13:54Z" duration="9.633987" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1085" name="StormOutsideRendersRainAbovePlayer" fullname="PontoCego.Tests.WeatherSceneTests.StormOutsideRendersRainAbovePlayer" methodname="StormOutsideRendersRainAbovePlayer" classname="PontoCego.Tests.WeatherSceneTests" runstate="Runnable" seed="1630551287" result="Passed" start-time="2026-10-19 06:13:44Z" end-time="2026-10-19 06:13:47Z" duration="2.834745" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1086" name="WeatherKnowsRoofsAndStopsDrawingInTheMenu" fullname="PontoCego.Tests.WeatherSceneTests.WeatherKnowsRoofsAndStopsDrawingInTheMenu" methodname="WeatherKnowsRoofsAndStopsDrawingInTheMenu" classname="PontoCego.Tests.WeatherSceneTests" runstate="Runnable" seed="1311535667" result="Passed" start-time="2026-10-19 06:13:47Z" end-time="2026-10-19 06:13:50Z" duration="3.146602" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1084" name="WeatherPoolIsBoundedAndNeverAddsPhysicsObstacles" fullname="PontoCego.Tests.WeatherSceneTests.WeatherPoolIsBoundedAndNeverAddsPhysicsObstacles" methodname="WeatherPoolIsBoundedAndNeverAddsPhysicsObstacles" classname="PontoCego.Tests.WeatherSceneTests" runstate="Runnable" seed="2068392142" result="Passed" start-time="2026-10-19 06:13:50Z" end-time="2026-10-19 06:13:54Z" duration="3.618947" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1087" name="WorldStoryProgressTests" fullname="PontoCego.Tests.WorldStoryProgressTests" classname="PontoCego.Tests.WorldStoryProgressTests" runstate="Runnable" testcasecount="1" result="Failed" site="Child" start-time="2026-10-19 06:13:54Z" end-time="2026-10-19 06:16:55Z" duration="181.242591" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-case id="1088" name="StoryObjectivesCanReachEndingInsideOneWorld" fullname="PontoCego.Tests.WorldStoryProgressTests.StoryObjectivesCanReachEndingInsideOneWorld" methodname="StoryObjectivesCanReachEndingInsideOneWorld" classname="PontoCego.Tests.WorldStoryProgressTests" runstate="Runnable" seed="347073479" result="Failed" start-time="2026-10-19 06:13:54Z" end-time="2026-10-19 06:16:55Z" duration="181.218285" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="Timeout" value="180000" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <failure>
+                <message><![CDATA[Timeout value of 180000 ms was exceeded. If this is intended, increase the timeout value using a TimeoutAttribute.]]></message>
+                <stack-trace><![CDATA[]]></stack-trace>
+              </failure>
+              <output><![CDATA[PONTO_STORY_QA / 01_Riberal / 0 / 19,19599
+PONTO_STORY_QA / 01_Riberal / 1 / 21,20631
+PONTO_STORY_QA / 01_Riberal / 2 / 23,73431
+PONTO_STORY_QA / 01_Riberal / 3 / 26,67463
+PONTO_STORY_QA / 01_Riberal / 4 / 28,51834
+PONTO_STORY_QA / 01_Riberal / 5 / 30,427
+PONTO_STORY_QA / 02_Gala / 0 / 33,37614
+PONTO_STORY_QA / 02_Gala / 1 / 35,33614
+PONTO_STORY_QA / 02_Gala / 2 / 37,60364
+PONTO_STORY_QA / 03_Casa / 0 / 41,91659
+PONTO_STORY_QA / 03_Casa / 1 / 46,46858
+PONTO_STORY_QA / 03_Casa / 2 / 48,26001
+PONTO_STORY_QA / 03_Casa / 3 / 50,311
+PONTO_STORY_QA / 03_Casa / 4 / 53,31968
+PONTO_STORY_QA / 03_Casa / 5 / 55,5707
+PONTO_STORY_QA / 04_Emboscada / 0 / 60,09984
+PONTO_STORY_QA / 04_Emboscada / 1 / 65,06304
+PONTO_STORY_QA / 04_Emboscada / 2 / 69,60169
+PONTO_STORY_QA / 04_Emboscada / 3 / 72,7425
+PONTO_STORY_QA / 04_Emboscada / 4 / 76,20267
+PONTO_STORY_QA / 04_Emboscada / 5 / 78,31145
+PONTO_STORY_QA / 04_Emboscada / 6 / 81,9459
+PONTO_STORY_QA / 05_ResgateMartins / 0 / 85,22451
+PONTO_STORY_QA / 05_ResgateMartins / 1 / 87,73782
+PONTO_STORY_QA / 05_ResgateMartins / 3 / 90,48208
+PONTO_STORY_QA / 05_ResgateMartins / 4 / 92,90833
+PONTO_STORY_QA / 06_Oficina / 0 / 95,56969
+PONTO_STORY_QA / 06_Oficina / 1 / 97,23048
+PONTO_STORY_QA / 06_Oficina / 2 / 99,384
+PONTO_STORY_QA / 06_Oficina / 3 / 102,1752
+PONTO_STORY_QA / 06_Oficina / 4 / 104,1142
+PONTO_STORY_QA / 07_Distribuidora / 0 / 107,9646
+PONTO_STORY_QA / 07_Distribuidora / 1 / 111,1578
+PONTO_STORY_QA / 07_Distribuidora / 2 / 114,148
+PONTO_STORY_QA / 07_Distribuidora / 3 / 116,3664
+PONTO_STORY_QA / 07_Distribuidora / 4 / 119,1347
+PONTO_STORY_QA / 07_Distribuidora / 5 / 122,358
+PONTO_STORY_QA / 07_Distribuidora / 6 / 124,3929
+PONTO_STORY_QA / 07_Distribuidora / 7 / 126,6526
+PONTO_STORY_QA / 07_Distribuidora / 8 / 128,9011
+PONTO_STORY_QA / 08_Patio / 0 / 131,2141
+PONTO_STORY_QA / 08_Patio / 1 / 133,644
+PONTO_STORY_QA / 08_Patio / 2 / 135,8763
+PONTO_STORY_QA / 08_Patio / 3 / 138,9164
+PONTO_STORY_QA / 08_Patio / 4 / 142,3941
+PONTO_STORY_QA / 08_Patio / 5 / 144,2795
+PONTO_STORY_QA / 08_Patio / 6 / 146,331
+PONTO_STORY_QA / 08_Patio / 7 / 148,6493
+PONTO_STORY_QA / 09_RastroCenoura / 0 / 152,0391
+PONTO_STORY_QA / 09_RastroCenoura / 1 / 153,786
+PONTO_STORY_QA / 09_RastroCenoura / 2 / 156,3887
+PONTO_STORY_QA / 09_RastroCenoura / 3 / 159,2708
+PONTO_STORY_QA / 09_RastroCenoura / 4 / 161,2936
+PONTO_STORY_QA / 09_RastroCenoura / 5 / 164,5141
+PONTO_STORY_QA / 09_RastroCenoura / 6 / 166,4546
+PONTO_STORY_QA / 10_ArquivoCargas / 0 / 170,5768
+PONTO_STORY_QA / 10_ArquivoCargas / 1 / 173,1868
+PONTO_STORY_QA / 10_ArquivoCargas / 2 / 175,1777
+PONTO_STORY_QA / 10_ArquivoCargas / 3 / 177,6448
+PONTO_STORY_QA / 10_ArquivoCargas / 4 / 180,0776
+PONTO_STORY_QA / 10_ArquivoCargas / 5 / 181,6758
+PONTO_STORY_QA / 10_ArquivoCargas / 6 / 184,0262
+PONTO_STORY_QA / 10_ArquivoCargas / 7 / 186,8758
+PONTO_STORY_QA / 11_OficinaRotas / 0 / 189,892
+PONTO_STORY_QA / 11_OficinaRotas / 1 / 191,5862
+PONTO_STORY_QA / 11_OficinaRotas / 2 / 193,9955
+PONTO_STORY_QA / 11_OficinaRotas / 3 / 195,5556
+Saving results to: D:\The Amaral Game\V 1.0\Validation\World0200-Targeted-Final.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

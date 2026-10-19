@@ -1,0 +1,1 @@
+{"name": "PontoCego3D.Editor", "references": ["PontoCego3D.Runtime", "Unity.InputSystem", "Unity.Cinemachine", "PontoCego.Environment", "PontoCego.Runtime"], "includePlatforms": ["Editor"]}

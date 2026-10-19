@@ -1,0 +1,1 @@
+{"name":"PontoCego.Tests.EditMode","references":["PontoCego.Runtime","Unity.InputSystem","PontoCego.Environment"],"includePlatforms":["Editor"],"optionalUnityReferences":["TestAssemblies"]}

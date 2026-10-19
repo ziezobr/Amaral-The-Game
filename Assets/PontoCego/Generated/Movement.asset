@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2f61a6a7d2fcec4f891fd54f3f08197, type: 3}
+  m_Name: Movement
+  m_EditorClassIdentifier: PontoCego.Runtime::PontoCego.MovementSettings
+  walkSpeed: 3.6
+  sprintMultiplier: 1.65
+  acceleration: 45
+  deceleration: 62
+  dodgeDuration: 0.22
+  dodgeSpeed: 11.5
+  dodgeCooldown: 0.7
+  sprintCapacity: 3.8
+  sprintRecoveryDelay: 0.65
+  sprintRecovery: 1.25
+  exhaustedCooldown: 1.4
+  dodgeInputBuffer: 0.12
+  dodgeEase: 0.22
+  turnAcceleration: 78

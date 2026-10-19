@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="7" result="Passed" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-18 15:31:04Z" end-time="2026-10-18 15:31:05Z" duration="0,0986529">
+  <test-suite type="TestSuite" id="1000" name="Ponto Cego" fullname="Ponto Cego" runstate="Runnable" testcasecount="7" result="Passed" start-time="2026-10-18 15:31:04Z" end-time="2026-10-18 15:31:05Z" duration="0.098653" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1009" name="PontoCego.Tests.EditMode.dll" fullname="D:/The Amaral Game/V 1.0/Library/ScriptAssemblies/PontoCego.Tests.EditMode.dll" runstate="Runnable" testcasecount="7" result="Passed" start-time="2026-10-18 15:31:05Z" end-time="2026-10-18 15:31:05Z" duration="0.082922" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="6032" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1010" name="PontoCego" fullname="PontoCego" runstate="Runnable" testcasecount="7" result="Passed" start-time="2026-10-18 15:31:05Z" end-time="2026-10-18 15:31:05Z" duration="0.082374" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1011" name="Tests" fullname="PontoCego.Tests" runstate="Runnable" testcasecount="7" result="Passed" start-time="2026-10-18 15:31:05Z" end-time="2026-10-18 15:31:05Z" duration="0.082139" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1001" name="MotorTests" fullname="PontoCego.Tests.MotorTests" classname="PontoCego.Tests.MotorTests" runstate="Runnable" testcasecount="7" result="Passed" start-time="2026-10-18 15:31:05Z" end-time="2026-10-18 15:31:05Z" duration="0.080601" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1003" name="AnalogInputRetainsPartialMagnitude" fullname="PontoCego.Tests.MotorTests.AnalogInputRetainsPartialMagnitude" methodname="AnalogInputRetainsPartialMagnitude" classname="PontoCego.Tests.MotorTests" runstate="Runnable" seed="1067994004" result="Passed" start-time="2026-10-18 15:31:05Z" end-time="2026-10-18 15:31:05Z" duration="0.028857" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1008" name="DefaultActionsSupportGamepadAndKeyboard" fullname="PontoCego.Tests.MotorTests.DefaultActionsSupportGamepadAndKeyboard" methodname="DefaultActionsSupportGamepadAndKeyboard" classname="PontoCego.Tests.MotorTests" runstate="Runnable" seed="1278678139" result="Passed" start-time="2026-10-18 15:31:05Z" end-time="2026-10-18 15:31:05Z" duration="0.019478" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1002" name="DiagonalHasSameSpeedAsCardinal" fullname="PontoCego.Tests.MotorTests.DiagonalHasSameSpeedAsCardinal" methodname="DiagonalHasSameSpeedAsCardinal" classname="PontoCego.Tests.MotorTests" runstate="Runnable" seed="795508307" result="Passed" start-time="2026-10-18 15:31:05Z" end-time="2026-10-18 15:31:05Z" duration="0.002743" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1005" name="DodgeDistanceIsStableAcrossFixedTimesteps" fullname="PontoCego.Tests.MotorTests.DodgeDistanceIsStableAcrossFixedTimesteps" methodname="DodgeDistanceIsStableAcrossFixedTimesteps" classname="PontoCego.Tests.MotorTests" runstate="Runnable" seed="1795557109" result="Passed" start-time="2026-10-18 15:31:05Z" end-time="2026-10-18 15:31:05Z" duration="0.000972" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1004" name="DodgeLocksDirectionAndRejectsRequestsDuringCooldown" fullname="PontoCego.Tests.MotorTests.DodgeLocksDirectionAndRejectsRequestsDuringCooldown" methodname="DodgeLocksDirectionAndRejectsRequestsDuringCooldown" classname="PontoCego.Tests.MotorTests" runstate="Runnable" seed="704150403" result="Passed" start-time="2026-10-18 15:31:05Z" end-time="2026-10-18 15:31:05Z" duration="0.001404" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1006" name="SprintExhaustsThenRecovers" fullname="PontoCego.Tests.MotorTests.SprintExhaustsThenRecovers" methodname="SprintExhaustsThenRecovers" classname="PontoCego.Tests.MotorTests" runstate="Runnable" seed="1533244856" result="Passed" start-time="2026-10-18 15:31:05Z" end-time="2026-10-18 15:31:05Z" duration="0.001088" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1007" name="StopRemovesMomentum" fullname="PontoCego.Tests.MotorTests.StopRemovesMomentum" methodname="StopRemovesMomentum" classname="PontoCego.Tests.MotorTests" runstate="Runnable" seed="647297398" result="Passed" start-time="2026-10-18 15:31:05Z" end-time="2026-10-18 15:31:05Z" duration="0.002677" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: D:\The Amaral Game\V 1.0\Validation\Bosses2D-EditMode.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

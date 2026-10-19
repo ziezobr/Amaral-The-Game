@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="2" result="Passed" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-19 07:09:52Z" end-time="2026-10-19 07:09:57Z" duration="4,623056">
+  <test-suite type="TestSuite" id="1119" name="Ponto Cego" fullname="Ponto Cego" runstate="Runnable" testcasecount="85" result="Passed" start-time="2026-10-19 07:09:52Z" end-time="2026-10-19 07:09:57Z" duration="4.623056" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1100" name="PontoCego.Tests.PlayMode.dll" fullname="D:/The Amaral Game/V 1.0/Library/ScriptAssemblies/PontoCego.Tests.PlayMode.dll" runstate="Runnable" testcasecount="76" result="Passed" start-time="2026-10-19 07:09:52Z" end-time="2026-10-19 07:09:57Z" duration="4.604396" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="19896" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1101" name="PontoCego" fullname="PontoCego" runstate="Runnable" testcasecount="76" result="Passed" start-time="2026-10-19 07:09:52Z" end-time="2026-10-19 07:09:57Z" duration="4.600172" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1102" name="Tests" fullname="PontoCego.Tests" runstate="Runnable" testcasecount="76" result="Passed" start-time="2026-10-19 07:09:52Z" end-time="2026-10-19 07:09:57Z" duration="4.580739" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1044" name="GroundContactTests" fullname="PontoCego.Tests.GroundContactTests" classname="PontoCego.Tests.GroundContactTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-19 07:09:52Z" end-time="2026-10-19 07:09:55Z" duration="2.951298" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1045" name="ProjectedCharacterShadowStaysAttachedToTheFootContact" fullname="PontoCego.Tests.GroundContactTests.ProjectedCharacterShadowStaysAttachedToTheFootContact" methodname="ProjectedCharacterShadowStaysAttachedToTheFootContact" classname="PontoCego.Tests.GroundContactTests" runstate="Runnable" seed="1696032845" result="Passed" start-time="2026-10-19 07:09:52Z" end-time="2026-10-19 07:09:55Z" duration="2.923705" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1049" name="MateusHideoutTests" fullname="PontoCego.Tests.MateusHideoutTests" classname="PontoCego.Tests.MateusHideoutTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-19 07:09:55Z" end-time="2026-10-19 07:09:57Z" duration="1.613281" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1050" name="HiddenMateusUsesFourCleanPosesAndFixedFeet" fullname="PontoCego.Tests.MateusHideoutTests.HiddenMateusUsesFourCleanPosesAndFixedFeet" methodname="HiddenMateusUsesFourCleanPosesAndFixedFeet" classname="PontoCego.Tests.MateusHideoutTests" runstate="Runnable" seed="2046391898" result="Passed" start-time="2026-10-19 07:09:55Z" end-time="2026-10-19 07:09:57Z" duration="1.606257" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: D:\The Amaral Game\V 1.0\Validation\World0201-Final-Retry.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="24" result="Passed" total="24" passed="24" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-19 06:20:42Z" end-time="2026-10-19 06:20:42Z" duration="0,2093956">
+  <test-suite type="TestSuite" id="1000" name="Ponto Cego" fullname="Ponto Cego" runstate="Runnable" testcasecount="24" result="Passed" start-time="2026-10-19 06:20:42Z" end-time="2026-10-19 06:20:42Z" duration="0.209396" total="24" passed="24" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1031" name="PontoCego.Tests.EditMode.dll" fullname="D:/The Amaral Game/V 1.0/Library/ScriptAssemblies/PontoCego.Tests.EditMode.dll" runstate="Runnable" testcasecount="24" result="Passed" start-time="2026-10-19 06:20:42Z" end-time="2026-10-19 06:20:42Z" duration="0.194641" total="24" passed="24" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="5760" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1032" name="PontoCego" fullname="PontoCego" runstate="Runnable" testcasecount="24" result="Passed" start-time="2026-10-19 06:20:42Z" end-time="2026-10-19 06:20:42Z" duration="0.193837" total="24" passed="24" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1033" name="Tests" fullname="PontoCego.Tests" runstate="Runnable" testcasecount="24" result="Passed" start-time="2026-10-19 06:20:42Z" end-time="2026-10-19 06:20:42Z" duration="0.193029" total="24" passed="24" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1001" name="MateusTests" fullname="PontoCego.Tests.MateusTests" classname="PontoCego.Tests.MateusTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-19 06:20:42Z" end-time="2026-10-19 06:20:42Z" duration="0.061478" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1004" name="AlliesCannotProvokeMateus" fullname="PontoCego.Tests.MateusTests.AlliesCannotProvokeMateus" methodname="AlliesCannotProvokeMateus" classname="PontoCego.Tests.MateusTests" runstate="Runnable" seed="97078941" result="Passed" start-time="2026-10-19 06:20:42Z" end-time="2026-10-19 06:20:42Z" duration="0.027871" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1002" name="FirstCounterHasOnePercentChance" fullname="PontoCego.Tests.MateusTests.FirstCounterHasOnePercentChance" methodname="FirstCounterHasOnePercentChance" classname="PontoCego.Tests.MateusTests" runstate="Runnable" seed="1081663380" result="Passed" start-time="2026-10-19 06:20:42Z" end-time="2026-10-19 06:20:42Z" duration="0.001484" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1003" name="RepeatedAggressionEscalatesButIsCapped" fullname="PontoCego.Tests.MateusTests.RepeatedAggressionEscalatesButIsCapped" methodname="RepeatedAggressionEscalatesButIsCapped" classname="PontoCego.Tests.MateusTests" runstate="Runnable" seed="384187727" result="Passed" start-time="2026-10-19 06:20:42Z" end-time="2026-10-19 06:20:42Z" duration="0.006204" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1005" name="MotorTests" fullname="PontoCego.Tests.MotorTests" classname="PontoCego.Tests.MotorTests" runstate="Runnable" testcasecount="7" result="Passed" start-time="2026-10-19 06:20:42Z" end-time="2026-10-19 06:20:42Z" duration="0.052282" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1007" name="AnalogInputRetainsPartialMagnitude" fullname="PontoCego.Tests.MotorTests.AnalogInputRetainsPartialMagnitude" methodname="AnalogInputRetainsPartialMagnitude" classname="PontoCego.Tests.MotorTests" runstate="Runnable" seed="1805134348" result="Passed" start-time="2026-10-19 06:20:42Z" end-time="2026-10-19 06:20:42Z" duration="0.005219" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1012" name="DefaultActionsSupportGamepadAndKeyboard" fullname="PontoCego.Tests.MotorTests.DefaultActionsSupportGamepadAndKeyboard" methodname="DefaultActionsSupportGamepadAndKeyboard" classname="PontoCego.Tests.MotorTests" runstate="Runnable" seed="728849419" result="Passed" start-time="2026-10-19 06:20:42Z" end-time="2026-10-19 06:20:42Z" duration="0.024119" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1006" name="DiagonalHasSameSpeedAsCardinal" fullname="PontoCego.Tests.MotorTests.DiagonalHasSameSpeedAsCardinal" methodname="DiagonalHasSameSpeedAsCardinal" classname="PontoCego.Tests.MotorTests" runstate="Runnable" seed="681744080" result="Passed" start-time="2026-10-19 06:20:42Z" end-time="2026-10-19 06:20:42Z" duration="0.003187" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1009" name="DodgeDistanceIsStableAcrossFixedTimesteps" fullname="PontoCego.Tests.MotorTests.DodgeDistanceIsStableAcrossFixedTimesteps" methodname="DodgeDistanceIsStableAcrossFixedTimesteps" classname="PontoCego.Tests.MotorTests" runstate="Runnable" seed="412785280" result="Passed" start-time="2026-10-19 06:20:42Z" end-time="2026-10-19 06:20:42Z" duration="0.001154" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1008" name="DodgeLocksDirectionAndRejectsRequestsDuringCooldown" fullname="PontoCego.Tests.MotorTests.DodgeLocksDirectionAndRejectsRequestsDuringCooldown" methodname="DodgeLocksDirectionAndRejectsRequestsDuringCooldown" classname="PontoCego.Tests.MotorTests" runstate="Runnable" seed="448696258" result="Passed" start-time="2026-10-19 06:20:42Z" end-time="2026-10-19 06:20:42Z" duration="0.001281" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1010" name="SprintExhaustsThenRecovers" fullname="PontoCego.Tests.MotorTests.SprintExhaustsThenRecovers" methodname="SprintExhaustsThenRecovers" classname="PontoCego.Tests.MotorTests" runstate="Runnable" seed="1921039445" result="Passed" start-time="2026-10-19 06:20:42Z" end-time="2026-10-19 06:20:42Z" duration="0.001437" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1011" name="StopRemovesMomentum" fullname="PontoCego.Tests.MotorTests.StopRemovesMomentum" methodname="StopRemovesMomentum" classname="PontoCego.Tests.MotorTests" runstate="Runnable" seed="1913797387" result="Passed" start-time="2026-10-19 06:20:42Z" end-time="2026-10-19 06:20:42Z" duration="0.007093" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1013" name="UiAccessibilityTests" fullname="PontoCego.Tests.UiAccessibilityTests" classname="PontoCego.Tests.UiAccessibilityTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-19 06:20:42Z" end-time="2026-10-19 06:20:42Z" duration="0.012747" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1018" name="EasingIsBoundedAndMonotonic" fullname="PontoCego.Tests.UiAccessibilityTests.EasingIsBoundedAndMonotonic" methodname="EasingIsBoundedAndMonotonic" classname="PontoCego.Tests.UiAccessibilityTests" runstate="Runnable" seed="551303565" result="Passed" start-time="2026-10-19 06:20:42Z" end-time="2026-10-19 06:20:42Z" duration="0.002010" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1019" name="LargePanelsHaveSmallCornersWhileIconsAndButtonsKeepPills" fullname="PontoCego.Tests.UiAccessibilityTests.LargePanelsHaveSmallCornersWhileIconsAndButtonsKeepPills" methodname="LargePanelsHaveSmallCornersWhileIconsAndButtonsKeepPills" classname="PontoCego.Tests.UiAccessibilityTests" runstate="Runnable" seed="346206182" result="Passed" start-time="2026-10-19 06:20:42Z" end-time="2026-10-19 06:20:42Z" duration="0.000912" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1015" name="LifeAndStaminaHaveDifferentColorsInEveryPalette" fullname="PontoCego.Tests.UiAccessibilityTests.LifeAndStaminaHaveDifferentColorsInEveryPalette" methodname="LifeAndStaminaHaveDifferentColorsInEveryPalette" classname="PontoCego.Tests.UiAccessibilityTests" runstate="Runnable" seed="1136100344" result="Passed" start-time="2026-10-19 06:20:42Z" end-time="2026-10-19 06:20:42Z" duration="0.001021" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1016" name="MenuAnimationUsesExplicitDeltaAndReducedMotionIsImmediate" fullname="PontoCego.Tests.UiAccessibilityTests.MenuAnimationUsesExplicitDeltaAndReducedMotionIsImmediate" methodname="MenuAnimationUsesExplicitDeltaAndReducedMotionIsImmediate" classname="PontoCego.Tests.UiAccessibilityTests" runstate="Runnable" seed="373021809" result="Passed" start-time="2026-10-19 06:20:42Z" end-time="2026-10-19 06:20:42Z" duration="0.000880" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1014" name="SmartHudKeepsCriticalInformationOpaque" fullname="PontoCego.Tests.UiAccessibilityTests.SmartHudKeepsCriticalInformationOpaque" methodname="SmartHudKeepsCriticalInformationOpaque" classname="PontoCego.Tests.UiAccessibilityTests" runstate="Runnable" seed="79092202" result="Passed" start-time="2026-10-19 06:20:42Z" end-time="2026-10-19 06:20:42Z" duration="0.002773" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1017" name="TextScaleIsBoundedForFixedInterfaceColumns" fullname="PontoCego.Tests.UiAccessibilityTests.TextScaleIsBoundedForFixedInterfaceColumns" methodname="TextScaleIsBoundedForFixedInterfaceColumns" classname="PontoCego.Tests.UiAccessibilityTests" runstate="Runnable" seed="1532758281" result="Passed" start-time="2026-10-19 06:20:42Z" end-time="2026-10-19 06:20:42Z" duration="0.002587" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1020" name="WeatherModelTests" fullname="PontoCego.Tests.WeatherModelTests" classname="PontoCego.Tests.WeatherModelTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-19 06:20:42Z" end-time="2026-10-19 06:20:42Z" duration="0.004631" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1024" name="ClearWeatherNeverMakesNegativeWetness" fullname="PontoCego.Tests.WeatherModelTests.ClearWeatherNeverMakesNegativeWetness" methodname="ClearWeatherNeverMakesNegativeWetness" classname="PontoCego.Tests.WeatherModelTests" runstate="Runnable" seed="940613888" result="Passed" start-time="2026-10-19 06:20:42Z" end-time="2026-10-19 06:20:42Z" duration="0.001103" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1022" name="PuddlesRemainAfterRainAndDryGradually" fullname="PontoCego.Tests.WeatherModelTests.PuddlesRemainAfterRainAndDryGradually" methodname="PuddlesRemainAfterRainAndDryGradually" classname="PontoCego.Tests.WeatherModelTests" runstate="Runnable" seed="2122307899" result="Passed" start-time="2026-10-19 06:20:42Z" end-time="2026-10-19 06:20:42Z" duration="0.000521" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1021" name="RainAndWindTransitionWithoutAnAbruptJump" fullname="PontoCego.Tests.WeatherModelTests.RainAndWindTransitionWithoutAnAbruptJump" methodname="RainAndWindTransitionWithoutAnAbruptJump" classname="PontoCego.Tests.WeatherModelTests" runstate="Runnable" seed="446657911" result="Passed" start-time="2026-10-19 06:20:42Z" end-time="2026-10-19 06:20:42Z" duration="0.000477" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1023" name="ZeroOrInvalidTimeDoesNotCorruptWeather" fullname="PontoCego.Tests.WeatherModelTests.ZeroOrInvalidTimeDoesNotCorruptWeather" methodname="ZeroOrInvalidTimeDoesNotCorruptWeather" classname="PontoCego.Tests.WeatherModelTests" runstate="Runnable" seed="977933589" result="Passed" start-time="2026-10-19 06:20:42Z" end-time="2026-10-19 06:20:42Z" duration="0.000399" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1025" name="WorldLightModelTests" fullname="PontoCego.Tests.WorldLightModelTests" classname="PontoCego.Tests.WorldLightModelTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-19 06:20:42Z" end-time="2026-10-19 06:20:42Z" duration="0.059329" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1026" name="SunAndMoonDirectionsStayContinuousThroughTwilight" fullname="PontoCego.Tests.WorldLightModelTests.SunAndMoonDirectionsStayContinuousThroughTwilight" methodname="SunAndMoonDirectionsStayContinuousThroughTwilight" classname="PontoCego.Tests.WorldLightModelTests" runstate="Runnable" seed="984736164" result="Passed" start-time="2026-10-19 06:20:42Z" end-time="2026-10-19 06:20:42Z" duration="0.055494" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-suite type="ParameterizedMethod" id="1030" name="TinyClockChangesDoNotFlipTheProjectedShadow" fullname="PontoCego.Tests.WorldLightModelTests.TinyClockChangesDoNotFlipTheProjectedShadow" classname="PontoCego.Tests.WorldLightModelTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-19 06:20:42Z" end-time="2026-10-19 06:20:42Z" duration="0.002467" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1027" name="TinyClockChangesDoNotFlipTheProjectedShadow(6.115f)" fullname="PontoCego.Tests.WorldLightModelTests.TinyClockChangesDoNotFlipTheProjectedShadow(6.115f)" methodname="TinyClockChangesDoNotFlipTheProjectedShadow" classname="PontoCego.Tests.WorldLightModelTests" runstate="Runnable" seed="2065859794" result="Passed" start-time="2026-10-19 06:20:42Z" end-time="2026-10-19 06:20:42Z" duration="0.000790" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1028" name="TinyClockChangesDoNotFlipTheProjectedShadow(17.885f)" fullname="PontoCego.Tests.WorldLightModelTests.TinyClockChangesDoNotFlipTheProjectedShadow(17.885f)" methodname="TinyClockChangesDoNotFlipTheProjectedShadow" classname="PontoCego.Tests.WorldLightModelTests" runstate="Runnable" seed="622594730" result="Passed" start-time="2026-10-19 06:20:42Z" end-time="2026-10-19 06:20:42Z" duration="0.000167" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1029" name="TinyClockChangesDoNotFlipTheProjectedShadow(24.0f)" fullname="PontoCego.Tests.WorldLightModelTests.TinyClockChangesDoNotFlipTheProjectedShadow(24.0f)" methodname="TinyClockChangesDoNotFlipTheProjectedShadow" classname="PontoCego.Tests.WorldLightModelTests" runstate="Runnable" seed="375736001" result="Passed" start-time="2026-10-19 06:20:42Z" end-time="2026-10-19 06:20:42Z" duration="0.000123" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[Saving results to: D:\The Amaral Game\V 1.0\Validation\World0200-Final-EditMode.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

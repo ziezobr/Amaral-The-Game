@@ -1,0 +1,1 @@
+{"name": "PontoCego3D.Runtime", "references": ["Unity.InputSystem", "Unity.Cinemachine", "PontoCego.Environment", "PontoCego.Runtime"], "autoReferenced": true}

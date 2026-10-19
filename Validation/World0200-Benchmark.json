@@ -1,0 +1,55 @@
+{
+    "version": "0.20.0",
+    "utc": "2026-10-19T06:41:02.8332615Z",
+    "gpu": "NVIDIA GeForce RTX 2060",
+    "cpu": "Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz",
+    "platform": "WindowsPlayer",
+    "note": "Windows release player; three camera locations (first moves north through the center), nighttime storm; 2s warmup per location. Frame times include the configured frame cap/vSync. No screenshots during sampling. Results apply to this device and window size.",
+    "width": 1280,
+    "height": 720,
+    "processorCount": 4,
+    "systemMemoryMB": 23996,
+    "graphicsMemoryMB": 5945,
+    "targetFPS": -1,
+    "vSync": 1,
+    "frames": 1173,
+    "sampleSeconds": 24.0,
+    "medianMilliseconds": 19.40230369567871,
+    "p95Milliseconds": 28.03660011291504,
+    "worstMilliseconds": 35.32490158081055,
+    "locations": [
+        {
+            "location": "Centro / conexão Riberal",
+            "frames": 399,
+            "sceneryCached": 2765,
+            "sceneryCulled": 2664,
+            "spriteRenderers": 3132,
+            "medianMilliseconds": 18.862600326538086,
+            "p95Milliseconds": 27.635196685791016,
+            "worstMilliseconds": 35.32490158081055,
+            "visibilityEvaluationMilliseconds": 1.0687
+        },
+        {
+            "location": "Leste / galpões e comércio",
+            "frames": 400,
+            "sceneryCached": 2765,
+            "sceneryCulled": 2709,
+            "spriteRenderers": 3132,
+            "medianMilliseconds": 19.133899688720703,
+            "p95Milliseconds": 27.236799240112305,
+            "worstMilliseconds": 33.32050323486328,
+            "visibilityEvaluationMilliseconds": 1.1232
+        },
+        {
+            "location": "Sul / acesso Mocambo",
+            "frames": 374,
+            "sceneryCached": 2765,
+            "sceneryCulled": 2618,
+            "spriteRenderers": 3132,
+            "medianMilliseconds": 20.5679988861084,
+            "p95Milliseconds": 29.52969741821289,
+            "worstMilliseconds": 34.48800277709961,
+            "visibilityEvaluationMilliseconds": 1.2251
+        }
+    ]
+}

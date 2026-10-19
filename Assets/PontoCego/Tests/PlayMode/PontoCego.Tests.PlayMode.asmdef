@@ -1,0 +1,1 @@
+{"name":"PontoCego.Tests.PlayMode","references":["PontoCego.Runtime","Unity.InputSystem","Unity.Cinemachine"],"optionalUnityReferences":["TestAssemblies"]}

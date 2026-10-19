@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="3" result="Passed" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-18 20:55:27Z" end-time="2026-10-18 20:55:27Z" duration="0,0993755">
+  <test-suite type="TestSuite" id="1000" name="Ponto Cego" fullname="Ponto Cego" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-10-18 20:55:27Z" end-time="2026-10-18 20:55:27Z" duration="0.099376" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1013" name="PontoCego.Tests.EditMode.dll" fullname="D:/The Amaral Game/V 1.0/Library/ScriptAssemblies/PontoCego.Tests.EditMode.dll" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-10-18 20:55:27Z" end-time="2026-10-18 20:55:27Z" duration="0.076783" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="9652" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1014" name="PontoCego" fullname="PontoCego" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-10-18 20:55:27Z" end-time="2026-10-18 20:55:27Z" duration="0.075048" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1015" name="Tests" fullname="PontoCego.Tests" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-10-18 20:55:27Z" end-time="2026-10-18 20:55:27Z" duration="0.074635" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1001" name="MateusTests" fullname="PontoCego.Tests.MateusTests" classname="PontoCego.Tests.MateusTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-18 20:55:27Z" end-time="2026-10-18 20:55:27Z" duration="0.070462" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1004" name="AlliesCannotProvokeMateus" fullname="PontoCego.Tests.MateusTests.AlliesCannotProvokeMateus" methodname="AlliesCannotProvokeMateus" classname="PontoCego.Tests.MateusTests" runstate="Runnable" seed="1696840504" result="Passed" start-time="2026-10-18 20:55:27Z" end-time="2026-10-18 20:55:27Z" duration="0.030838" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1002" name="FirstCounterHasOnePercentChance" fullname="PontoCego.Tests.MateusTests.FirstCounterHasOnePercentChance" methodname="FirstCounterHasOnePercentChance" classname="PontoCego.Tests.MateusTests" runstate="Runnable" seed="1506483660" result="Passed" start-time="2026-10-18 20:55:27Z" end-time="2026-10-18 20:55:27Z" duration="0.001758" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1003" name="RepeatedAggressionEscalatesButIsCapped" fullname="PontoCego.Tests.MateusTests.RepeatedAggressionEscalatesButIsCapped" methodname="RepeatedAggressionEscalatesButIsCapped" classname="PontoCego.Tests.MateusTests" runstate="Runnable" seed="766461180" result="Passed" start-time="2026-10-18 20:55:27Z" end-time="2026-10-18 20:55:27Z" duration="0.007756" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: D:\The Amaral Game\V 1.0\Validation\Mateus-Tests.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

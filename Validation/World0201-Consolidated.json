@@ -1,0 +1,508 @@
+{
+  "version": "0.20.1",
+  "uniqueTests": 100,
+  "passed": 100,
+  "note": "Latest result per case; 25 targeted tests rerun after the visual revision; unchanged cases retain previous evidence. Small final render-only sign cleanup is verified by native screenshots.",
+  "cases": [
+    {
+      "case": "PontoCego.Tests.MateusTests.AlliesCannotProvokeMateus",
+      "result": "Passed",
+      "source": "World0200-Final-EditMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.MateusTests.FirstCounterHasOnePercentChance",
+      "result": "Passed",
+      "source": "World0200-Final-EditMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.MateusTests.RepeatedAggressionEscalatesButIsCapped",
+      "result": "Passed",
+      "source": "World0200-Final-EditMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.MotorTests.AnalogInputRetainsPartialMagnitude",
+      "result": "Passed",
+      "source": "World0200-Final-EditMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.MotorTests.DefaultActionsSupportGamepadAndKeyboard",
+      "result": "Passed",
+      "source": "World0200-Final-EditMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.MotorTests.DiagonalHasSameSpeedAsCardinal",
+      "result": "Passed",
+      "source": "World0200-Final-EditMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.MotorTests.DodgeDistanceIsStableAcrossFixedTimesteps",
+      "result": "Passed",
+      "source": "World0200-Final-EditMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.MotorTests.DodgeLocksDirectionAndRejectsRequestsDuringCooldown",
+      "result": "Passed",
+      "source": "World0200-Final-EditMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.MotorTests.SprintExhaustsThenRecovers",
+      "result": "Passed",
+      "source": "World0200-Final-EditMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.MotorTests.StopRemovesMomentum",
+      "result": "Passed",
+      "source": "World0200-Final-EditMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.UiAccessibilityTests.EasingIsBoundedAndMonotonic",
+      "result": "Passed",
+      "source": "World0200-Final-EditMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.UiAccessibilityTests.LargePanelsHaveSmallCornersWhileIconsAndButtonsKeepPills",
+      "result": "Passed",
+      "source": "World0200-Final-EditMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.UiAccessibilityTests.LifeAndStaminaHaveDifferentColorsInEveryPalette",
+      "result": "Passed",
+      "source": "World0200-Final-EditMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.UiAccessibilityTests.MenuAnimationUsesExplicitDeltaAndReducedMotionIsImmediate",
+      "result": "Passed",
+      "source": "World0200-Final-EditMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.UiAccessibilityTests.SmartHudKeepsCriticalInformationOpaque",
+      "result": "Passed",
+      "source": "World0200-Final-EditMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.UiAccessibilityTests.TextScaleIsBoundedForFixedInterfaceColumns",
+      "result": "Passed",
+      "source": "World0200-Final-EditMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.WeatherModelTests.ClearWeatherNeverMakesNegativeWetness",
+      "result": "Passed",
+      "source": "World0200-Final-EditMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.WeatherModelTests.PuddlesRemainAfterRainAndDryGradually",
+      "result": "Passed",
+      "source": "World0200-Final-EditMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.WeatherModelTests.RainAndWindTransitionWithoutAnAbruptJump",
+      "result": "Passed",
+      "source": "World0200-Final-EditMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.WeatherModelTests.ZeroOrInvalidTimeDoesNotCorruptWeather",
+      "result": "Passed",
+      "source": "World0200-Final-EditMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.WorldLightModelTests.SunAndMoonDirectionsStayContinuousThroughTwilight",
+      "result": "Passed",
+      "source": "World0200-Final-EditMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.WorldLightModelTests.TinyClockChangesDoNotFlipTheProjectedShadow(6.115f)",
+      "result": "Passed",
+      "source": "World0200-Final-EditMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.WorldLightModelTests.TinyClockChangesDoNotFlipTheProjectedShadow(17.885f)",
+      "result": "Passed",
+      "source": "World0200-Final-EditMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.WorldLightModelTests.TinyClockChangesDoNotFlipTheProjectedShadow(24.0f)",
+      "result": "Passed",
+      "source": "World0200-Final-EditMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.AdaptiveUiTests.LowHealthKeepsHudFullyVisible",
+      "result": "Passed",
+      "source": "World0200-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.AdaptiveUiTests.PauseHidesPhoneWithoutLosingAppOrGameplayLock",
+      "result": "Passed",
+      "source": "World0200-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.AdaptiveUiTests.PhoneAnimationContinuesWhileSimulationIsPaused",
+      "result": "Passed",
+      "source": "World0200-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.AdaptiveUiTests.PhoneDoesNotUnlockAnExistingCutscene",
+      "result": "Passed",
+      "source": "World0200-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.AmbienceVisibilityTests.AmbienceBootsWithoutExtraListenerAndPausesWithSimulation",
+      "result": "Passed",
+      "source": "World0200-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.AmbienceVisibilityTests.ClockMixHasCorrectEndpointsAndConstantPower",
+      "result": "Passed",
+      "source": "World0200-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.AmbienceVisibilityTests.CullingNeverDisablesPhysicsAndRestoresRendererState",
+      "result": "Passed",
+      "source": "World0200-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.AmbienceVisibilityTests.QuestAndCombatActorsAreExcludedFromStaticCulling",
+      "result": "Passed",
+      "source": "World0200-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.BossTests.AttackSpriteMatchesTheLockedAimDirection",
+      "result": "Passed",
+      "source": "World0200-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.BossTests.BossDemoRestoresTheFightWithoutTouchingCampaignSave",
+      "result": "Passed",
+      "source": "World0200-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.BossTests.BossHasAbilitiesAndEntersSecondPhase",
+      "result": "Passed",
+      "source": "World0200-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.BossTests.DefeatingABossDuringRecoveryDoesNotFreezeItsDeathAnimation",
+      "result": "Passed",
+      "source": "World0200-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.BossTests.FlashStunCancelsTheBossWindupAndGroundWarnings",
+      "result": "Passed",
+      "source": "World0200-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.BossTests.RepeatedFlashCannotPermanentlyStunABoss",
+      "result": "Passed",
+      "source": "World0200-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.BossTests.ThirdMeleeHitIsAStrongerFinisher",
+      "result": "Passed",
+      "source": "World0200-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.BossTests.WarningCannotDamageThroughWalls",
+      "result": "Passed",
+      "source": "World0200-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.BossTests.WarningWaitsBeforeDamageAndPausesDuringDialogue",
+      "result": "Passed",
+      "source": "World0200-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.CampaignFlowTests.CampaignCanProgressFromKidnappingToEnding",
+      "result": "Passed",
+      "source": "World0200-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.ChaseMusicTests.UserTrackLoopsPausesAndFadesOutWithChase",
+      "result": "Passed",
+      "source": "World0200-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.CitySceneryTests.BuildingsKeepStreetsClearAndMapFootprintsMatch",
+      "result": "Passed",
+      "source": "World0201-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.CitySceneryTests.CursorSupportsPhonePauseDeathAndReturnToMenu",
+      "result": "Passed",
+      "source": "World0201-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.CityTrafficTests.TrafficBrakesForPedestrianAndResumesWhenLaneClears",
+      "result": "Passed",
+      "source": "World0200-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.CombatTests.BulletsStopAtWallsAndDamageWithoutWall",
+      "result": "Passed",
+      "source": "World0200-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.CombatTests.DeathLocksPlayerAndMedkitsHealOnlyWhenNeeded",
+      "result": "Passed",
+      "source": "World0200-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.CombatTests.EveryCampaignPhaseHasReachableObjectivesAndSafeSpawn",
+      "result": "Passed",
+      "source": "World0200-Final-Retry.xml"
+    },
+    {
+      "case": "PontoCego.Tests.CombatTests.HealthFiltersFriendlyDamageAndDeathFiresOnce",
+      "result": "Passed",
+      "source": "World0200-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.CombatTests.PlayerMeleeDamagesAndStunsEnemy",
+      "result": "Passed",
+      "source": "World0200-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.CombatTests.StaminaIsHiddenUntilUsedAndHidesAfterRecovery",
+      "result": "Passed",
+      "source": "World0200-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.ContinuousWorldTests.EveryDistrictEntranceConnectsToTheCityThroughRealCollisions",
+      "result": "Passed",
+      "source": "World0201-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.ContinuousWorldTests.EveryMissionKeepsReachableObjectivesInItsWorldDistrict",
+      "result": "Passed",
+      "source": "World0201-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.ContinuousWorldTests.NorthernDistrictsCannotSortThePlayerBehindTheMap",
+      "result": "Passed",
+      "source": "World0201-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.ContinuousWorldTests.PhysicalTriggerKeepsTheSamePlayerCameraAndLoadedScene",
+      "result": "Passed",
+      "source": "World0201-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.ContinuousWorldTests.ReplayingAMissionRecreatesItsActorsWithoutDuplicatingTheWorld",
+      "result": "Passed",
+      "source": "World0201-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.ContinuousWorldTests.WorldCoordinatesAndMissionStepAreSavedSeparately",
+      "result": "Passed",
+      "source": "World0201-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.LandscapeIntegrationTests.SixLandmarksConnectToTheSameWorldAndRewardOnlyOnce",
+      "result": "Passed",
+      "source": "World0201-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.MenuMusicTests.MenuUsesSuppliedTrackAndHasOneListener",
+      "result": "Passed",
+      "source": "World0200-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.MocamboTests.ParkHasReadableSignAndReachableMissionPoints",
+      "result": "Passed",
+      "source": "World0200-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.MocamboTests.PivoThrowsBallsThenEntersSecondPhase",
+      "result": "Passed",
+      "source": "World0200-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.NeighborhoodTests.CarsDriveAndAllowSafeExitAmongPedestrians",
+      "result": "Passed",
+      "source": "World0200-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.NeighborhoodTests.DeliveryRewardsOnlyOnceAndResourcesRequirePurchase",
+      "result": "Passed",
+      "source": "World0200-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.NeighborhoodTests.MainMissionReturnsToNeighborhoodWithoutSkippingProgress",
+      "result": "Passed",
+      "source": "World0200-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.NeighborhoodTests.UberListsInstalledPhasesAndPreservesEquipmentDuringTravel",
+      "result": "Passed",
+      "source": "World0200-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.NewContentTests.AllMissionsContainPcPartsAndWorkbenchRequiresSixTypes",
+      "result": "Passed",
+      "source": "World0200-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.NewContentTests.FleetAndCitizensUseSuppliedReferences",
+      "result": "Passed",
+      "source": "World0200-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.NewContentTests.HudReflectsRealDamageAndSprintDoesNotConsumeHealth",
+      "result": "Passed",
+      "source": "World0200-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.NewContentTests.PauloGateRequiresAssemblyAndBossesHaveCorrectPhaseCounts",
+      "result": "Passed",
+      "source": "World0200-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.NewContentTests.TaxiHonorsTenSecondsAndActuallyArrives",
+      "result": "Passed",
+      "source": "World0200-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.RebuiltCityTests.InteriorRevealsWithoutChangingPlayerCameraOrPhysics",
+      "result": "Passed",
+      "source": "World0201-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.RebuiltCityTests.MainOutdoorBackdropsAreReplacedAndPedestrianRoutesAvoidStaticWalls",
+      "result": "Passed",
+      "source": "World0201-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.ReleaseRepairTests.GoldenRewardsRequireThreeErrandsAndReturn",
+      "result": "Passed",
+      "source": "World0201-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.ReleaseRepairTests.InteractionInputActuallyCollectsHiddenPart",
+      "result": "Passed",
+      "source": "World0201-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.ReleaseRepairTests.PersistentPartsAreAccessibleAndSixTypesExist",
+      "result": "Passed",
+      "source": "World0201-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.ReleaseRepairTests.TaxiBoardsDrivesWholeRouteAndDisembarks",
+      "result": "Passed",
+      "source": "World0201-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.ReleaseRepairTests.TaxiUsesGrayPeugeotAndCleanCivilianFrames",
+      "result": "Passed",
+      "source": "World0201-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.RoadNetworkTests.CanonicalGraphHasNoDuplicateEdgesOrInteriorCollinearOverlaps",
+      "result": "Passed",
+      "source": "World0201-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.RoadNetworkTests.SidewalkSurfacesNeverCrossAnyAsphaltLane",
+      "result": "Passed",
+      "source": "World0201-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.SceneTests.CameraAndAuthoredSpritesAreAssigned",
+      "result": "Passed",
+      "source": "World0200-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.SceneTests.DialogueLocksMovementUntilDismissed",
+      "result": "Passed",
+      "source": "World0200-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.SceneTests.DodgeCannotTunnelThroughPaintedDeskCollision",
+      "result": "Passed",
+      "source": "World0200-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.SceneTests.EveryOfficeObjectiveIsReachableAroundFurniture",
+      "result": "Passed",
+      "source": "World0200-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.SceneTests.GamepadMovesAndAimsIndependently",
+      "result": "Passed",
+      "source": "World0200-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.SceneTests.InteractionCannotReachThroughWalls",
+      "result": "Passed",
+      "source": "World0200-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.SceneTests.PaintedMapKeepsItsOriginalAspectAndCollisionScale",
+      "result": "Passed",
+      "source": "World0200-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.SceneTests.PhotographyRequiresClearLineOfSight",
+      "result": "Passed",
+      "source": "World0200-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.SceneTests.PrologueFollowsClockBossColleaguesAndLens",
+      "result": "Passed",
+      "source": "World0200-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.SceneTests.RealRigidbodyMovesAndStops",
+      "result": "Passed",
+      "source": "World0200-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.WeatherSceneTests.StormOutsideRendersRainAbovePlayer",
+      "result": "Passed",
+      "source": "World0200-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.WeatherSceneTests.WeatherKnowsRoofsAndStopsDrawingInTheMenu",
+      "result": "Passed",
+      "source": "World0200-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.WeatherSceneTests.WeatherPoolIsBoundedAndNeverAddsPhysicsObstacles",
+      "result": "Passed",
+      "source": "World0200-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.WorldStoryProgressTests.StoryObjectivesCanReachEndingInsideOneWorld",
+      "result": "Passed",
+      "source": "World0201-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.GroundContactTests.ProjectedCharacterShadowStaysAttachedToTheFootContact",
+      "result": "Passed",
+      "source": "World0201-Final-Retry.xml"
+    },
+    {
+      "case": "PontoCego.Tests.GroundContactTests.StreetBenchesHaveGroundedFeetAndVisibleLampFixtures",
+      "result": "Passed",
+      "source": "World0201-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.MateusHideoutTests.HiddenMateusUsesFourCleanPosesAndFixedFeet",
+      "result": "Passed",
+      "source": "World0201-Final-Retry.xml"
+    },
+    {
+      "case": "PontoCego.Tests.MateusHideoutTests.HideoutPathAndStashRemainAccessible",
+      "result": "Passed",
+      "source": "World0201-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.MateusHideoutTests.QuestNavigationUsesTheSameHideoutAndRewardCoordinates",
+      "result": "Passed",
+      "source": "World0201-Final-PlayMode.xml"
+    },
+    {
+      "case": "PontoCego.Tests.WorkshopArtTests.WorkshopUsesNewArtWithinItsExistingFootprint",
+      "result": "Passed",
+      "source": "World0201-Final-PlayMode.xml"
+    }
+  ]
+}

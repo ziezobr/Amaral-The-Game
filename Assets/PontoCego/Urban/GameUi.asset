@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcea23ba00feb224391e922440d44e2b, type: 3}
+  m_Name: GameUi
+  m_EditorClassIdentifier: PontoCego.Runtime::PontoCego.GameUiArt
+  icons:
+  - {fileID: 9222752019998260854, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: -7390381823001234606, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: -6752945803579090584, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: -1640942514344237005, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: 7619983194739815347, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: -1128800829465466182, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: -4273103665549084381, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: 9105195318430054098, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: -4229538119496616937, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: 4798283468487873123, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: -7950446742265353694, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: -3525075456146490223, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: -7432214710812093552, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: -3697158039735345738, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: -140799864373401417, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: -868318170937240612, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  caramelo: {fileID: 2215066555759387619, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  mainMenu: {fileID: 2800000, guid: 37d7f8621375cb1439e944027c499044, type: 3}
+  phone: {fileID: 2800000, guid: 8067bf5da7a61544786ae90e77a668a8, type: 3}
+  uber: {fileID: 2800000, guid: c4c64e1ff334e9d40857e5f6ff166415, type: 3}
