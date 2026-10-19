@@ -10,7 +10,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   import:
-    if: github.repository == 'ziezobr/Amaral-The-Game'
+    if: github.repository == 'ziezobr/Amaral-The-Game' && (github.event_name == 'workflow_dispatch' || github.event.release.tag_name == 'v0.20.1')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -43,4 +43,13 @@ jobs:
           if ! git diff --cached --quiet; then
             git commit -m "Importar projeto Unity completo da demo 0.20.1"
             git push origin HEAD:main
+          fi
+      - name: Associar a tag da demo ao projeto completo
+        shell: bash
+        run: |
+          previous_tag="$(git ls-remote origin refs/tags/v0.20.1 | cut -f1)"
+          if [ -n "$previous_tag" ]; then
+            git push "--force-with-lease=refs/tags/v0.20.1:$previous_tag" origin HEAD:refs/tags/v0.20.1
+          else
+            git push origin HEAD:refs/tags/v0.20.1
           fi
