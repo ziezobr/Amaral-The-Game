@@ -4,10 +4,9 @@ Demo 2D para Windows, ambientada em Patos de Minas e desenvolvida na Unity 6.
 
 ## Baixar e jogar
 
-- [Instalador Windows 64 bits — versão 0.20.1](https://github.com/ziezobr/Amaral-The-Game/releases/download/v0.20.1/Amaral-The-Game-0.20.1-Windows-Setup.exe)
-- [Todas as opções de download e notas da versão](https://github.com/ziezobr/Amaral-The-Game/releases/tag/v0.20.1)
+**Publicação dos downloads pendente.** O instalador 0.20.1 foi compilado e testado localmente, mas ainda não foi anexado a uma release. Nenhum link de download está disponível no GitHub neste momento.
 
-Execute o instalador e abra **Amaral The Game** no menu Iniciar. A edição portátil também está disponível: extraia o ZIP inteiro e execute `PontoCego.exe`. Não é necessário instalar a Unity para jogar. O instalador não possui certificado de assinatura de código.
+No computador de desenvolvimento, os pacotes estão em `D:\The Amaral Game\V 1.0\Builds\Distribution`. O instalador é `Amaral-The-Game-0.20.1-Windows-Setup.exe`.
 
 ## Controles
 
