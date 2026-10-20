@@ -1,4 +1,4 @@
-name: Publicar demo Windows 0.20.1
+name: Publicar demo Windows 0.24.0
 on:
   workflow_dispatch:
   push:
@@ -7,7 +7,7 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: publish-demo-0201
+  group: publish-demo-0240
   cancel-in-progress: false
 jobs:
   publish:
@@ -27,7 +27,7 @@ jobs:
         run: |
           import json, os, pathlib
           data=json.loads(pathlib.Path('Packaging/distribution-manifest.json').read_text())
-          assert data['version']=='0.20.1'
+          assert data['version']=='0.24.0'
           with open(os.environ['GITHUB_OUTPUT'],'a') as f:
               f.write('commit='+data['stagingCommit']+'\n')
       - uses: actions/checkout@v4
@@ -64,7 +64,7 @@ jobs:
         run: |
           import pathlib,zipfile
           root=pathlib.Path.cwd().resolve()
-          with zipfile.ZipFile('_release_output/Amaral-The-Game-0.20.1-Unity-Source.zip') as z:
+          with zipfile.ZipFile('_release_output/Amaral-The-Game-0.24.0-Unity-Source.zip') as z:
               for info in z.infolist():
                   path=pathlib.PurePosixPath(info.filename)
                   assert not path.is_absolute() and '..' not in path.parts and '.github' not in path.parts
@@ -77,46 +77,52 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add Assets Packages ProjectSettings Packaging Design Validation README.md .gitignore '*.md'
           if ! git diff --cached --quiet; then
-            git commit -m "Publicar projeto Unity completo da demo 0.20.1"
+            git commit -m "Publicar projeto Unity completo da demo 0.24.0"
             git push origin HEAD:main
           fi
       - name: Preparar notas da demo
         shell: python
         run: |
           from pathlib import Path
-          Path('_release_output/NOTES.md').write_text("""## Jogar no Windows
-          Baixe **Amaral-The-Game-0.20.1-Windows-Setup.exe**, execute e abra Amaral The Game no menu Iniciar.
-          A versao portatil funciona extraindo todo o ZIP e executando PontoCego.exe.
-          
-          ## Demo 2D
-          Cidade conectada de Patos de Minas, missoes, combate, transporte com Higor, ciclo dia/noite e clima.
-          Riberal, oficina, Mocambo, ferro-velho e esconderijo de Mateus receberam revisao visual.
-          
-          ## Validacao
-          Build Windows Release, instalacao e desinstalacao testadas. Os 218 arquivos instalados conferem por SHA-256.
-          O jogo instalado executou e gerou sete capturas de revisao visual sem excecoes no log.
-          O conjunto consolidado da demo registra 100 verificacoes distintas aprovadas; 25 foram repetidas apos a revisao visual.
-          Esta e uma demo em desenvolvimento, sem promessa de cinco horas de campanha. Instalador sem assinatura digital.
-          
-          ## Fontes e integridade
-          Projeto completo no repositorio e em Unity-Source.zip, para Unity 6000.6.6f1.
-          Os tres pacotes foram reconstruidos e conferidos por SHA-256 antes da publicacao.
+          Path('_release_output/NOTES.md').write_text("""## Demo 2D 0.24.0 para Windows
+          Instalador e ZIP portátil anexados. Extraia o ZIP inteiro para jogar sem instalar.
+
+          ## Novidades
+          Dificuldade História, Normal e Difícil antes de começar, com balanceamento salvo.
+          Introduções de missão no cenário, puláveis com E. Três trabalhos de bairro pelo celular.
+          Carros da rua dirigíveis. Trânsito cede passagem ao Uber em encontro frontal.
+          Mapa ampliado com waypoint e destino personalizado no Uber; embarque e viagem físicos.
+          Scroll alterna câmera preta, câmera rosa desbloqueada e mãos. Clique esquerdo usa a seleção.
+          Amaral tem 24 poses novas segurando a câmera rosa, sem câmera flutuando.
+
+          ## Atualizador
+          O menu consulta as próximas releases, verifica SHA-256 e aplica a versão portátil com reinício.
+          A opção automática pode ser adiada/desativada. Os saves são preservados fora da instalação.
+          O auxiliar Windows mantém cópia dos arquivos anteriores para recuperação.
+
+          ## Verificação
+          70 testes de edição e 22 de execução aprovados, mais verificações adicionais dos contratos e Uber.
+          Revisão nativa 1080p de dificuldade, sprites, cutscene, mapa e Uber sem exceções no log.
+          O auxiliar de atualização foi exercitado com cópia e backup em uma instalação de teste.
+          Demo em desenvolvimento. Instalador sem assinatura digital.
+
+          Projeto Unity completo e SHA256SUMS.txt anexados.
           """,encoding='utf-8')
       - name: Enviar arquivos e publicar a release
         shell: bash
         run: |
-          if gh release view v0.20.1 >/dev/null 2>&1; then
+          if gh release view v0.24.0 >/dev/null 2>&1; then
             echo "A release ja existe; recusando sobrescrever uma publicacao existente."
             exit 1
           fi
-          gh release create v0.20.1 --draft --target "$(git rev-parse HEAD)" --title "Amaral The Game — Demo 0.20.1 para Windows" --notes-file _release_output/NOTES.md
-          gh release upload v0.20.1 _release_output/*.exe _release_output/*.zip _release_output/SHA256SUMS.txt
-          gh release edit v0.20.1 --draft=false
+          gh release create v0.24.0 --draft --target "$(git rev-parse HEAD)" --title "Amaral The Game — Demo 0.24.0 para Windows" --notes-file _release_output/NOTES.md
+          gh release upload v0.24.0 _release_output/*.exe _release_output/*.zip _release_output/SHA256SUMS.txt
+          gh release edit v0.24.0 --draft=false
       - name: Confirmar anexos publicados
         shell: python
         run: |
           import json,pathlib,subprocess
-          release=json.loads(subprocess.check_output(['gh','api','repos/ziezobr/Amaral-The-Game/releases/tags/v0.20.1']))
+          release=json.loads(subprocess.check_output(['gh','api','repos/ziezobr/Amaral-The-Game/releases/tags/v0.24.0']))
           assert not release['draft']
           files=json.loads(pathlib.Path('Packaging/distribution-manifest.json').read_text())['files']
           assets={a['name']:a for a in release['assets']}
@@ -129,4 +135,5 @@ jobs:
           print('PUBLICACAO_VERIFICADA: '+release['html_url'])
       - name: Remover somente a branch temporaria de envio
         shell: bash
-        run: git push origin --delete release-upload-0201
+        run: git push origin --delete release-upload-0240
+
