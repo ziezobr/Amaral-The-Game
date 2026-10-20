@@ -25,6 +25,7 @@ namespace PontoCego
         void Awake(){Instance=this;for(int layer=0;layer<32;layer++)Physics2D.IgnoreLayerCollision(11,layer,true);var confiner=FindAnyObjectByType<CinemachineConfiner2D>();if(confiner&&confiner.BoundingShape2D)confiner.BoundingShape2D.isTrigger=true;}
         void Start()
         {
+            if(!GetComponent<CityContracts>())gameObject.AddComponent<CityContracts>();
             player=FindAnyObjectByType<PlayerMotor>();input=player.GetComponent<PlayerInputReader>();navigation=FindAnyObjectByType<GridNavigator>();
             foreach(var m in missions){m.actors.SetActive(false);m.template=m.actors;m.templateLevel=m.level;}
             Destination=string.IsNullOrEmpty(GameSession.Current.worldDestination)?GameSession.Current.mainMission:GameSession.Current.worldDestination;
@@ -45,6 +46,7 @@ namespace PontoCego
         public bool TryBegin(string id)
         {
             if(TaxiService.Instance&&TaxiService.Instance.TripActive)return false;
+            var gps=FindAnyObjectByType<CityNavigation>();if(gps&&(gps.FollowMateus||gps.FollowWaypoint||gps.FollowContract))return false;
             if(Transitioning||Active!=null||!player||input.Paused||input.GameplayLocked)return false;
             if(requireExit){if(Vector2.Distance(player.transform.position,completedGate)<2)return false;requireExit=false;}
             var mission=Find(id);if(mission==null||!mission.trigger.gameObject.activeSelf||Vector2.Distance(player.transform.position,mission.entry)>mission.trigger.radius+.35f)return false;
@@ -61,11 +63,11 @@ namespace PontoCego
             navigation.SetArea(mission.center,mission.size+Vector2.one*8);
             if(resume&&!GameSession.Current.worldPositionValid)SetPosition(mission.entry);
             if(mission.road){var road=player.gameObject.AddComponent<RoadDriver>();road.ridingSprites=GetComponent<WorldRoadAssets>().riding;road.worldCenter=mission.center;road.cruiseSpeed=3;player.gameObject.AddComponent<RoadChase>();}
-            RefreshTriggers();Transitioning=false;SaveCheckpoint(mission.level);
+            RefreshTriggers();Transitioning=false;SaveCheckpoint(mission.level);if(!resume||step==0){var intro=GetComponent<MissionIntro2D>();if(!intro)intro=gameObject.AddComponent<MissionIntro2D>();intro.Begin(mission);}
         }
         public void Complete(string next)
         {
-            if(Active==null||Transitioning)return;Transitioning=true;
+            if(Active==null||Transitioning)return;GetComponent<MissionIntro2D>()?.Finish();Transitioning=true;
             if(player.TryGetComponent<RoadDriver>(out var road)){road.RestoreWalking();Destroy(road);}
             if(Active.id=="21_Adryan"){foreach(var follower in Active.actors.GetComponentsInChildren<CivilianFollower>(true))follower.transform.SetParent(null,true);if(!GameSession.Current.collected.Contains("story:adryan-rescued"))GameSession.Current.collected.Add("story:adryan-rescued");}
             bool side=Active.id=="24_Mocambo";completedGate=Active.entry;requireExit=true;
@@ -84,6 +86,7 @@ namespace PontoCego
             if(id=="25_Bairro"||id==SceneName){Destination="";GameSession.Current.worldDestination="";return true;}
             var mission=Find(id);if(mission==null)return false;
             if(Active!=null){player.GetComponent<Interaction>().Say("Conclua a missão atual antes de marcar outro destino.");return false;}
+            var gps=FindAnyObjectByType<CityNavigation>();if(gps){gps.FollowMateus=false;gps.FollowWaypoint=false;gps.FollowContract=false;}
             Destination=id;GameSession.Current.worldDestination=id;RefreshTriggers();UpdateObjective();GameSession.Save();
             player.GetComponent<Interaction>().Say("Rota marcada. Vá a pé ou de carro até "+mission.level.title+".");return true;
         }
@@ -94,7 +97,7 @@ namespace PontoCego
         void UpdateObjective()
         {
             if(Active!=null)return;var target=Find(Destination);if(target==null)target=Find(GameSession.Current.mainMission);
-            exploration.objectives=new[]{target==null?"Explore Patos de Minas. Procure o Henzo ou escolha um destino no Uber.":"Vá até "+target.level.title+". A missão começa ao alcançar a marca no chão."};
+            exploration.objectives=new[]{target==null?"Explore Patos de Minas. Procure o Henzo ou escolha um destino no Uber.":"Vá até "+target.level.title+". A missão começa na entrada sinalizada."};
             exploration.objectiveTargets=target==null?Array.Empty<Transform>():new[]{target.trigger.transform};
         }
         void Update()

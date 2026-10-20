@@ -11,4 +11,3 @@
 - O instalador do jogo não é assinado digitalmente.
 
 Logs locais: Logs/github-release-build.log, Logs/installer-test.log e Logs/installed0201-player.log.
-

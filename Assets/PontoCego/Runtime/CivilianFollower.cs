@@ -20,6 +20,6 @@ namespace PontoCego
             }
             body.linearVelocity=Vector2.MoveTowards(body.linearVelocity,dir*(delta.magnitude>4?5.5f:4),35*Time.fixedDeltaTime);
         }
-        void LateUpdate(){if(visual){visual.sortingOrder=WorldSort.At(transform.position.y);if(body.linearVelocity.x<-.3f)visual.flipX=true;else if(body.linearVelocity.x>.3f)visual.flipX=false;}}
+        void LateUpdate(){if(visual){visual.sortingOrder=WorldSort.At(transform.position.y);if(!GetComponent<ReferenceActorAnimation>()){if(body.linearVelocity.x<-.3f)visual.flipX=true;else if(body.linearVelocity.x>.3f)visual.flipX=false;}}}
     }
 }

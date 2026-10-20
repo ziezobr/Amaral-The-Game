@@ -25,6 +25,7 @@ namespace PontoCego
         IEnumerator Start()
         {
             Directory.CreateDirectory(folder);
+            if(Array.IndexOf(Environment.GetCommandLineArgs(),"--polish-review")>=0){yield return Polish021Review.Run(folder);Application.Quit();yield break;}
             if(Array.IndexOf(Environment.GetCommandLineArgs(),"--quick-art-review")>=0)
             {
                 GameSession.ExploreNeighborhood("01_Riberal");yield return new WaitForSeconds(2);

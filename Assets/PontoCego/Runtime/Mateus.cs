@@ -25,7 +25,6 @@ namespace PontoCego
         void Update()
         {
             if(!player)player=FindAnyObjectByType<PlayerMotor>();if(!player)return;
-            if(cameraIcon&&GameSession.Current.collected.Contains("weapon:xuxa")){var aim=player.GetComponent<PlayerAim>();if(aim&&aim.cameraProp){var cameraSprite=aim.cameraProp.GetComponent<SpriteRenderer>();if(cameraSprite){cameraSprite.sprite=cameraIcon;cameraSprite.color=Color.white;cameraSprite.transform.localScale=Vector3.one*(.45f/cameraIcon.bounds.size.y);}}}
             var input=player.GetComponent<PlayerInputReader>();if(input.Paused||input.GameplayLocked){if(strikeAt>=0)strikeAt+=Time.deltaTime;calmAt+=Time.deltaTime;return;}
             if(strikeAt>=0&&Time.time>=strikeAt)
             {
@@ -45,6 +44,6 @@ namespace PontoCego
         }
         void OnGUI(){if(!player)return;var input=player.GetComponent<PlayerInputReader>();if(input.Paused||input.GameplayLocked)return;if(Vector2.Distance(player.transform.position,transform.position)<2)CollectibleCover.Hint(transform.position,Prompt);}
         public void Interact(){if(Time.time<calmAt)return;GetComponent<GoldenWeaponQuest>()?.Talk();
-            if(!GameSession.Current.collected.Contains("weapon:xuxa")){GameSession.Current.collected.Add("weapon:xuxa");GameSession.Save();var aim=FindAnyObjectByType<PlayerAim>();if(aim&&cameraIcon){var sr=aim.cameraProp.GetComponent<SpriteRenderer>();if(sr)sr.sprite=cameraIcon;}FindAnyObjectByType<Interaction>()?.Say("Mateus: Câmera da Xuxa equipada! Cada flash tira 10% da vida máxima de inimigos no enquadramento.");return;}}
+            if(!GameSession.Current.collected.Contains("weapon:xuxa")){GameSession.Current.collected.Add("weapon:xuxa");GameSession.Save();var equipment=FindAnyObjectByType<PlayerEquipment2D>();if(equipment){equipment.pinkIcon=cameraIcon;equipment.Select(PlayerEquipment.PinkCamera);}FindAnyObjectByType<Interaction>()?.Say("Mateus: Câmera da Xuxa equipada! Cada flash tira 10% da vida máxima de inimigos no enquadramento.");return;}}
     }
 }

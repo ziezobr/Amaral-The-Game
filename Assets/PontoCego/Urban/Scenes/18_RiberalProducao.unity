@@ -223,7 +223,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1000
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -1321754720341685604, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  m_Sprite: {fileID: 5986911403898678926, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -463,6 +463,9 @@ GameObject:
   - component: {fileID: 84739468}
   - component: {fileID: 84739467}
   - component: {fileID: 84739466}
+  - component: {fileID: 84739471}
+  - component: {fileID: 84739473}
+  - component: {fileID: 84739472}
   m_Layer: 12
   m_Name: Inimigo / Elite / 18_RiberalProducao:wave:3:2
   m_TagString: Untagged
@@ -482,7 +485,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cda83f01d78860640b348af29b1510bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: PontoCego.Runtime::PontoCego.EnemyAgent
-  role: 2
+  role: 1
   speed: 2.4
   damage: 14
   attackInterval: 0.85
@@ -490,10 +493,10 @@ MonoBehaviour:
   visual: {fileID: 787329927}
   projectileSprite: {fileID: -4134895763890451319, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
   poses:
-  - {fileID: -7880008318611555667, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
-  - {fileID: -7624753645143877276, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
-  - {fileID: -8466814997099739613, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
-  - {fileID: 3386580563265309033, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: -7322620875916320343, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 1133925507558144187, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -5278640393704602400, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 444083009773182341, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
   rewardId: 18_RiberalProducao:wave:3:2
   cashReward: 14
   startAlerted: 1
@@ -592,6 +595,50 @@ Transform:
   - {fileID: 879910461}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &84739471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84739465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c0dbdc76a8a6c944bcd810d28e74443, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PontoCego.Runtime::PontoCego.ActorSecondaryMotion2D
+  visual: {fileID: 787329927}
+--- !u!114 &84739472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84739465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e70970fb83c46b5409e9ac2991aae502, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PontoCego.Runtime::PontoCego.CommonEnemyFoodDrop
+  foodSprites:
+  - {fileID: 7555298463983758642, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: 449660712216926060, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: 5569918699899371568, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: -8731412275905841515, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: 872458556539435902, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+--- !u!114 &84739473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84739465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0fdedf95f95874ba1f84f1985925f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PontoCego.Runtime::PontoCego.EnemyVariety
+  archetype: 4
 --- !u!1 &91747937
 GameObject:
   m_ObjectHideFlags: 0
@@ -2602,6 +2649,9 @@ GameObject:
   - component: {fileID: 543253846}
   - component: {fileID: 543253845}
   - component: {fileID: 543253844}
+  - component: {fileID: 543253849}
+  - component: {fileID: 543253851}
+  - component: {fileID: 543253850}
   m_Layer: 12
   m_Name: Inimigo / Gunner / 18_RiberalProducao:wave:3:3
   m_TagString: Untagged
@@ -2621,7 +2671,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cda83f01d78860640b348af29b1510bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: PontoCego.Runtime::PontoCego.EnemyAgent
-  role: 1
+  role: 0
   speed: 2.4
   damage: 10
   attackInterval: 1.2
@@ -2629,10 +2679,10 @@ MonoBehaviour:
   visual: {fileID: 2012065051}
   projectileSprite: {fileID: -4134895763890451319, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
   poses:
-  - {fileID: 8633647626906969222, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
-  - {fileID: 6394818742293131621, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
-  - {fileID: 5665608680773189648, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
-  - {fileID: 3772179023737584778, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: -7236527725130917339, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 6047712810485561215, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 5053937613976409290, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 4664679178248355159, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
   rewardId: 18_RiberalProducao:wave:3:3
   cashReward: 14
   startAlerted: 1
@@ -2731,6 +2781,50 @@ Transform:
   - {fileID: 684190377}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &543253849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543253843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c0dbdc76a8a6c944bcd810d28e74443, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PontoCego.Runtime::PontoCego.ActorSecondaryMotion2D
+  visual: {fileID: 2012065051}
+--- !u!114 &543253850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543253843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e70970fb83c46b5409e9ac2991aae502, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PontoCego.Runtime::PontoCego.CommonEnemyFoodDrop
+  foodSprites:
+  - {fileID: 7555298463983758642, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: 449660712216926060, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: 5569918699899371568, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: -8731412275905841515, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: 872458556539435902, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+--- !u!114 &543253851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543253843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0fdedf95f95874ba1f84f1985925f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PontoCego.Runtime::PontoCego.EnemyVariety
+  archetype: 0
 --- !u!1 &564741160
 GameObject:
   m_ObjectHideFlags: 0
@@ -2822,6 +2916,9 @@ GameObject:
   - component: {fileID: 595030195}
   - component: {fileID: 595030194}
   - component: {fileID: 595030193}
+  - component: {fileID: 595030198}
+  - component: {fileID: 595030200}
+  - component: {fileID: 595030199}
   m_Layer: 12
   m_Name: Inimigo / Heavy / 18_RiberalProducao:wave:3:1
   m_TagString: Untagged
@@ -2849,10 +2946,10 @@ MonoBehaviour:
   visual: {fileID: 1312495643}
   projectileSprite: {fileID: -4134895763890451319, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
   poses:
-  - {fileID: 5757350333099194534, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
-  - {fileID: 5286393167165582356, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
-  - {fileID: -3157907793616755504, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
-  - {fileID: -969664797710945533, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: -7487484209621789899, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 3156367839915414121, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 4613809100071005162, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 7625832111383730076, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
   rewardId: 18_RiberalProducao:wave:3:1
   cashReward: 14
   startAlerted: 1
@@ -2951,6 +3048,50 @@ Transform:
   - {fileID: 227140569}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &595030198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595030192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c0dbdc76a8a6c944bcd810d28e74443, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PontoCego.Runtime::PontoCego.ActorSecondaryMotion2D
+  visual: {fileID: 1312495643}
+--- !u!114 &595030199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595030192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e70970fb83c46b5409e9ac2991aae502, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PontoCego.Runtime::PontoCego.CommonEnemyFoodDrop
+  foodSprites:
+  - {fileID: 7555298463983758642, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: 449660712216926060, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: 5569918699899371568, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: -8731412275905841515, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: 872458556539435902, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+--- !u!114 &595030200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595030192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0fdedf95f95874ba1f84f1985925f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PontoCego.Runtime::PontoCego.EnemyVariety
+  archetype: 5
 --- !u!1 &622228715
 GameObject:
   m_ObjectHideFlags: 0
@@ -3176,6 +3317,8 @@ GameObject:
   - component: {fileID: 638783858}
   - component: {fileID: 638783857}
   - component: {fileID: 638783856}
+  - component: {fileID: 638783862}
+  - component: {fileID: 638783861}
   m_Layer: 13
   m_Name: "Ribeiro \u2022 companheiro"
   m_TagString: Untagged
@@ -3300,6 +3443,117 @@ Transform:
   - {fileID: 154272161}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &638783861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 638783855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c0dbdc76a8a6c944bcd810d28e74443, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PontoCego.Runtime::PontoCego.ActorSecondaryMotion2D
+  visual: {fileID: 1974764438}
+--- !u!114 &638783862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 638783855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 190daf5c0eb8d1e4db6d2369fb6ac68c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PontoCego.Runtime::PontoCego.ReferenceActorAnimation
+  visual: {fileID: 1974764438}
+  idle:
+  - {fileID: -5016610701301639339, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 3898614463419767017, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 3371311259254717834, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -459033143241563916, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 6810268369567967270, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 4602921292746358926, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -5499151376190655629, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 8898556248742939377, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  walk:
+  - {fileID: -4914237888205686733, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -1831104613172939207, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -6934568625344560134, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -7920574814901277256, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 6407278901344260078, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 6738587043553028089, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 7101480745571031589, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 2417484092481865783, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 2725889817975409905, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 9042298335431835083, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -7545286812875740710, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 669097490049412810, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -2935903422110495109, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 8203429068161623856, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 7305202694784922606, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -634687970187813962, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -7937670828028897484, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 2203266573269835806, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 5352356160774363846, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -2397077580819117986, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -4655898644876604295, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 7839013505135804579, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 8541419142241009579, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 8933607370950881466, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  run:
+  - {fileID: -4914237888205686733, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -1831104613172939207, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -6934568625344560134, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -7920574814901277256, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 6407278901344260078, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 6738587043553028089, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 7101480745571031589, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 2417484092481865783, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 2725889817975409905, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 9042298335431835083, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -7545286812875740710, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 669097490049412810, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -2935903422110495109, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 8203429068161623856, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 7305202694784922606, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -634687970187813962, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -7937670828028897484, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 2203266573269835806, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 5352356160774363846, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -2397077580819117986, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -4655898644876604295, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 7839013505135804579, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 8541419142241009579, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 8933607370950881466, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  idleCycle:
+  - {fileID: -5016610701301639339, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -5016610701301639339, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -5016610701301639339, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 3898614463419767017, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 3898614463419767017, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 3898614463419767017, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 3371311259254717834, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 3371311259254717834, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 3371311259254717834, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -459033143241563916, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -459033143241563916, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -459033143241563916, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 6810268369567967270, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 6810268369567967270, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 6810268369567967270, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 4602921292746358926, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 4602921292746358926, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 4602921292746358926, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -5499151376190655629, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -5499151376190655629, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -5499151376190655629, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 8898556248742939377, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 8898556248742939377, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 8898556248742939377, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  mirroredWalkDirections: 
 --- !u!1 &684190376
 GameObject:
   m_ObjectHideFlags: 0
@@ -3697,6 +3951,9 @@ GameObject:
   - component: {fileID: 724357102}
   - component: {fileID: 724357101}
   - component: {fileID: 724357100}
+  - component: {fileID: 724357105}
+  - component: {fileID: 724357107}
+  - component: {fileID: 724357106}
   m_Layer: 12
   m_Name: Inimigo / Elite / 18_RiberalProducao:wave:3:0
   m_TagString: Untagged
@@ -3716,7 +3973,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cda83f01d78860640b348af29b1510bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: PontoCego.Runtime::PontoCego.EnemyAgent
-  role: 2
+  role: 0
   speed: 2.4
   damage: 14
   attackInterval: 0.85
@@ -3724,10 +3981,10 @@ MonoBehaviour:
   visual: {fileID: 860281039}
   projectileSprite: {fileID: -4134895763890451319, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
   poses:
-  - {fileID: -7880008318611555667, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
-  - {fileID: -7624753645143877276, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
-  - {fileID: -8466814997099739613, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
-  - {fileID: 3386580563265309033, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: -7579717953032688067, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 1099830079695589726, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -4740240823680864913, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -3172921248720394813, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
   rewardId: 18_RiberalProducao:wave:3:0
   cashReward: 14
   startAlerted: 1
@@ -3826,6 +4083,50 @@ Transform:
   - {fileID: 623635829}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &724357105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 724357099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c0dbdc76a8a6c944bcd810d28e74443, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PontoCego.Runtime::PontoCego.ActorSecondaryMotion2D
+  visual: {fileID: 860281039}
+--- !u!114 &724357106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 724357099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e70970fb83c46b5409e9ac2991aae502, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PontoCego.Runtime::PontoCego.CommonEnemyFoodDrop
+  foodSprites:
+  - {fileID: 7555298463983758642, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: 449660712216926060, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: 5569918699899371568, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: -8731412275905841515, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: 872458556539435902, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+--- !u!114 &724357107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 724357099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0fdedf95f95874ba1f84f1985925f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PontoCego.Runtime::PontoCego.EnemyVariety
+  archetype: 1
 --- !u!1 &726364131
 GameObject:
   m_ObjectHideFlags: 0
@@ -4597,7 +4898,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1000
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -7880008318611555667, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  m_Sprite: {fileID: -7322620875916320343, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4728,6 +5029,9 @@ GameObject:
   - component: {fileID: 795195526}
   - component: {fileID: 795195525}
   - component: {fileID: 795195524}
+  - component: {fileID: 795195529}
+  - component: {fileID: 795195531}
+  - component: {fileID: 795195530}
   m_Layer: 12
   m_Name: Inimigo / Gunner / 18_RiberalProducao:wave:1:3
   m_TagString: Untagged
@@ -4747,7 +5051,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cda83f01d78860640b348af29b1510bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: PontoCego.Runtime::PontoCego.EnemyAgent
-  role: 1
+  role: 3
   speed: 2.4
   damage: 10
   attackInterval: 1.2
@@ -4755,10 +5059,10 @@ MonoBehaviour:
   visual: {fileID: 1440718935}
   projectileSprite: {fileID: -4134895763890451319, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
   poses:
-  - {fileID: 8633647626906969222, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
-  - {fileID: 6394818742293131621, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
-  - {fileID: 5665608680773189648, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
-  - {fileID: 3772179023737584778, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: 2218563100242356141, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -2007704189624840970, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -7553449631008826297, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -7662432926363292210, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
   rewardId: 18_RiberalProducao:wave:1:3
   cashReward: 14
   startAlerted: 1
@@ -4857,6 +5161,50 @@ Transform:
   - {fileID: 1079877851}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &795195529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795195523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c0dbdc76a8a6c944bcd810d28e74443, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PontoCego.Runtime::PontoCego.ActorSecondaryMotion2D
+  visual: {fileID: 1440718935}
+--- !u!114 &795195530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795195523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e70970fb83c46b5409e9ac2991aae502, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PontoCego.Runtime::PontoCego.CommonEnemyFoodDrop
+  foodSprites:
+  - {fileID: 7555298463983758642, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: 449660712216926060, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: 5569918699899371568, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: -8731412275905841515, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: 872458556539435902, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+--- !u!114 &795195531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795195523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0fdedf95f95874ba1f84f1985925f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PontoCego.Runtime::PontoCego.EnemyVariety
+  archetype: 3
 --- !u!1 &860281038
 GameObject:
   m_ObjectHideFlags: 0
@@ -4923,7 +5271,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1000
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -7880008318611555667, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  m_Sprite: {fileID: -7579717953032688067, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5153,7 +5501,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1000
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 247965931792652655, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  m_Sprite: {fileID: 1577284382994176670, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6432,6 +6780,8 @@ GameObject:
   - component: {fileID: 1180869325}
   - component: {fileID: 1180869324}
   - component: {fileID: 1180869323}
+  - component: {fileID: 1180869329}
+  - component: {fileID: 1180869328}
   m_Layer: 13
   m_Name: "Cristyan \u2022 companheiro"
   m_TagString: Untagged
@@ -6556,6 +6906,117 @@ Transform:
   - {fileID: 96200586}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1180869328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180869322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c0dbdc76a8a6c944bcd810d28e74443, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PontoCego.Runtime::PontoCego.ActorSecondaryMotion2D
+  visual: {fileID: 914972278}
+--- !u!114 &1180869329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180869322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 190daf5c0eb8d1e4db6d2369fb6ac68c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PontoCego.Runtime::PontoCego.ReferenceActorAnimation
+  visual: {fileID: 914972278}
+  idle:
+  - {fileID: 1577284382994176670, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 4361768140579978382, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -2304635651876684549, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 6367774993558819273, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 3949664108343423724, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -7658495173922318243, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 2269810157257998752, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 6077748274163568809, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  walk:
+  - {fileID: 2052338115751941037, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -3341849116010227089, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 5157165730707111162, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 8104723414355292776, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -2983568012801770284, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -6754656047752502104, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 4416714291021986944, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 340501256749703003, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 5453778780763676222, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 2038311069098705027, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -5911314297653155664, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 1383320251431913358, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -4423728577069602191, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 2200803947847181572, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 6969695024713789707, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 6364940504914513406, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -3903337625780855809, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 8039999964943869826, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -5754493371872413481, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 2460019395262023753, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 2806345762277438360, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 4136878785275256458, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 7086377477722828837, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -3523396357181194797, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  run:
+  - {fileID: 2052338115751941037, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -3341849116010227089, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 5157165730707111162, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 8104723414355292776, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -2983568012801770284, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -6754656047752502104, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 4416714291021986944, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 340501256749703003, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 5453778780763676222, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 2038311069098705027, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -5911314297653155664, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 1383320251431913358, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -4423728577069602191, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 2200803947847181572, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 6969695024713789707, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 6364940504914513406, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -3903337625780855809, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 8039999964943869826, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -5754493371872413481, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 2460019395262023753, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 2806345762277438360, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 4136878785275256458, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 7086377477722828837, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -3523396357181194797, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  idleCycle:
+  - {fileID: 1577284382994176670, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 1577284382994176670, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 1577284382994176670, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 4361768140579978382, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 4361768140579978382, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 4361768140579978382, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -2304635651876684549, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -2304635651876684549, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -2304635651876684549, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 6367774993558819273, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 6367774993558819273, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 6367774993558819273, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 3949664108343423724, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 3949664108343423724, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 3949664108343423724, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -7658495173922318243, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -7658495173922318243, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -7658495173922318243, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 2269810157257998752, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 2269810157257998752, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 2269810157257998752, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 6077748274163568809, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 6077748274163568809, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 6077748274163568809, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  mirroredWalkDirections: 
 --- !u!1 &1192908632
 GameObject:
   m_ObjectHideFlags: 0
@@ -7026,7 +7487,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1000
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 5757350333099194534, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  m_Sprite: {fileID: -7487484209621789899, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -7118,7 +7579,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1000
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -7880008318611555667, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  m_Sprite: {fileID: -7579717953032688067, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -7582,7 +8043,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1000
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 8633647626906969222, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  m_Sprite: {fileID: 2218563100242356141, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -7725,6 +8186,10 @@ GameObject:
   - component: {fileID: 1514244258}
   - component: {fileID: 1514244257}
   - component: {fileID: 1514244256}
+  - component: {fileID: 1514244270}
+  - component: {fileID: 1514244269}
+  - component: {fileID: 1514244272}
+  - component: {fileID: 1514244271}
   m_Layer: 9
   m_Name: Amaral
   m_TagString: Untagged
@@ -8064,6 +8529,208 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &1514244269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1514244251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c0dbdc76a8a6c944bcd810d28e74443, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PontoCego.Runtime::PontoCego.ActorSecondaryMotion2D
+  visual: {fileID: 20812132}
+--- !u!114 &1514244270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1514244251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 190daf5c0eb8d1e4db6d2369fb6ac68c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PontoCego.Runtime::PontoCego.ReferenceActorAnimation
+  visual: {fileID: 20812132}
+  idle:
+  - {fileID: 5986911403898678926, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 3970114364488321418, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 5376218247588561195, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 5852642417430755311, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -920794817119215667, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 1428180630141506906, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -3546926628671399773, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -8900551859450035170, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  walk:
+  - {fileID: -8761062957252592870, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: 1924953062909256925, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: 2402151634130723021, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: -3811070332257721807, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: 4365862100127509276, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: 8589231969385501787, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: -8358540761656022560, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: 1942245588408582009, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: -1827033568946531642, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: 6366594031653672939, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: 460360645138637881, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: 4539167610353687372, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: 4125199488476425156, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: 1916272897548745601, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: -2362900890729375848, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: -1890700626590130980, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: 3210713329555507973, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: -8782815696409401221, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: 5548374493954080121, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: 7842018533834450972, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: 7262570348835686044, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: -6946168512339989422, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: -7024204764753521487, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: 8477795349529215584, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: 2604343531832242923, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: -1890700626590130980, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: 3210713329555507973, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: -8782815696409401221, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: 5548374493954080121, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: 7842018533834450972, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: 8616513886428136547, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: 4882194560136080048, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: -5163527323799516587, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: -4392922912524869509, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: -5672678420508880753, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: -4780044862140738589, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: -4587419747082390521, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: 2887196713142987256, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: -2014880880401816734, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: 411211328032826725, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  run:
+  - {fileID: -8761062957252592870, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: 1924953062909256925, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: 2402151634130723021, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: -3811070332257721807, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: 4365862100127509276, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: 8589231969385501787, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: -8358540761656022560, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: 1942245588408582009, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: -1827033568946531642, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: 6366594031653672939, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: 460360645138637881, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: 4539167610353687372, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: 4125199488476425156, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: 1916272897548745601, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: -2362900890729375848, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: -1890700626590130980, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: 3210713329555507973, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: -8782815696409401221, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: 5548374493954080121, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: 7842018533834450972, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: 7262570348835686044, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: -6946168512339989422, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: -7024204764753521487, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: 8477795349529215584, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: 2604343531832242923, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: -1890700626590130980, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: 3210713329555507973, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: -8782815696409401221, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: 5548374493954080121, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: 7842018533834450972, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: 8616513886428136547, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: 4882194560136080048, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: -5163527323799516587, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: -4392922912524869509, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: -5672678420508880753, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: -4780044862140738589, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: -4587419747082390521, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: 2887196713142987256, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: -2014880880401816734, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  - {fileID: 411211328032826725, guid: dc1bb1026c3f83c4eb8431aa8fc64f58, type: 2}
+  idleCycle:
+  - {fileID: 5986911403898678926, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 5986911403898678926, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 5986911403898678926, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 3970114364488321418, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 3970114364488321418, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 3970114364488321418, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 5376218247588561195, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 5376218247588561195, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 5376218247588561195, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 5852642417430755311, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 5852642417430755311, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 5852642417430755311, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -920794817119215667, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -920794817119215667, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -920794817119215667, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 1428180630141506906, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 1428180630141506906, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 1428180630141506906, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -3546926628671399773, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -3546926628671399773, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -3546926628671399773, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -8900551859450035170, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -8900551859450035170, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -8900551859450035170, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  mirroredWalkDirections: 0000000100000000y
+--- !u!114 &1514244271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1514244251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91adb5cbdd47f534cb40f67e679c189f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PontoCego.Runtime::PontoCego.PlayerEquipmentVisual2D
+--- !u!114 &1514244272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1514244251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1b482ad5df59de4dbdfaaa07388749f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PontoCego.Runtime::PontoCego.PlayerEquipment2D
+  pinkIcon: {fileID: 0}
+  pinkIdle:
+  - {fileID: -7533181842137346902, guid: ec7658de5e04e7b4eb0f763587bff7bd, type: 2}
+  - {fileID: -2579090421481770291, guid: ec7658de5e04e7b4eb0f763587bff7bd, type: 2}
+  - {fileID: -2698054623570439195, guid: ec7658de5e04e7b4eb0f763587bff7bd, type: 2}
+  - {fileID: -8242795970132819396, guid: ec7658de5e04e7b4eb0f763587bff7bd, type: 2}
+  - {fileID: 5933993699442602724, guid: ec7658de5e04e7b4eb0f763587bff7bd, type: 2}
+  - {fileID: 2896421944535534940, guid: ec7658de5e04e7b4eb0f763587bff7bd, type: 2}
+  - {fileID: 984264847965071306, guid: ec7658de5e04e7b4eb0f763587bff7bd, type: 2}
+  - {fileID: -762474165491688054, guid: ec7658de5e04e7b4eb0f763587bff7bd, type: 2}
+  pinkWalk:
+  - {fileID: -7533181842137346902, guid: ec7658de5e04e7b4eb0f763587bff7bd, type: 2}
+  - {fileID: -4468176533829785192, guid: ec7658de5e04e7b4eb0f763587bff7bd, type: 2}
+  - {fileID: -5605137178699981903, guid: ec7658de5e04e7b4eb0f763587bff7bd, type: 2}
+  - {fileID: -2579090421481770291, guid: ec7658de5e04e7b4eb0f763587bff7bd, type: 2}
+  - {fileID: 8577539736787707124, guid: ec7658de5e04e7b4eb0f763587bff7bd, type: 2}
+  - {fileID: -853637890590729532, guid: ec7658de5e04e7b4eb0f763587bff7bd, type: 2}
+  - {fileID: -2698054623570439195, guid: ec7658de5e04e7b4eb0f763587bff7bd, type: 2}
+  - {fileID: -9160797416841448770, guid: ec7658de5e04e7b4eb0f763587bff7bd, type: 2}
+  - {fileID: -1161891004580406051, guid: ec7658de5e04e7b4eb0f763587bff7bd, type: 2}
+  - {fileID: -8242795970132819396, guid: ec7658de5e04e7b4eb0f763587bff7bd, type: 2}
+  - {fileID: -7073102873013683339, guid: ec7658de5e04e7b4eb0f763587bff7bd, type: 2}
+  - {fileID: 741442027453825231, guid: ec7658de5e04e7b4eb0f763587bff7bd, type: 2}
+  - {fileID: 5933993699442602724, guid: ec7658de5e04e7b4eb0f763587bff7bd, type: 2}
+  - {fileID: 8124430982252617344, guid: ec7658de5e04e7b4eb0f763587bff7bd, type: 2}
+  - {fileID: -5733500743728769150, guid: ec7658de5e04e7b4eb0f763587bff7bd, type: 2}
+  - {fileID: 2896421944535534940, guid: ec7658de5e04e7b4eb0f763587bff7bd, type: 2}
+  - {fileID: 8954985412407213719, guid: ec7658de5e04e7b4eb0f763587bff7bd, type: 2}
+  - {fileID: -4827359717842455681, guid: ec7658de5e04e7b4eb0f763587bff7bd, type: 2}
+  - {fileID: 984264847965071306, guid: ec7658de5e04e7b4eb0f763587bff7bd, type: 2}
+  - {fileID: 9079414699676765607, guid: ec7658de5e04e7b4eb0f763587bff7bd, type: 2}
+  - {fileID: -8489277958077988970, guid: ec7658de5e04e7b4eb0f763587bff7bd, type: 2}
+  - {fileID: -762474165491688054, guid: ec7658de5e04e7b4eb0f763587bff7bd, type: 2}
+  - {fileID: -1448792043221283822, guid: ec7658de5e04e7b4eb0f763587bff7bd, type: 2}
+  - {fileID: 6816155425044709985, guid: ec7658de5e04e7b4eb0f763587bff7bd, type: 2}
 --- !u!1 &1557898840
 GameObject:
   m_ObjectHideFlags: 0
@@ -8694,6 +9361,9 @@ GameObject:
   - component: {fileID: 1763624742}
   - component: {fileID: 1763624741}
   - component: {fileID: 1763624740}
+  - component: {fileID: 1763624745}
+  - component: {fileID: 1763624747}
+  - component: {fileID: 1763624746}
   m_Layer: 12
   m_Name: Inimigo / Elite / 18_RiberalProducao:wave:1:1
   m_TagString: Untagged
@@ -8713,7 +9383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cda83f01d78860640b348af29b1510bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: PontoCego.Runtime::PontoCego.EnemyAgent
-  role: 2
+  role: 3
   speed: 2.4
   damage: 14
   attackInterval: 0.85
@@ -8721,10 +9391,10 @@ MonoBehaviour:
   visual: {fileID: 1987978550}
   projectileSprite: {fileID: -4134895763890451319, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
   poses:
-  - {fileID: -7880008318611555667, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
-  - {fileID: -7624753645143877276, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
-  - {fileID: -8466814997099739613, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
-  - {fileID: 3386580563265309033, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: -7487484209621789899, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 3156367839915414121, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 4613809100071005162, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 7625832111383730076, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
   rewardId: 18_RiberalProducao:wave:1:1
   cashReward: 14
   startAlerted: 1
@@ -8823,6 +9493,50 @@ Transform:
   - {fileID: 1942010888}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1763624745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763624739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c0dbdc76a8a6c944bcd810d28e74443, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PontoCego.Runtime::PontoCego.ActorSecondaryMotion2D
+  visual: {fileID: 1987978550}
+--- !u!114 &1763624746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763624739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e70970fb83c46b5409e9ac2991aae502, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PontoCego.Runtime::PontoCego.CommonEnemyFoodDrop
+  foodSprites:
+  - {fileID: 7555298463983758642, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: 449660712216926060, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: 5569918699899371568, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: -8731412275905841515, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: 872458556539435902, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+--- !u!114 &1763624747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763624739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0fdedf95f95874ba1f84f1985925f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PontoCego.Runtime::PontoCego.EnemyVariety
+  archetype: 5
 --- !u!1 &1774227958
 GameObject:
   m_ObjectHideFlags: 0
@@ -9045,7 +9759,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1000
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 5757350333099194534, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  m_Sprite: {fileID: 4747513081182522893, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9176,6 +9890,9 @@ GameObject:
   - component: {fileID: 1849571368}
   - component: {fileID: 1849571367}
   - component: {fileID: 1849571366}
+  - component: {fileID: 1849571371}
+  - component: {fileID: 1849571373}
+  - component: {fileID: 1849571372}
   m_Layer: 12
   m_Name: Inimigo / Heavy / 18_RiberalProducao:wave:1:2
   m_TagString: Untagged
@@ -9195,7 +9912,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cda83f01d78860640b348af29b1510bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: PontoCego.Runtime::PontoCego.EnemyAgent
-  role: 3
+  role: 0
   speed: 1.8
   damage: 20
   attackInterval: 1.2
@@ -9203,10 +9920,10 @@ MonoBehaviour:
   visual: {fileID: 1813853378}
   projectileSprite: {fileID: -4134895763890451319, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
   poses:
-  - {fileID: 5757350333099194534, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
-  - {fileID: 5286393167165582356, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
-  - {fileID: -3157907793616755504, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
-  - {fileID: -969664797710945533, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: 4747513081182522893, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -2333718331562809070, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 2050295471236299980, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -7584837327659303962, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
   rewardId: 18_RiberalProducao:wave:1:2
   cashReward: 14
   startAlerted: 1
@@ -9305,6 +10022,50 @@ Transform:
   - {fileID: 1147724805}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1849571371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849571365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c0dbdc76a8a6c944bcd810d28e74443, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PontoCego.Runtime::PontoCego.ActorSecondaryMotion2D
+  visual: {fileID: 1813853378}
+--- !u!114 &1849571372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849571365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e70970fb83c46b5409e9ac2991aae502, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PontoCego.Runtime::PontoCego.CommonEnemyFoodDrop
+  foodSprites:
+  - {fileID: 7555298463983758642, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: 449660712216926060, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: 5569918699899371568, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: -8731412275905841515, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: 872458556539435902, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+--- !u!114 &1849571373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849571365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0fdedf95f95874ba1f84f1985925f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PontoCego.Runtime::PontoCego.EnemyVariety
+  archetype: 2
 --- !u!1 &1865664594
 GameObject:
   m_ObjectHideFlags: 0
@@ -9371,7 +10132,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1000
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -7880008318611555667, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  m_Sprite: {fileID: -7236527725130917339, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9488,6 +10249,9 @@ GameObject:
   - component: {fileID: 1888169666}
   - component: {fileID: 1888169665}
   - component: {fileID: 1888169664}
+  - component: {fileID: 1888169669}
+  - component: {fileID: 1888169671}
+  - component: {fileID: 1888169670}
   m_Layer: 12
   m_Name: Inimigo / Elite / 18_RiberalProducao:wave:1:0
   m_TagString: Untagged
@@ -9507,7 +10271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cda83f01d78860640b348af29b1510bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: PontoCego.Runtime::PontoCego.EnemyAgent
-  role: 2
+  role: 0
   speed: 2.4
   damage: 14
   attackInterval: 0.85
@@ -9515,10 +10279,10 @@ MonoBehaviour:
   visual: {fileID: 1865664595}
   projectileSprite: {fileID: -4134895763890451319, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
   poses:
-  - {fileID: -7880008318611555667, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
-  - {fileID: -7624753645143877276, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
-  - {fileID: -8466814997099739613, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
-  - {fileID: 3386580563265309033, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: -7236527725130917339, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 6047712810485561215, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 5053937613976409290, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 4664679178248355159, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
   rewardId: 18_RiberalProducao:wave:1:0
   cashReward: 14
   startAlerted: 1
@@ -9617,6 +10381,50 @@ Transform:
   - {fileID: 1751326477}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1888169669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888169663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c0dbdc76a8a6c944bcd810d28e74443, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PontoCego.Runtime::PontoCego.ActorSecondaryMotion2D
+  visual: {fileID: 1865664595}
+--- !u!114 &1888169670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888169663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e70970fb83c46b5409e9ac2991aae502, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PontoCego.Runtime::PontoCego.CommonEnemyFoodDrop
+  foodSprites:
+  - {fileID: 7555298463983758642, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: 449660712216926060, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: 5569918699899371568, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: -8731412275905841515, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: 872458556539435902, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+--- !u!114 &1888169671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888169663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0fdedf95f95874ba1f84f1985925f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PontoCego.Runtime::PontoCego.EnemyVariety
+  archetype: 0
 --- !u!1 &1891916709
 GameObject:
   m_ObjectHideFlags: 0
@@ -10068,7 +10876,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1000
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -767169811968568391, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  m_Sprite: {fileID: -5016610701301639339, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -10160,7 +10968,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1000
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -7880008318611555667, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  m_Sprite: {fileID: -7487484209621789899, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -10252,7 +11060,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1000
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 8633647626906969222, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  m_Sprite: {fileID: -7236527725130917339, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -10660,6 +11468,9 @@ GameObject:
   - component: {fileID: 2078644165}
   - component: {fileID: 2078644164}
   - component: {fileID: 2078644163}
+  - component: {fileID: 2078644168}
+  - component: {fileID: 2078644170}
+  - component: {fileID: 2078644169}
   m_Layer: 12
   m_Name: Inimigo / Elite / 18_RiberalProducao:wave:3:4
   m_TagString: Untagged
@@ -10679,7 +11490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cda83f01d78860640b348af29b1510bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: PontoCego.Runtime::PontoCego.EnemyAgent
-  role: 2
+  role: 0
   speed: 2.4
   damage: 14
   attackInterval: 0.85
@@ -10687,10 +11498,10 @@ MonoBehaviour:
   visual: {fileID: 1322394868}
   projectileSprite: {fileID: -4134895763890451319, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
   poses:
-  - {fileID: -7880008318611555667, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
-  - {fileID: -7624753645143877276, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
-  - {fileID: -8466814997099739613, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
-  - {fileID: 3386580563265309033, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: -7579717953032688067, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: 1099830079695589726, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -4740240823680864913, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
+  - {fileID: -3172921248720394813, guid: b75469da9b31fd74a9eb616cbad4b2a3, type: 2}
   rewardId: 18_RiberalProducao:wave:3:4
   cashReward: 14
   startAlerted: 1
@@ -10789,6 +11600,50 @@ Transform:
   - {fileID: 2022358437}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2078644168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078644162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c0dbdc76a8a6c944bcd810d28e74443, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PontoCego.Runtime::PontoCego.ActorSecondaryMotion2D
+  visual: {fileID: 1322394868}
+--- !u!114 &2078644169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078644162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e70970fb83c46b5409e9ac2991aae502, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PontoCego.Runtime::PontoCego.CommonEnemyFoodDrop
+  foodSprites:
+  - {fileID: 7555298463983758642, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: 449660712216926060, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: 5569918699899371568, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: -8731412275905841515, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+  - {fileID: 872458556539435902, guid: 09d79d6c519a4ac4ca89961df76520b4, type: 2}
+--- !u!114 &2078644170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078644162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0fdedf95f95874ba1f84f1985925f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PontoCego.Runtime::PontoCego.EnemyVariety
+  archetype: 1
 --- !u!1 &2089431974
 GameObject:
   m_ObjectHideFlags: 0

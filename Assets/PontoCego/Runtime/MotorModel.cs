@@ -8,21 +8,24 @@ namespace PontoCego
         public Vector2 Velocity { get; private set; }
         public Vector2 Facing { get; private set; } = Vector2.down;
         public float Stamina { get; private set; }
+        float staminaBonus;
+        public float StaminaCapacity=>settings.sprintCapacity+staminaBonus;
+        public void SetStaminaUpgrade(int level){float before=StaminaCapacity;staminaBonus=settings.sprintCapacity*.2f*Mathf.Clamp(level,0,5);Stamina=Mathf.Clamp(Stamina+StaminaCapacity-before,0,StaminaCapacity);}
         public float Cooldown { get; private set; }
         public bool Dodging => dodgeLeft > 0f;
         public bool Sprinting { get; private set; }
         public float InfiniteStaminaRemaining{get;private set;}
-        public void GrantInfiniteStamina(float seconds){InfiniteStaminaRemaining=Mathf.Max(InfiniteStaminaRemaining,seconds);Stamina=settings.sprintCapacity;exhaustedLeft=0;}
+        public void GrantInfiniteStamina(float seconds){InfiniteStaminaRemaining=Mathf.Max(InfiniteStaminaRemaining,seconds);Stamina=StaminaCapacity;exhaustedLeft=0;}
         float dodgeLeft, recoveryLeft, exhaustedLeft, dodgeBuffer;
         public float DodgeProgress => 1f-dodgeLeft/settings.dodgeDuration;
-        public bool ShowStamina => Sprinting || Stamina < settings.sprintCapacity-.005f;
+        public bool ShowStamina => Sprinting || Stamina < StaminaCapacity-.005f;
         Vector2 dodgeDirection;
         readonly MovementSettings settings;
 
         public MotorModel(MovementSettings settings)
         {
             this.settings = settings;
-            Stamina = settings.sprintCapacity;
+            Stamina = StaminaCapacity;
         }
 
         /// <summary>Digital diagonals are normalized; analog magnitudes below one are retained.</summary>
@@ -33,7 +36,7 @@ namespace PontoCego
         public void Step(Vector2 move, bool sprint, bool dodge, float dt)
         {
             if (dt <= 0f) return;
-            bool infinite=InfiniteStaminaRemaining>0;InfiniteStaminaRemaining=Mathf.Max(0,InfiniteStaminaRemaining-dt);if(infinite){Stamina=settings.sprintCapacity;exhaustedLeft=0;}
+            bool infinite=InfiniteStaminaRemaining>0;InfiniteStaminaRemaining=Mathf.Max(0,InfiniteStaminaRemaining-dt);if(infinite){Stamina=StaminaCapacity;exhaustedLeft=0;}
             move = NormalizeInput(move);
             dodgeBuffer=dodge?settings.dodgeInputBuffer:Mathf.Max(0,dodgeBuffer-dt);
             Cooldown = Mathf.Max(0f, Cooldown - dt);
@@ -55,7 +58,7 @@ namespace PontoCego
                 if (Stamina <= 0f) { exhaustedLeft = settings.exhaustedCooldown; Sprinting = false; }
             }
             else if (recoveryLeft <= 0f)
-                Stamina = Mathf.Min(settings.sprintCapacity, Stamina + settings.sprintRecovery * dt);
+                Stamina = Mathf.Min(StaminaCapacity, Stamina + settings.sprintRecovery * dt);
 
             if (Dodging)
             {

@@ -39,7 +39,7 @@ namespace PontoCego
             if(!cab||Arrived||!Requested||player&&player.Paused){if(body)body.linearVelocity=Vector2.zero;return;}
             while(waypoint<route.Length&&Vector2.Distance(body.position,route[waypoint])<.22f)waypoint++;
             if(waypoint>=route.Length){body.linearVelocity=Vector2.zero;return;}
-            Vector2 d=route[waypoint]-body.position;body.MovePosition(Vector2.MoveTowards(body.position,route[waypoint],5.5f*Time.fixedDeltaTime));
+            Vector2 d=route[waypoint]-body.position;Vector2 next=Vector2.MoveTowards(body.position,route[waypoint],5.5f*Time.fixedDeltaTime);if(!CanAdvance(next,d))return;body.MovePosition(next);
             int frame=Mathf.Abs(d.x)>Mathf.Abs(d.y)?(d.x>0?1:3):(d.y>0?2:0);visual.sprite=sprites[frame];visual.transform.localScale=Vector3.one*(3.4f/Mathf.Max(visual.sprite.bounds.size.x,visual.sprite.bounds.size.y));collision.size=frame%2==0?new Vector2(1.55f,3.4f):new Vector2(3.4f,1.55f);
             if(Driver)Driver.transform.localPosition=frame%2==0?Vector3.right*1.35f:Vector3.down*1.35f;
             visual.sortingOrder=WorldSort.At(body.position.y);

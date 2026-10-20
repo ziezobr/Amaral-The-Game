@@ -47,18 +47,20 @@ namespace PontoCego
         {
             input = FindAnyObjectByType<PlayerInputReader>();
             view = Camera.main;
-            birdsClip = Synthesize("Dia / pássaros", 8, 0);
+            birdsClip = AudioClip.Create("Dia / silêncio sem pássaros", 1, 1, 22050, false);
             cricketsClip = Synthesize("Noite / grilos", 7, 1);
             windClip = Synthesize("Ambiente / vento", 8, 2);
-            owlClip = Synthesize("Noite / coruja distante", 16, 3);
+            owlClip = AudioClip.Create("Noite / silêncio sem aves", 1, 1, 22050, false);
             waterClip = Synthesize("Local / água corrente", 6, 4);
             humClip = Synthesize("Local / iluminação elétrica", 4, 5);
             fireClip = Synthesize("Local / fogueira", 6, 6);
             rainClip = Synthesize("Clima / chuva", 8, 7);
             DaySource = Loop("Pássaros", birdsClip);
+            DaySource.mute = true;
             NightSource = Loop("Grilos", cricketsClip);
             wind = Loop("Vento", windClip);
             owl = Loop("Coruja", owlClip);
+            owl.mute = true;
             rain = Loop("Chuva", rainClip);
             CacheAnchors();
             RefreshEmitters();

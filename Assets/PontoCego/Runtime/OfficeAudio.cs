@@ -8,7 +8,7 @@ namespace PontoCego
         {
             motor=FindAnyObjectByType<PlayerMotor>();ambience=gameObject.AddComponent<AudioSource>();ambience.loop=true;ambience.volume=.08f;
             ambience.clip=Tone("office fan",2,0);ambience.Play();foley=gameObject.AddComponent<AudioSource>();foley.volume=.12f;
-            step=Tone("shoe",.065f,1);shutter=Tone("shutter",.12f,2);
+            shutter=Tone("shutter",.12f,2);
             impact=Tone("impact",.13f,3);shot=Tone("shot",.11f,4);warning=Tone("warning",.24f,5);
         }
         AudioClip Tone(string name,float duration,int type)
@@ -28,8 +28,7 @@ namespace PontoCego
         {
             if(ambience)ambience.volume=.08f*GamePreferences.Effects;if(foley)foley.volume=.12f*GamePreferences.Effects;
             if(!motor||Time.timeScale==0)return;
-            if(motor.Body.linearVelocity.magnitude>.25f&&Time.time>nextStep)
-            {foley.pitch=Random.Range(.9f,1.1f);foley.PlayOneShot(step);nextStep=Time.time+(motor.Model.Sprinting ? .23f : .34f);}
+            // Locomotion is deliberately silent; camera, impact and combat effects remain independent.
         }
         public void Shutter(){if(foley)foley.PlayOneShot(shutter,.8f);}
         public void Impact(){if(foley&&Time.time>=nextImpact){nextImpact=Time.time+.045f;foley.PlayOneShot(impact,.8f);}}

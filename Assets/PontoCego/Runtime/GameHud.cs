@@ -14,7 +14,7 @@ namespace PontoCego
         string lastObjective;CityNavigation gps;AmmoInventory inventory;PlayerPhone phone;
         public float HudOpacity{get;private set;}=1;
         public bool InDanger=>inDanger;
-        bool journalOpen;Vector2 journalScroll;
+        bool journalOpen;Vector2 journalScroll,shopScroll;int selectedShopProduct;Sprite staminaCan;
         readonly Color gold=new Color(.99f,.73f,.27f),ink=new Color(.035f,.045f,.06f,.94f);
         void Init()
         {
@@ -57,11 +57,11 @@ namespace PontoCego
         void Portrait(Rect r,Texture2D t){Fill(r,Color.black);if(t)GUI.DrawTextureWithTexCoords(r,t,new Rect(.03f,.36f,.94f,.64f));}
         public void SetLevel(LevelProgress selected){level=selected;mission=selected.GetComponent<CombatMission>();shop=FindAnyObjectByType<EquipmentShop>();}
         public float LifeFraction{get{var h=health?health:input?input.GetComponent<Health>():null;return h?Mathf.Clamp01(h.Current/h.maximum):1;}}
-        public float StaminaFraction=>motor&&motor.Model!=null?Mathf.Clamp01(motor.Model.Stamina/motor.settings.sprintCapacity):1;
+        public float StaminaFraction=>motor&&motor.Model!=null?Mathf.Clamp01(motor.Model.Stamina/motor.Model.StaminaCapacity):1;
         public int CameraCount=>GameSession.Current.flashCharges;
         void OnGUI()
         {
-            if(!input||!motor||!level)return;
+            if(!input||!motor||!level||MissionIntro2D.Showing)return;
             foreach(var driver in FindObjectsByType<UberDriver>())if(driver.Active)return;
             var previousMatrix=GUI.matrix;var previousColor=GUI.color;int previousDepth=GUI.depth;bool previousEnabled=GUI.enabled;
             try
@@ -71,7 +71,7 @@ namespace PontoCego
             title.fontSize=UiTheme.Font(25);label.fontSize=UiTheme.Font(20);small.fontSize=UiTheme.Font(13);heading.fontSize=UiTheme.Font(14);button.fontSize=UiTheme.Font(16);
             label.normal.textColor=UiTheme.Text;small.normal.textColor=UiTheme.Text;heading.normal.textColor=UiTheme.Accent;
             var aim=input.GetComponent<PlayerAim>();if(aim&&aim.FlashIntensity>0)Fill(new Rect(0,0,1280,720),new Color(1,1,1,aim.FlashIntensity*.12f));
-            GUI.color=new Color(1,1,1,HudOpacity);DrawStatus();GUI.color=previousColor;DrawMap();
+            GUI.color=new Color(1,1,1,HudOpacity);DrawStatus();GUI.color=previousColor;DrawMap();DrawMissionPanel();
             if(!input.GameplayLocked&&!input.Paused&&(!dialogue||!dialogue.Active)){
                 if(Time.unscaledTime<interaction.MessageUntil){CleanGui.Round(new Rect(280,634,660,52),ink);GUI.Label(new Rect(294,640,632,44),interaction.Message,new GUIStyle(small){fontSize=UiTheme.Font(14),alignment=TextAnchor.MiddleCenter});}
                 else if(!string.IsNullOrEmpty(interaction.Prompt)){CleanGui.Round(new Rect(390,650,500,34),ink);GUI.Label(new Rect(400,652,480,30),interaction.Prompt,new GUIStyle(small){fontSize=UiTheme.Font(14),alignment=TextAnchor.MiddleCenter});}}
@@ -105,7 +105,7 @@ namespace PontoCego
             }
             CleanGui.ShadowLabel(new Rect(882,132,70,31),CameraCount.ToString(),new GUIStyle(UiTheme.Label(23,Color.white,true)){alignment=TextAnchor.MiddleCenter});
             var save=GameSession.Current;
-            if(save.hasSidearm)CleanGui.ShadowLabel(new Rect(850,163,135,26),inventory&&inventory.Reloading?"RECARREGANDO":save.magazine+" / "+save.ammoReserve,new GUIStyle(UiTheme.Label(10,UiTheme.Text,true)){alignment=TextAnchor.MiddleCenter,wordWrap=false});
+            if(save.hasSidearm)CleanGui.ShadowLabel(new Rect(850,163,135,26),inventory&&inventory.Reloading?"RECARGA "+Mathf.RoundToInt(inventory.ReloadProgress*100)+"%":save.magazine+" / "+save.ammoReserve,new GUIStyle(UiTheme.Label(10,UiTheme.Text,true)){alignment=TextAnchor.MiddleCenter,wordWrap=false});
             if(art)CleanGui.Icon(new Rect(976,138,55,33),art.caramelo);
             string money="R$"+save.currency.ToString("N0",new System.Globalization.CultureInfo("pt-BR"));var moneyStyle=UiTheme.Label(28,UiTheme.Money,true);moneyStyle.wordWrap=false;
             while(moneyStyle.fontSize>16&&moneyStyle.CalcSize(new GUIContent(money)).x>205)moneyStyle.fontSize--;
@@ -140,6 +140,21 @@ namespace PontoCego
                 GUI.Label(new Rect(67,520,165,24),UiTheme.WeatherLabel(weather?weather.Kind:WeatherKind.Clear),UiTheme.Label(10,UiTheme.Muted,true));
             }
             else GUI.Label(new Rect(40,516,190,25),distance,UiTheme.Label(11,UiTheme.Text,true));
+        }
+        public string MissionObjective=>gps&&!string.IsNullOrEmpty(gps.Objective)?gps.Objective:level?level.Objective:"Explore a cidade.";
+        void DrawMissionPanel()
+        {
+            if(!GamePreferences.Objectives||input.Paused||input.GameplayLocked||dialogue&&dialogue.Active||shop&&shop.Active)return;
+            var style=UiTheme.Label(15,UiTheme.Text);style.wordWrap=true;
+            string primary=WorldHub.Instance&&WorldHub.Instance.Active!=null?level.Objective:MissionObjective;
+            string side=GoldenWeaponQuest.Started(!GoldenWeaponQuest.Glock?0:1)&&!(GoldenWeaponQuest.Glock&&GoldenWeaponQuest.Razor)?GoldenWeaponQuest.Status:"";
+            float bodyHeight=style.CalcHeight(new GUIContent(primary),398);
+            float sideHeight=string.IsNullOrEmpty(side)?0:style.CalcHeight(new GUIContent(side),398)+29;
+            var panel=new Rect(30,28,430,72+bodyHeight+sideHeight);
+            CleanGui.Round(panel,UiTheme.Surface);Fill(new Rect(30,40,3,panel.height-24),UiTheme.Accent);
+            GUI.Label(new Rect(46,40,398,24),"OBJETIVO • "+(WorldHub.Instance&&WorldHub.Instance.Active==null?"CIDADE":level.chapter),UiTheme.Label(12,UiTheme.Accent,true));
+            GUI.Label(new Rect(46,70,398,bodyHeight),primary,style);
+            if(sideHeight>0){float y=80+bodyHeight;GUI.Label(new Rect(46,y,398,23),"SERVIÇOS DO MATEUS",UiTheme.Label(11,UiTheme.Accent,true));GUI.Label(new Rect(46,y+24,398,sideHeight),side,style);}
         }
         void DrawObjective()
         {
@@ -185,20 +200,34 @@ namespace PontoCego
             if(GUI.Button(new Rect(390,368,500,45),"VOLTAR AO CHECKPOINT",button))GameSession.Retry();
             if(GUI.Button(new Rect(390,425,500,42),"MENU PRINCIPAL",button))GameSession.ReturnToMenu();
         }
+        public void InspectShopProduct(int index){selectedShopProduct=Mathf.Clamp(index,0,EquipmentShop.ProductCount-1);shopScroll.y=Mathf.Max(0,selectedShopProduct*84-260);}
         void DrawShop()
         {
-            Fill(new Rect(0,0,1280,720),new Color(0,0,0,.96f));
-            if(art)CleanGui.Icon(new Rect(936,70,55,28),art.caramelo);
-            GUI.Label(new Rect(994,65,250,40),"R$"+GameSession.Current.currency.ToString("N0"),new GUIStyle(title){fontSize=30,normal={textColor=new Color(.18f,.4f,.13f)}});
-            for(int i=0;i<EquipmentShop.ProductCount;i++)
+            Fill(new Rect(0,0,1280,720),new Color(.015f,.025f,.03f,.98f));
+            GUI.Label(new Rect(100,35,700,50),"HENZO • EQUIPAMENTOS E MELHORIAS",title);
+            GUI.Label(new Rect(870,40,330,42),"R$ "+GameSession.Current.currency.ToString("N0"),new GUIStyle(title){alignment=TextAnchor.MiddleRight,normal={textColor=UiTheme.Money}});
+            if(!staminaCan)staminaCan=Resources.Load<Sprite>("henzo-stamina-white-v1");
+            shopScroll=GUI.BeginScrollView(new Rect(100,105,680,515),shopScroll,new Rect(0,0,645,EquipmentShop.ProductCount*84));
+            try{for(int i=0;i<EquipmentShop.ProductCount;i++)
             {
-                float y=72+i*60;CleanGui.Round(new Rect(473,y,45,45),Color.Lerp(new Color(.59f,.66f,.35f),new Color(.22f,.31f,.17f),UiTheme.Night));CleanGui.Round(new Rect(527,y,280,45),Color.Lerp(new Color(.89f,.95f,.74f),new Color(.14f,.22f,.17f),UiTheme.Night));
-                if(art)CleanGui.Icon(new Rect(477,y+4,37,37),art.icons[EquipmentShop.IconIndices[i]]);
-                if(GUI.Button(new Rect(527,y,280,45),GUIContent.none,GUIStyle.none)){shop.Buy(i);UiSound.PlayClick();}
-                GUI.Label(new Rect(540,y+3,257,23),EquipmentShop.ProductName(i),new GUIStyle(label){fontSize=UiTheme.Font(15),fontStyle=FontStyle.Bold,normal={textColor=Color.Lerp(new Color(.13f,.2f,.09f),new Color(.84f,.92f,.79f),UiTheme.Night)}});
-                GUI.Label(new Rect(540,y+24,257,20),"R$ "+EquipmentShop.Price(i)+(GameSession.Current.currency>=EquipmentShop.Price(i)?"":" • SEM SALDO"),new GUIStyle(small){fontSize=UiTheme.Font(12),normal={textColor=GameSession.Current.currency>=EquipmentShop.Price(i)?Color.Lerp(new Color(.2f,.32f,.12f),new Color(.63f,.85f,.53f),UiTheme.Night):Color.Lerp(new Color(.65f,.14f,.1f),new Color(1,.65f,.45f),UiTheme.Night)}});
-            }
-            GUI.Label(new Rect(30,610,395,65),shop.Notice,label);if(GUI.Button(new Rect(1050,640,180,40),"VOLTAR",button)){UiSound.PlayClick();shop.Close();}
+                float y=i*84;bool chosen=selectedShopProduct==i;
+                CleanGui.Round(new Rect(0,y,640,76),chosen?new Color(.25f,.35f,.23f):UiTheme.Panel);
+                CleanGui.Round(new Rect(5,y+5,66,66),new Color(.3f,.4f,.23f));
+                if(i==10&&staminaCan)GUI.DrawTexture(new Rect(10,y+8,56,60),staminaCan.texture,ScaleMode.ScaleToFit);
+                else if(art&&i<EquipmentShop.IconIndices.Length)CleanGui.Icon(new Rect(12,y+10,52,52),art.icons[EquipmentShop.IconIndices[i]]);
+                if(GUI.Button(new Rect(0,y,640,76),GUIContent.none,GUIStyle.none)){selectedShopProduct=i;UiSound.PlayClick();}
+                GUI.Label(new Rect(88,y+8,425,27),EquipmentShop.ProductName(i),UiTheme.Label(17,UiTheme.Text,true));
+                GUI.Label(new Rect(88,y+40,360,23),EquipmentShop.LevelText(i),UiTheme.Label(11,UiTheme.Muted));
+                GUI.Label(new Rect(460,y+26,160,30),"R$ "+EquipmentShop.Price(i),new GUIStyle(UiTheme.Label(17,UiTheme.Money,true)){alignment=TextAnchor.MiddleRight});
+            }}finally{GUI.EndScrollView();}
+            CleanGui.Round(new Rect(810,105,370,515),UiTheme.Panel);
+            GUI.Label(new Rect(835,127,320,65),EquipmentShop.ProductName(selectedShopProduct),UiTheme.Label(21,UiTheme.Accent,true));
+            GUI.Label(new Rect(835,210,320,190),EquipmentShop.Description(selectedShopProduct),UiTheme.Label(18,UiTheme.Text));
+            GUI.Label(new Rect(835,402,320,45),EquipmentShop.LevelText(selectedShopProduct),UiTheme.Label(15,UiTheme.Muted,true));
+            if(selectedShopProduct==10)GUI.Label(new Rect(835,454,320,48),"Fôlego atual: "+motor.Model.StaminaCapacity.ToString("0.0")+" s de corrida",UiTheme.Label(16,UiTheme.Text));
+            if(GUI.Button(new Rect(835,542,320,52),"COMPRAR • R$ "+EquipmentShop.Price(selectedShopProduct),button)){shop.Buy(selectedShopProduct);UiSound.PlayClick();}
+            GUI.Label(new Rect(100,635,840,60),shop.Notice,UiTheme.Label(16,UiTheme.Text));
+            if(GUI.Button(new Rect(970,642,210,45),"VOLTAR",button)){UiSound.PlayClick();shop.Close();}
         }
         void DrawEnding(CampaignEnding ending)
         {

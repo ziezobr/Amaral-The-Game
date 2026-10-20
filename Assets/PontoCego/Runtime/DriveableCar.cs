@@ -9,7 +9,8 @@ namespace PontoCego
         Rigidbody2D body;PlayerMotor player;PlayerInputReader input;SpriteRenderer[] hidden;bool[] visibility;
         public void Enter()
         {
-            if(Current)return;player=FindAnyObjectByType<PlayerMotor>();input=player.GetComponent<PlayerInputReader>();
+            if(Current||TaxiService.Instance&&TaxiService.Instance.TripActive)return;player=FindAnyObjectByType<PlayerMotor>();input=player.GetComponent<PlayerInputReader>();
+            var traffic=GetComponent<CityTraffic>();if(traffic)traffic.enabled=false;body.bodyType=RigidbodyType2D.Dynamic;body.gravityScale=0;body.freezeRotation=true;body.collisionDetectionMode=CollisionDetectionMode2D.Continuous;
             Current=this;player.enabled=false;player.GetComponent<PlayerAim>().enabled=false;player.GetComponent<CombatPlayer>().enabled=false;
             hidden=player.GetComponentsInChildren<SpriteRenderer>();visibility=new bool[hidden.Length];for(int i=0;i<hidden.Length;i++){visibility[i]=hidden[i].enabled;hidden[i].enabled=false;}
             player.Body.linearVelocity=Vector2.zero;player.Body.simulated=false;player.GetComponent<Interaction>().Say("WASD / analógico: dirigir • Shift: acelerar • E: sair");

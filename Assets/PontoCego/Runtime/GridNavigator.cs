@@ -21,6 +21,7 @@ namespace PontoCego
         Vector2Int Cell(Vector2 p)=>new Vector2Int(Mathf.Clamp(Mathf.RoundToInt((p.x-origin.x)/cellSize),0,width-1),Mathf.Clamp(Mathf.RoundToInt((p.y-origin.y)/cellSize),0,height-1));
         public List<Vector2> Path(Vector2 from,Vector2 to)
         {
+            if(WorldHub.Instance&&WorldHub.Instance.Active==null){var route=TaxiCollisionRoute.Plan(from,to,null,agentRadius,.8f);return route==null?new List<Vector2>():new List<Vector2>(route);}
             if(open==null)Rebuild();var start=Cell(from);var end=Cell(to);var result=new List<Vector2>();
             if(!open[end.x,end.y])
             {

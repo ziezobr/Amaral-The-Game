@@ -6,17 +6,19 @@ namespace PontoCego
     [RequireComponent(typeof(Rigidbody2D),typeof(Health))]
     public sealed class EnemyAgent:MonoBehaviour
     {
+        public float VisualGaitCycle=>Mathf.Repeat(walkPhase/4f,1);
+
         public EnemyRole role;public float speed=2.3f,damage=12,attackInterval=1.2f,detectionRange=11;
         public SpriteRenderer visual;public Sprite projectileSprite;public Sprite[] poses;public string rewardId;
         public int cashReward=12;public bool startAlerted=true;
         public bool Stunned=>Time.time<stunUntil;
         public bool Alive=>health&&health.Alive;
-        public string StateLabel=>!Alive?"CAÍDO":Stunned?"ATORDOADO":windingUp?"ATACANDO":"";
+        public string StateLabel=>!Alive?"CAÍDO":Stunned?"ATORDOADO":windingUp?"ATACANDO":GetComponent<EnemyVariety>() is EnemyVariety variety?variety.Label:"";
         public float WindupProgress=>windingUp?Mathf.Clamp01((Time.time-attackStarted)/.45f):0;
         public float LastAttackAt{get;private set;}=-100;
         public Vector2 AttackDirection=>attackDirection;
         Rigidbody2D body;Health health;PlayerMotor player;GridNavigator nav;Vector3 origin;
-        float stunUntil,nextAttack,nextPath,attackStarted,deadAt=-1;bool windingUp,alerted;Vector2 attackDirection;List<Vector2> path;int waypoint;
+        float stunUntil,nextAttack,nextPath,attackStarted,deadAt=-1,walkPhase;bool windingUp,alerted;Vector2 attackDirection;List<Vector2> path;int waypoint;
         LineRenderer telegraph;static Material lineMaterial;Vector2 knockback;float knockbackUntil;
         float nextShortStun,nextBossFlash;
         public float FlashResistanceRemaining=>Mathf.Max(0,nextBossFlash-Time.time);
@@ -26,7 +28,7 @@ namespace PontoCego
         void OnDisable(){if(telegraph)telegraph.enabled=false;}
         void Awake()
         {
-            body=GetComponent<Rigidbody2D>();health=GetComponent<Health>();health.IncreaseMaximum(health.maximum*(health.boss?.2f:.35f));body.gravityScale=0;body.freezeRotation=true;
+            body=GetComponent<Rigidbody2D>();health=GetComponent<Health>();health.IncreaseMaximum(health.maximum*((health.boss?1.2f:1.35f)*DifficultyRules.EnemyLife(DifficultyRules.Current)-1));speed*=DifficultyRules.EnemyPace(DifficultyRules.Current);attackInterval/=DifficultyRules.EnemyPace(DifficultyRules.Current);body.gravityScale=0;body.freezeRotation=true;
             body.interpolation=RigidbodyInterpolation2D.Interpolate;body.collisionDetectionMode=CollisionDetectionMode2D.Continuous;
             origin=visual.transform.localPosition;health.Died+=OnDeath;
             var line=new GameObject("Sinal de ataque");line.transform.SetParent(transform,false);telegraph=line.AddComponent<LineRenderer>();
@@ -116,7 +118,9 @@ namespace PontoCego
             }
             if(body.linearVelocity.sqrMagnitude>.1f)visual.flipX=body.linearVelocity.x<-.15f;
             if(windingUp)visual.flipX=attackDirection.x<0;
-            if(poses!=null&&poses.Length==4)visual.sprite=poses[windingUp||Time.time-LastAttackAt<.14f?3:body.linearVelocity.magnitude>.2f?1+(Mathf.FloorToInt(Time.time*9)%2):0];
+            walkPhase+=Time.deltaTime*ReferenceActorAnimation.FramesPerSecond(body.linearVelocity.magnitude,body.linearVelocity.magnitude>4.2f,3);
+            int stride=Mathf.FloorToInt(walkPhase)%4;
+            if(poses!=null&&poses.Length==4)visual.sprite=poses[windingUp||Time.time-LastAttackAt<.14f?3:body.linearVelocity.magnitude>.2f?(stride==0?1:stride==2?2:0):0];
             visual.transform.localPosition=origin+Vector3.up*(body.linearVelocity.magnitude>.2f?Mathf.Abs(Mathf.Sin(Time.time*11+transform.position.x))*.045f:0);
         }
     }

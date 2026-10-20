@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="4" result="Passed" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-20 02:12:25Z" end-time="2026-10-20 02:12:45Z" duration="19,2994714">
+  <test-suite type="TestSuite" id="1141" name="Ponto Cego" fullname="Ponto Cego" runstate="Runnable" testcasecount="102" result="Passed" start-time="2026-10-20 02:12:25Z" end-time="2026-10-20 02:12:45Z" duration="19.299471" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1122" name="PontoCego.Tests.PlayMode.dll" fullname="D:/The Amaral Game/V 1.0/Library/ScriptAssemblies/PontoCego.Tests.PlayMode.dll" runstate="Runnable" testcasecount="93" result="Passed" start-time="2026-10-20 02:12:25Z" end-time="2026-10-20 02:12:45Z" duration="19.284400" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="19092" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1123" name="PontoCego" fullname="PontoCego" runstate="Runnable" testcasecount="93" result="Passed" start-time="2026-10-20 02:12:25Z" end-time="2026-10-20 02:12:45Z" duration="19.276676" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1124" name="Tests" fullname="PontoCego.Tests" runstate="Runnable" testcasecount="93" result="Passed" start-time="2026-10-20 02:12:26Z" end-time="2026-10-20 02:12:45Z" duration="19.259913" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1055" name="Mateus024Tests" fullname="PontoCego.Tests.Mateus024Tests" classname="PontoCego.Tests.Mateus024Tests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-20 02:12:26Z" end-time="2026-10-20 02:12:43Z" duration="17.956460" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1057" name="AllErrandsHaveWalkableCityRoutes" fullname="PontoCego.Tests.Mateus024Tests.AllErrandsHaveWalkableCityRoutes" methodname="AllErrandsHaveWalkableCityRoutes" classname="PontoCego.Tests.Mateus024Tests" runstate="Runnable" seed="122052427" result="Passed" start-time="2026-10-20 02:12:26Z" end-time="2026-10-20 02:12:28Z" duration="2.613138" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="Timeout" value="180000" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[PONTO_GROUNDED_SIGNS_V2
+]]></output>
+            </test-case>
+            <test-case id="1056" name="BothMateusChainsCanBeCompletedWithTheirActualActions" fullname="PontoCego.Tests.Mateus024Tests.BothMateusChainsCanBeCompletedWithTheirActualActions" methodname="BothMateusChainsCanBeCompletedWithTheirActualActions" classname="PontoCego.Tests.Mateus024Tests" runstate="Runnable" seed="1897584627" result="Passed" start-time="2026-10-20 02:12:28Z" end-time="2026-10-20 02:12:40Z" duration="12.189425" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="Timeout" value="180000" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[PONTO_GROUNDED_SIGNS_V2
+]]></output>
+            </test-case>
+            <test-case id="1058" name="QuestCannotBeCollectedRemotelyAndGateDoesNotInterruptErrands" fullname="PontoCego.Tests.Mateus024Tests.QuestCannotBeCollectedRemotelyAndGateDoesNotInterruptErrands" methodname="QuestCannotBeCollectedRemotelyAndGateDoesNotInterruptErrands" classname="PontoCego.Tests.Mateus024Tests" runstate="Runnable" seed="649899238" result="Passed" start-time="2026-10-20 02:12:40Z" end-time="2026-10-20 02:12:43Z" duration="3.129228" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[PONTO_GROUNDED_SIGNS_V2
+]]></output>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1079" name="Polish021InteractionTests" fullname="PontoCego.Tests.Polish021InteractionTests" classname="PontoCego.Tests.Polish021InteractionTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-20 02:12:43Z" end-time="2026-10-20 02:12:45Z" duration="1.285357" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1081" name="MateusPhotoAdvancesOnlyThroughCamera" fullname="PontoCego.Tests.Polish021InteractionTests.MateusPhotoAdvancesOnlyThroughCamera" methodname="MateusPhotoAdvancesOnlyThroughCamera" classname="PontoCego.Tests.Polish021InteractionTests" runstate="Runnable" seed="1542385481" result="Passed" start-time="2026-10-20 02:12:43Z" end-time="2026-10-20 02:12:45Z" duration="1.270163" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[PONTO_GROUNDED_SIGNS_V2
+Saving results to: D:\The Amaral Game\V 1.0\Validation\Fix024-PlacementFinal.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

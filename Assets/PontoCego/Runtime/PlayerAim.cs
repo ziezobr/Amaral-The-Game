@@ -38,7 +38,8 @@ namespace PontoCego
             reticle.localPosition = (Vector3)(Direction * 1.25f) + new Vector3(0, .3f, 0);
             cameraProp.localPosition = (Vector3)(Direction * .35f) + new Vector3(0, .65f, 0);
             cameraProp.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(Direction.y, Direction.x) * Mathf.Rad2Deg);
-            if ((input.ConsumeFlash()||input.FlashHeld) && Time.time >= nextFlash)
+            var equipment=GetComponent<PlayerEquipment2D>();
+            if ((!equipment||equipment.CameraSelected)&&(input.ConsumeFlash()||input.FlashHeld) && Time.time >= nextFlash)
             {
                 nextFlash = Time.time + Mathf.Max(.35f,.8f-GameSession.Current.flashLevel*.1f); flashUntil = Time.time + .1f;
                 var audio=FindAnyObjectByType<OfficeAudio>();if(audio)audio.Shutter();
@@ -48,13 +49,15 @@ namespace PontoCego
                     if(!powered||!enemy.Alive)continue;Vector2 delta=enemy.transform.position-transform.position;
                     if(delta.magnitude>4.5f||Vector2.Dot(Direction,delta.normalized)<.62f)continue;
                     if(Physics2D.Raycast(transform.position,delta.normalized,delta.magnitude,LayerMask.GetMask("World")))continue;
-                    if(GameSession.Current.collected.Contains("weapon:xuxa")){var hp=enemy.GetComponent<Health>();hp.Damage(hp.maximum*.1f,CombatTeam.Player,true);}
+                    if(equipment&&equipment.PinkSelected){var hp=enemy.GetComponent<Health>();hp.Damage(hp.maximum*.1f,CombatTeam.Player,true);}
                     enemy.Stun(1.7f+GameSession.Current.flashLevel*.45f);
                 }
                 foreach (var target in FindObjectsByType<PhotoTarget>())
                 {
                     if(CanPhotograph(target)){target.Photograph();break;}
                 }
+                foreach(var task in FindObjectsByType<GoldenQuestPickup>())task.TryPhotograph(this);
+                foreach(var task in FindObjectsByType<CityContractPoint>())task.Photograph(this);
             }
             indicator.color = Time.time < flashUntil ? Color.white : new Color(.35f, 1f, .85f, .8f);
             indicator.transform.localScale = Vector3.one * (Time.time < flashUntil ? .65f : .3f)*GamePreferences.AimSize;

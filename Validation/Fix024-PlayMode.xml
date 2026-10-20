@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="5" result="Passed" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-20 02:02:09Z" end-time="2026-10-20 02:02:32Z" duration="22,5354252">
+  <test-suite type="TestSuite" id="1138" name="Ponto Cego" fullname="Ponto Cego" runstate="Runnable" testcasecount="100" result="Passed" start-time="2026-10-20 02:02:09Z" end-time="2026-10-20 02:02:32Z" duration="22.535425" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1119" name="PontoCego.Tests.PlayMode.dll" fullname="D:/The Amaral Game/V 1.0/Library/ScriptAssemblies/PontoCego.Tests.PlayMode.dll" runstate="Runnable" testcasecount="91" result="Passed" start-time="2026-10-20 02:02:09Z" end-time="2026-10-20 02:02:32Z" duration="22.514265" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="18312" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1120" name="PontoCego" fullname="PontoCego" runstate="Runnable" testcasecount="91" result="Passed" start-time="2026-10-20 02:02:09Z" end-time="2026-10-20 02:02:32Z" duration="22.512662" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1121" name="Tests" fullname="PontoCego.Tests" runstate="Runnable" testcasecount="91" result="Passed" start-time="2026-10-20 02:02:09Z" end-time="2026-10-20 02:02:32Z" duration="22.491855" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1030" name="CombatTests" fullname="PontoCego.Tests.CombatTests" classname="PontoCego.Tests.CombatTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-20 02:02:09Z" end-time="2026-10-20 02:02:13Z" duration="3.469948" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1033" name="BulletsStopAtWallsAndDamageWithoutWall" fullname="PontoCego.Tests.CombatTests.BulletsStopAtWallsAndDamageWithoutWall" methodname="BulletsStopAtWallsAndDamageWithoutWall" classname="PontoCego.Tests.CombatTests" runstate="Runnable" seed="310417038" result="Passed" start-time="2026-10-20 02:02:09Z" end-time="2026-10-20 02:02:11Z" duration="2.189673" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1034" name="PlayerMeleeDamagesAndStunsEnemy" fullname="PontoCego.Tests.CombatTests.PlayerMeleeDamagesAndStunsEnemy" methodname="PlayerMeleeDamagesAndStunsEnemy" classname="PontoCego.Tests.CombatTests" runstate="Runnable" seed="185578672" result="Passed" start-time="2026-10-20 02:02:11Z" end-time="2026-10-20 02:02:13Z" duration="1.250361" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1052" name="Mateus024Tests" fullname="PontoCego.Tests.Mateus024Tests" classname="PontoCego.Tests.Mateus024Tests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-20 02:02:13Z" end-time="2026-10-20 02:02:32Z" duration="19.001824" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1054" name="AllErrandsHaveWalkableCityRoutes" fullname="PontoCego.Tests.Mateus024Tests.AllErrandsHaveWalkableCityRoutes" methodname="AllErrandsHaveWalkableCityRoutes" classname="PontoCego.Tests.Mateus024Tests" runstate="Runnable" seed="981814536" result="Passed" start-time="2026-10-20 02:02:13Z" end-time="2026-10-20 02:02:16Z" duration="2.956739" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="Timeout" value="180000" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[PONTO_GROUNDED_SIGNS_V2
+]]></output>
+            </test-case>
+            <test-case id="1053" name="BothMateusChainsCanBeCompletedWithTheirActualActions" fullname="PontoCego.Tests.Mateus024Tests.BothMateusChainsCanBeCompletedWithTheirActualActions" methodname="BothMateusChainsCanBeCompletedWithTheirActualActions" classname="PontoCego.Tests.Mateus024Tests" runstate="Runnable" seed="1633266025" result="Passed" start-time="2026-10-20 02:02:16Z" end-time="2026-10-20 02:02:28Z" duration="12.626146" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="Timeout" value="180000" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[PONTO_GROUNDED_SIGNS_V2
+]]></output>
+            </test-case>
+            <test-case id="1055" name="QuestCannotBeCollectedRemotelyAndGateDoesNotInterruptErrands" fullname="PontoCego.Tests.Mateus024Tests.QuestCannotBeCollectedRemotelyAndGateDoesNotInterruptErrands" methodname="QuestCannotBeCollectedRemotelyAndGateDoesNotInterruptErrands" classname="PontoCego.Tests.Mateus024Tests" runstate="Runnable" seed="1624366026" result="Passed" start-time="2026-10-20 02:02:28Z" end-time="2026-10-20 02:02:32Z" duration="3.404937" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[PONTO_GROUNDED_SIGNS_V2
+Saving results to: D:\The Amaral Game\V 1.0\Validation\Fix024-PlayMode.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

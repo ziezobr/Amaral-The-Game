@@ -23,6 +23,6 @@ namespace PontoCego
             if(!Active)return;if(++index<lines.Length)return;
             lines=null;input.SetGameplayLocked(false);var callback=completed;completed=null;callback?.Invoke();
         }
-        public void DismissForValidation(){while(Active)Advance();}
+        public void DismissForValidation(){UnityEngine.Object.FindAnyObjectByType<MissionIntro2D>()?.Finish();while(Active)Advance();}
     }
 }

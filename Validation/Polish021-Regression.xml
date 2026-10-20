@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="9" result="Passed" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-19 22:42:14Z" end-time="2026-10-19 22:42:41Z" duration="26,2494847">
+  <test-suite type="TestSuite" id="1131" name="Ponto Cego" fullname="Ponto Cego" runstate="Runnable" testcasecount="95" result="Passed" start-time="2026-10-19 22:42:14Z" end-time="2026-10-19 22:42:41Z" duration="26.249485" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1112" name="PontoCego.Tests.PlayMode.dll" fullname="D:/The Amaral Game/V 1.0/Library/ScriptAssemblies/PontoCego.Tests.PlayMode.dll" runstate="Runnable" testcasecount="86" result="Passed" start-time="2026-10-19 22:42:14Z" end-time="2026-10-19 22:42:41Z" duration="26.233369" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="7840" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1113" name="PontoCego" fullname="PontoCego" runstate="Runnable" testcasecount="86" result="Passed" start-time="2026-10-19 22:42:14Z" end-time="2026-10-19 22:42:41Z" duration="26.225696" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1114" name="Tests" fullname="PontoCego.Tests" runstate="Runnable" testcasecount="86" result="Passed" start-time="2026-10-19 22:42:14Z" end-time="2026-10-19 22:42:41Z" duration="26.208911" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1049" name="MateusHideoutTests" fullname="PontoCego.Tests.MateusHideoutTests" classname="PontoCego.Tests.MateusHideoutTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-19 22:42:14Z" end-time="2026-10-19 22:42:20Z" duration="5.196193" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1050" name="HiddenMateusUsesFourCleanPosesAndFixedFeet" fullname="PontoCego.Tests.MateusHideoutTests.HiddenMateusUsesFourCleanPosesAndFixedFeet" methodname="HiddenMateusUsesFourCleanPosesAndFixedFeet" classname="PontoCego.Tests.MateusHideoutTests" runstate="Runnable" seed="1703822766" result="Passed" start-time="2026-10-19 22:42:14Z" end-time="2026-10-19 22:42:17Z" duration="2.638505" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[PONTO_GROUNDED_SIGNS_V2
+]]></output>
+            </test-case>
+            <test-case id="1051" name="HideoutPathAndStashRemainAccessible" fullname="PontoCego.Tests.MateusHideoutTests.HideoutPathAndStashRemainAccessible" methodname="HideoutPathAndStashRemainAccessible" classname="PontoCego.Tests.MateusHideoutTests" runstate="Runnable" seed="164330349" result="Passed" start-time="2026-10-19 22:42:17Z" end-time="2026-10-19 22:42:18Z" duration="1.289696" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[PONTO_GROUNDED_SIGNS_V2
+]]></output>
+            </test-case>
+            <test-case id="1052" name="QuestNavigationUsesTheSameHideoutAndRewardCoordinates" fullname="PontoCego.Tests.MateusHideoutTests.QuestNavigationUsesTheSameHideoutAndRewardCoordinates" methodname="QuestNavigationUsesTheSameHideoutAndRewardCoordinates" classname="PontoCego.Tests.MateusHideoutTests" runstate="Runnable" seed="1573526252" result="Passed" start-time="2026-10-19 22:42:18Z" end-time="2026-10-19 22:42:20Z" duration="1.247015" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[PONTO_GROUNDED_SIGNS_V2
+]]></output>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1069" name="Polish021InteractionTests" fullname="PontoCego.Tests.Polish021InteractionTests" classname="PontoCego.Tests.Polish021InteractionTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-19 22:42:20Z" end-time="2026-10-19 22:42:25Z" duration="5.716877" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1072" name="InvestigationCancelsWhenPlayerWalksAway" fullname="PontoCego.Tests.Polish021InteractionTests.InvestigationCancelsWhenPlayerWalksAway" methodname="InvestigationCancelsWhenPlayerWalksAway" classname="PontoCego.Tests.Polish021InteractionTests" runstate="Runnable" seed="1723193851" result="Passed" start-time="2026-10-19 22:42:20Z" end-time="2026-10-19 22:42:21Z" duration="1.641216" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[PONTO_GROUNDED_SIGNS_V2
+]]></output>
+            </test-case>
+            <test-case id="1071" name="MateusPhotoAdvancesOnlyThroughCamera" fullname="PontoCego.Tests.Polish021InteractionTests.MateusPhotoAdvancesOnlyThroughCamera" methodname="MateusPhotoAdvancesOnlyThroughCamera" classname="PontoCego.Tests.Polish021InteractionTests" runstate="Runnable" seed="513361931" result="Passed" start-time="2026-10-19 22:42:21Z" end-time="2026-10-19 22:42:23Z" duration="1.299188" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[PONTO_GROUNDED_SIGNS_V2
+]]></output>
+            </test-case>
+            <test-case id="1070" name="PlayerStopsAtWallButPassesRiberalDoor" fullname="PontoCego.Tests.Polish021InteractionTests.PlayerStopsAtWallButPassesRiberalDoor" methodname="PlayerStopsAtWallButPassesRiberalDoor" classname="PontoCego.Tests.Polish021InteractionTests" runstate="Runnable" seed="1958840673" result="Passed" start-time="2026-10-19 22:42:23Z" end-time="2026-10-19 22:42:25Z" duration="2.763109" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[PONTO_GROUNDED_SIGNS_V2
+]]></output>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1090" name="RoadNetworkTests" fullname="PontoCego.Tests.RoadNetworkTests" classname="PontoCego.Tests.RoadNetworkTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-19 22:42:25Z" end-time="2026-10-19 22:42:28Z" duration="2.515081" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1091" name="CanonicalGraphHasNoDuplicateEdgesOrInteriorCollinearOverlaps" fullname="PontoCego.Tests.RoadNetworkTests.CanonicalGraphHasNoDuplicateEdgesOrInteriorCollinearOverlaps" methodname="CanonicalGraphHasNoDuplicateEdgesOrInteriorCollinearOverlaps" classname="PontoCego.Tests.RoadNetworkTests" runstate="Runnable" seed="1845865194" result="Passed" start-time="2026-10-19 22:42:25Z" end-time="2026-10-19 22:42:27Z" duration="1.247645" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[PONTO_GROUNDED_SIGNS_V2
+]]></output>
+            </test-case>
+            <test-case id="1092" name="SidewalkSurfacesNeverCrossAnyAsphaltLane" fullname="PontoCego.Tests.RoadNetworkTests.SidewalkSurfacesNeverCrossAnyAsphaltLane" methodname="SidewalkSurfacesNeverCrossAnyAsphaltLane" classname="PontoCego.Tests.RoadNetworkTests" runstate="Runnable" seed="1040309659" result="Passed" start-time="2026-10-19 22:42:27Z" end-time="2026-10-19 22:42:28Z" duration="1.254511" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[PONTO_GROUNDED_SIGNS_V2
+]]></output>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1110" name="WorldStoryProgressTests" fullname="PontoCego.Tests.WorldStoryProgressTests" classname="PontoCego.Tests.WorldStoryProgressTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-10-19 22:42:28Z" end-time="2026-10-19 22:42:41Z" duration="12.762167" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1111" name="StoryObjectivesCanReachEndingInsideOneWorld" fullname="PontoCego.Tests.WorldStoryProgressTests.StoryObjectivesCanReachEndingInsideOneWorld" methodname="StoryObjectivesCanReachEndingInsideOneWorld" classname="PontoCego.Tests.WorldStoryProgressTests" runstate="Runnable" seed="1669201076" result="Passed" start-time="2026-10-19 22:42:28Z" end-time="2026-10-19 22:42:41Z" duration="12.752585" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="Timeout" value="180000" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[PONTO_GROUNDED_SIGNS_V2
+PONTO_STORY_QA / 01_Riberal / 0 / 18,10725
+PONTO_STORY_QA / 01_Riberal / 1 / 18,161
+PONTO_STORY_QA / 01_Riberal / 2 / 18,21033
+PONTO_STORY_QA / 01_Riberal / 3 / 18,26053
+PONTO_STORY_QA / 01_Riberal / 4 / 18,31141
+PONTO_STORY_QA / 01_Riberal / 5 / 18,36058
+PONTO_STORY_QA / 02_Gala / 0 / 18,44707
+PONTO_STORY_QA / 02_Gala / 1 / 18,49843
+PONTO_STORY_QA / 02_Gala / 2 / 18,54988
+PONTO_STORY_QA / 03_Casa / 0 / 18,63368
+PONTO_STORY_QA / 03_Casa / 1 / 19,64928
+PONTO_STORY_QA / 03_Casa / 2 / 19,6994
+PONTO_STORY_QA / 03_Casa / 3 / 19,75146
+PONTO_STORY_QA / 03_Casa / 4 / 19,81694
+PONTO_STORY_QA / 03_Casa / 5 / 19,86655
+PONTO_STORY_QA / 04_Emboscada / 0 / 19,95447
+PONTO_STORY_QA / 04_Emboscada / 1 / 20,03777
+PONTO_STORY_QA / 04_Emboscada / 2 / 20,10531
+PONTO_STORY_QA / 04_Emboscada / 3 / 20,14906
+PONTO_STORY_QA / 04_Emboscada / 4 / 20,22192
+PONTO_STORY_QA / 04_Emboscada / 5 / 20,26912
+PONTO_STORY_QA / 04_Emboscada / 6 / 20,33794
+PONTO_STORY_QA / 05_ResgateMartins / 0 / 20,44212
+PONTO_STORY_QA / 05_ResgateMartins / 1 / 20,50696
+PONTO_STORY_QA / 05_ResgateMartins / 2 / 20,58968
+PONTO_STORY_QA / 05_ResgateMartins / 3 / 21,60742
+PONTO_STORY_QA / 05_ResgateMartins / 4 / 21,67394
+PONTO_STORY_QA / 06_Oficina / 0 / 21,75834
+PONTO_STORY_QA / 06_Oficina / 1 / 21,80813
+PONTO_STORY_QA / 06_Oficina / 2 / 21,85858
+PONTO_STORY_QA / 06_Oficina / 3 / 21,9082
+PONTO_STORY_QA / 06_Oficina / 4 / 21,95842
+PONTO_STORY_QA / 07_Distribuidora / 0 / 22,05249
+PONTO_STORY_QA / 07_Distribuidora / 1 / 22,1481
+PONTO_STORY_QA / 07_Distribuidora / 2 / 22,21498
+PONTO_STORY_QA / 07_Distribuidora / 3 / 22,26629
+PONTO_STORY_QA / 07_Distribuidora / 4 / 22,31322
+PONTO_STORY_QA / 07_Distribuidora / 5 / 22,38797
+PONTO_STORY_QA / 07_Distribuidora / 6 / 22,43168
+PONTO_STORY_QA / 07_Distribuidora / 7 / 22,48944
+PONTO_STORY_QA / 07_Distribuidora / 8 / 22,57286
+PONTO_STORY_QA / 08_Patio / 0 / 22,66304
+PONTO_STORY_QA / 08_Patio / 1 / 22,71638
+PONTO_STORY_QA / 08_Patio / 2 / 22,79063
+PONTO_STORY_QA / 08_Patio / 3 / 22,83608
+PONTO_STORY_QA / 08_Patio / 4 / 22,90679
+PONTO_STORY_QA / 08_Patio / 5 / 22,95543
+PONTO_STORY_QA / 08_Patio / 6 / 23,00413
+PONTO_STORY_QA / 08_Patio / 7 / 23,0705
+PONTO_STORY_QA / 09_RastroCenoura / 0 / 23,16622
+PONTO_STORY_QA / 09_RastroCenoura / 1 / 23,24212
+PONTO_STORY_QA / 09_RastroCenoura / 2 / 23,31038
+PONTO_STORY_QA / 09_RastroCenoura / 3 / 23,39154
+PONTO_STORY_QA / 09_RastroCenoura / 4 / 23,45244
+PONTO_STORY_QA / 09_RastroCenoura / 5 / 23,51671
+PONTO_STORY_QA / 09_RastroCenoura / 6 / 23,56783
+PONTO_STORY_QA / 10_ArquivoCargas / 0 / 23,66127
+PONTO_STORY_QA / 10_ArquivoCargas / 1 / 23,72199
+PONTO_STORY_QA / 10_ArquivoCargas / 2 / 23,76577
+PONTO_STORY_QA / 10_ArquivoCargas / 3 / 23,82392
+PONTO_STORY_QA / 10_ArquivoCargas / 4 / 23,88938
+PONTO_STORY_QA / 10_ArquivoCargas / 5 / 23,93969
+PONTO_STORY_QA / 10_ArquivoCargas / 6 / 23,9863
+PONTO_STORY_QA / 10_ArquivoCargas / 7 / 24,05537
+PONTO_STORY_QA / 11_OficinaRotas / 0 / 24,13659
+PONTO_STORY_QA / 11_OficinaRotas / 1 / 24,18927
+PONTO_STORY_QA / 11_OficinaRotas / 2 / 24,23902
+PONTO_STORY_QA / 11_OficinaRotas / 3 / 24,28916
+PONTO_STORY_QA / 12_Transferencia / 0 / 24,38203
+PONTO_STORY_QA / 12_Transferencia / 1 / 24,4447
+PONTO_STORY_QA / 12_Transferencia / 2 / 24,53112
+PONTO_STORY_QA / 12_Transferencia / 3 / 24,5926
+PONTO_STORY_QA / 12_Transferencia / 4 / 24,64654
+PONTO_STORY_QA / 12_Transferencia / 5 / 24,6954
+PONTO_STORY_QA / 12_Transferencia / 6 / 24,75179
+PONTO_STORY_QA / 12_Transferencia / 7 / 24,83333
+PONTO_STORY_QA / 13_Estrada / 0 / 24,93037
+PONTO_STORY_QA / 13_Estrada / 1 / 25,00254
+PONTO_STORY_QA / 13_Estrada / 2 / 25,08904
+PONTO_STORY_QA / 13_Estrada / 3 / 25,19004
+PONTO_STORY_QA / 13_Estrada / 4 / 25,28907
+PONTO_STORY_QA / 14_FerroVelho / 0 / 25,3792
+PONTO_STORY_QA / 14_FerroVelho / 1 / 25,43531
+PONTO_STORY_QA / 14_FerroVelho / 2 / 25,49236
+PONTO_STORY_QA / 14_FerroVelho / 3 / 25,55807
+PONTO_STORY_QA / 14_FerroVelho / 4 / 25,61201
+PONTO_STORY_QA / 14_FerroVelho / 5 / 25,68579
+PONTO_STORY_QA / 15_Cenoura / 0 / 25,78231
+PONTO_STORY_QA / 15_Cenoura / 1 / 25,84264
+PONTO_STORY_QA / 15_Cenoura / 2 / 25,92768
+PONTO_STORY_QA / 15_Cenoura / 3 / 25,99287
+PONTO_STORY_QA / 15_Cenoura / 4 / 26,03762
+PONTO_STORY_QA / 16_Retorno / 0 / 26,13739
+PONTO_STORY_QA / 16_Retorno / 1 / 26,19641
+PONTO_STORY_QA / 16_Retorno / 2 / 26,25107
+PONTO_STORY_QA / 16_Retorno / 3 / 26,31501
+PONTO_STORY_QA / 17_RiberalTerreo / 0 / 26,41014
+PONTO_STORY_QA / 17_RiberalTerreo / 1 / 26,48961
+PONTO_STORY_QA / 17_RiberalTerreo / 2 / 26,53547
+PONTO_STORY_QA / 17_RiberalTerreo / 3 / 26,60577
+PONTO_STORY_QA / 17_RiberalTerreo / 4 / 26,67302
+PONTO_STORY_QA / 17_RiberalTerreo / 5 / 26,73986
+PONTO_STORY_QA / 18_RiberalProducao / 0 / 26,82855
+PONTO_STORY_QA / 18_RiberalProducao / 1 / 26,87326
+PONTO_STORY_QA / 18_RiberalProducao / 2 / 26,94356
+PONTO_STORY_QA / 18_RiberalProducao / 3 / 26,99146
+PONTO_STORY_QA / 18_RiberalProducao / 4 / 27,0615
+PONTO_STORY_QA / 18_RiberalProducao / 5 / 27,1109
+PONTO_STORY_QA / 19_Servico / 0 / 27,19095
+PONTO_STORY_QA / 19_Servico / 1 / 27,24322
+PONTO_STORY_QA / 19_Servico / 2 / 27,28875
+PONTO_STORY_QA / 19_Servico / 3 / 27,34335
+PONTO_STORY_QA / 20_Paulo / 0 / 27,44997
+PONTO_STORY_QA / 20_Paulo / 1 / 27,51153
+PONTO_STORY_QA / 20_Paulo / 2 / 27,56135
+PONTO_STORY_QA / 20_Paulo / 3 / 27,61125
+PONTO_STORY_QA / 20_Paulo / 4 / 27,67629
+PONTO_STORY_QA / 20_Paulo / 5 / 27,72871
+PONTO_STORY_QA / 21_Adryan / 0 / 27,81488
+PONTO_STORY_QA / 21_Adryan / 1 / 27,87759
+PONTO_STORY_QA / 21_Adryan / 2 / 27,92972
+PONTO_STORY_QA / 21_Adryan / 3 / 28,9575
+PONTO_STORY_QA / 22_Fuga / 0 / 29,04681
+PONTO_STORY_QA / 22_Fuga / 1 / 29,13197
+PONTO_STORY_QA / 22_Fuga / 2 / 29,21305
+PONTO_STORY_QA / 22_Fuga / 3 / 29,31288
+PONTO_STORY_QA / 23_Amanhecer / 0 / 29,41203
+PONTO_STORY_QA / 23_Amanhecer / 1 / 29,4586
+PONTO_STORY_QA / 23_Amanhecer / 2 / 29,51063
+Saving results to: D:\The Amaral Game\V 1.0\Validation\Polish021-Regression.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

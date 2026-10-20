@@ -42,7 +42,7 @@ namespace PontoCego.Editor
             world.streetBlocks=blocks.ToArray();world.rebuiltOutdoorLayout=true;
             var shop=UnityEngine.Object.FindAnyObjectByType<EquipmentShop>();if(shop){shop.transform.position+=Vector3.up*1.2f;foreach(var table in UnityEngine.Object.FindObjectsByType<PcWorkbench>())table.transform.position+=Vector3.up*1.2f;}
 
-            StreetName(new Vector2(-5.5f,-23),"AVENIDA CENTRAL",8);StreetName(new Vector2(-79,24),"RUA DA RIBERAL",7);StreetName(new Vector2(96,23),"VIA DOS GALPÕES",7);StreetName(new Vector2(-23,-78),"CAMINHO DO MOCAMBO",8);StreetName(new Vector2(-80,95),"ALAMEDA DO CÓRREGO",8);StreetName(new Vector2(191,-78),"ESTRADA DO RESGATE",8);
+            StreetName(new Vector2(-5.5f,-23),"AVENIDA CENTRAL",8);StreetName(new Vector2(-79,24),"RUA JOSÉ DE SANTANA",7);StreetName(new Vector2(96,23),"VIA DOS GALPÕES",7);StreetName(new Vector2(-23,-78),"CAMINHO DO MOCAMBO",8);StreetName(new Vector2(-80,95),"ALAMEDA DO CÓRREGO",8);StreetName(new Vector2(191,-78),"ESTRADA DO RESGATE",8);
         }
         static void RebuildPedestrianRoutes(WorldHub world)
         {

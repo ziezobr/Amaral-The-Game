@@ -4,15 +4,16 @@ namespace PontoCego
     /// <summary>The user's title artwork with accessible controls, preserved campaign and test slots.</summary>
     public sealed class MainMenu:MonoBehaviour
     {
-        bool selecting,accessibility;Vector2 phaseScroll;float reveal,panelReveal;
+        bool selecting,accessibility,choosingDifficulty;int chosenDifficulty=1;string selectedPhase;Vector2 phaseScroll;float reveal,panelReveal;
         static readonly string[] colourNames={"Original","Protanopia","Deuteranopia","Tritanopia"};
         public bool AccessibilityOpen=>accessibility;
         public AudioClip menuMusic;AudioSource musicSource;
         public Texture2D background,portrait;public GameUiArt art;
-        void Start(){Cursor.visible=true;if(menuMusic){musicSource=gameObject.AddComponent<AudioSource>();musicSource.clip=menuMusic;musicSource.loop=true;musicSource.playOnAwake=false;musicSource.spatialBlend=0;musicSource.volume=0;musicSource.Play();}}
-        void Update(){if(musicSource)musicSource.volume=Mathf.MoveTowards(musicSource.volume,.4f*GamePreferences.Music,Time.unscaledDeltaTime*.5f);reveal=UiTheme.StepVisibility(reveal,true,Time.unscaledDeltaTime,GamePreferences.ReduceMotion);panelReveal=UiTheme.StepVisibility(panelReveal,selecting||accessibility,Time.unscaledDeltaTime,GamePreferences.ReduceMotion);}
-        public void StartGame(){UiSound.PlayClick();if(GameSession.HasSave)GameSession.Continue();else GameSession.NewCampaign();}
+        void Start(){if(!GetComponent<GameAutoUpdater>())gameObject.AddComponent<GameAutoUpdater>();Cursor.visible=true;if(menuMusic){musicSource=gameObject.AddComponent<AudioSource>();musicSource.clip=menuMusic;musicSource.loop=true;musicSource.playOnAwake=false;musicSource.spatialBlend=0;musicSource.volume=0;musicSource.Play();}}
+        void Update(){if(musicSource)musicSource.volume=Mathf.MoveTowards(musicSource.volume,.4f*GamePreferences.Music,Time.unscaledDeltaTime*.5f);reveal=UiTheme.StepVisibility(reveal,true,Time.unscaledDeltaTime,GamePreferences.ReduceMotion);panelReveal=UiTheme.StepVisibility(panelReveal,selecting||accessibility||choosingDifficulty,Time.unscaledDeltaTime,GamePreferences.ReduceMotion);}
+        public void StartGame(){UiSound.PlayClick();if(GameSession.HasSave)GameSession.Continue();else OpenDifficulty(null);}
         public void OpenAccessibility(){accessibility=true;selecting=false;panelReveal=0;UiSound.PlayOpen();}
+        public void OpenDifficulty(string phase){selectedPhase=phase;choosingDifficulty=true;selecting=accessibility=false;panelReveal=0;UiSound.PlayOpen();}
         void OpenPhases(){selecting=true;accessibility=false;panelReveal=0;UiSound.PlayOpen();}
         void OnGUI()
         {
@@ -22,18 +23,18 @@ namespace PontoCego
                 GUI.matrix=UiTheme.SafeMatrix();
                 if(art&&art.mainMenu)GUI.DrawTexture(new Rect(0,0,1280,720),art.mainMenu,ScaleMode.StretchToFill);
                 float alpha=UiTheme.MenuEase(reveal);GUI.color=oldColor*new Color(1,1,1,alpha);
-                if(selecting||accessibility)
+                if(selecting||accessibility||choosingDifficulty)
                 {
                     GUI.color*=new Color(0,0,0,.65f);GUI.DrawTexture(new Rect(0,0,1280,720),Texture2D.whiteTexture);
                     float panel=UiTheme.MenuEase(panelReveal);GUI.color=oldColor*new Color(1,1,1,panel);GUI.matrix=UiTheme.SafeMatrix()*Matrix4x4.Translate(new Vector3(0,GamePreferences.ReduceMotion?0:(1-panel)*18,0));
-                    if(selecting)DrawPhaseSelector();else DrawAccessibility();
-                    if(Event.current.type==EventType.KeyDown&&Event.current.keyCode==KeyCode.Escape){selecting=accessibility=false;UiSound.PlayClick();Event.current.Use();}
+                    if(choosingDifficulty)DrawDifficulty();else if(selecting)DrawPhaseSelector();else DrawAccessibility();
+                    if(Event.current.type==EventType.KeyDown&&Event.current.keyCode==KeyCode.Escape){selecting=accessibility=choosingDifficulty=false;UiSound.PlayClick();Event.current.Use();}
                     return;
                 }
                 GUI.matrix=UiTheme.SafeMatrix()*Matrix4x4.Translate(new Vector3(0,GamePreferences.ReduceMotion?0:(1-alpha)*14,0));
                 float y=378;
                 if(GameSession.HasSave){if(Button(new Rect(490,y,300,49),"CONTINUAR"))GameSession.Continue();y+=59;}
-                if(Button(new Rect(490,y,300,49),"NOVO JOGO"))GameSession.NewCampaign();y+=59;
+                if(Button(new Rect(490,y,300,49),"NOVO JOGO"))OpenDifficulty(null);y+=59;
                 if(Button(new Rect(490,y,300,45),"ESCOLHER FASE"))OpenPhases();y+=55;
                 if(Button(new Rect(490,y,300,42),"ACESSIBILIDADE",15))OpenAccessibility();
                 if(Event.current.type==EventType.KeyDown&&(Event.current.keyCode==KeyCode.Return||Event.current.keyCode==KeyCode.Space)){StartGame();Event.current.Use();}
@@ -56,8 +57,16 @@ namespace PontoCego
         {
             Panel("ESCOLHER FASE","Partida de teste • sua campanha em Continuar será preservada.");
             var destinations=UberDriver.Destinations;phaseScroll=GUI.BeginScrollView(new Rect(245,210,790,350),phaseScroll,new Rect(0,0,765,(destinations.Length-1)*51));int row=0;
-            foreach(var id in destinations){if(id=="25_Bairro")continue;if(Button(new Rect(0,row++*51,755,44),UberDriver.TitleFor(id),16))GameSession.StartSelectedMission(id);}
+            foreach(var id in destinations){if(id=="25_Bairro")continue;if(Button(new Rect(0,row++*51,755,44),UberDriver.TitleFor(id),16))OpenDifficulty(id);}
             GUI.EndScrollView();if(Button(new Rect(245,586,790,44),"VOLTAR",16))selecting=false;
+        }
+        void DrawDifficulty()
+        {
+            Panel("ESCOLHA A DIFICULDADE","A escolha será salva nesta partida. Continuar preserva a dificuldade anterior.");
+            string[] descriptions={"HISTÓRIA • inimigos com menos vida, ataques mais lentos e dano reduzido.","NORMAL • experiência original, recursos limitados e combate equilibrado.","DIFÍCIL • inimigos mais resistentes, ágeis e perigosos. Esquiva e cobertura importam."};
+            for(int i=0;i<3;i++)if(Button(new Rect(245,215+i*83,790,68),descriptions[i],14,chosenDifficulty==i))chosenDifficulty=i;
+            if(Button(new Rect(245,493,790,48),"INICIAR • "+DifficultyRules.Name((GameDifficulty)chosenDifficulty),17)){if(string.IsNullOrEmpty(selectedPhase))GameSession.NewCampaign(false,chosenDifficulty);else GameSession.StartSelectedMission(selectedPhase,chosenDifficulty);}
+            if(Button(new Rect(245,586,790,44),"VOLTAR",16))choosingDifficulty=false;
         }
         void DrawAccessibility()
         {

@@ -9,6 +9,7 @@ namespace PontoCego
         public SpriteRenderer visual;public Sprite projectileSprite;public Sprite[] poses;
         Rigidbody2D body;Health health;PlayerMotor player;GridNavigator nav;Vector3 visualOrigin;List<Vector2> path;int waypoint;
         float nextAttack,nextPath,downUntil,attackUntil;int rounds=6;
+        public bool AttackVisualActive=>Time.time<attackUntil||health&&!health.Alive;
         void Awake()
         {
             body=GetComponent<Rigidbody2D>();health=GetComponent<Health>();body.gravityScale=0;body.freezeRotation=true;body.interpolation=RigidbodyInterpolation2D.Interpolate;

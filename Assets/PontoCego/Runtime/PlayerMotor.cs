@@ -17,6 +17,7 @@ namespace PontoCego
             Body.interpolation = RigidbodyInterpolation2D.Interpolate;
             Body.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
         }
+        void Start(){Model.SetStaminaUpgrade(GameSession.Current.staminaLevel);}
         void FixedUpdate()
         {
             if (input.Paused || input.GameplayLocked) { Model.Stop(); Body.linearVelocity = Vector2.zero; return; }

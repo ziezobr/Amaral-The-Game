@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="7" result="Passed" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-19 22:37:37Z" end-time="2026-10-19 22:37:47Z" duration="10,2457325">
+  <test-suite type="TestSuite" id="1127" name="Ponto Cego" fullname="Ponto Cego" runstate="Runnable" testcasecount="92" result="Passed" start-time="2026-10-19 22:37:37Z" end-time="2026-10-19 22:37:47Z" duration="10.245733" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1108" name="PontoCego.Tests.PlayMode.dll" fullname="D:/The Amaral Game/V 1.0/Library/ScriptAssemblies/PontoCego.Tests.PlayMode.dll" runstate="Runnable" testcasecount="83" result="Passed" start-time="2026-10-19 22:37:37Z" end-time="2026-10-19 22:37:47Z" duration="10.229798" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="23988" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1109" name="PontoCego" fullname="PontoCego" runstate="Runnable" testcasecount="83" result="Passed" start-time="2026-10-19 22:37:37Z" end-time="2026-10-19 22:37:47Z" duration="10.228062" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1110" name="Tests" fullname="PontoCego.Tests" runstate="Runnable" testcasecount="83" result="Passed" start-time="2026-10-19 22:37:37Z" end-time="2026-10-19 22:37:47Z" duration="10.206025" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1069" name="Polish021SceneTests" fullname="PontoCego.Tests.Polish021SceneTests" classname="PontoCego.Tests.Polish021SceneTests" runstate="Runnable" testcasecount="7" result="Passed" start-time="2026-10-19 22:37:37Z" end-time="2026-10-19 22:37:47Z" duration="10.187981" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1074" name="BirdSourcesAreMutedAndFootstepsHaveNoClip" fullname="PontoCego.Tests.Polish021SceneTests.BirdSourcesAreMutedAndFootstepsHaveNoClip" methodname="BirdSourcesAreMutedAndFootstepsHaveNoClip" classname="PontoCego.Tests.Polish021SceneTests" runstate="Runnable" seed="1191315540" result="Passed" start-time="2026-10-19 22:37:37Z" end-time="2026-10-19 22:37:40Z" duration="2.600610" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[PONTO_GROUNDED_SIGNS_V2
+]]></output>
+            </test-case>
+            <test-case id="1071" name="CommonEnemiesHaveSixLooksAndFoodButBossesDoNot" fullname="PontoCego.Tests.Polish021SceneTests.CommonEnemiesHaveSixLooksAndFoodButBossesDoNot" methodname="CommonEnemiesHaveSixLooksAndFoodButBossesDoNot" classname="PontoCego.Tests.Polish021SceneTests" runstate="Runnable" seed="1655445416" result="Passed" start-time="2026-10-19 22:37:40Z" end-time="2026-10-19 22:37:41Z" duration="1.290336" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[PONTO_GROUNDED_SIGNS_V2
+]]></output>
+            </test-case>
+            <test-case id="1072" name="DoorsAreOpenAndWallsRemainSolid" fullname="PontoCego.Tests.Polish021SceneTests.DoorsAreOpenAndWallsRemainSolid" methodname="DoorsAreOpenAndWallsRemainSolid" classname="PontoCego.Tests.Polish021SceneTests" runstate="Runnable" seed="12356862" result="Passed" start-time="2026-10-19 22:37:41Z" end-time="2026-10-19 22:37:42Z" duration="1.247240" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[PONTO_GROUNDED_SIGNS_V2
+]]></output>
+            </test-case>
+            <test-case id="1073" name="HenzoStaminaUpgradePersistsInSessionWithoutChangingLife" fullname="PontoCego.Tests.Polish021SceneTests.HenzoStaminaUpgradePersistsInSessionWithoutChangingLife" methodname="HenzoStaminaUpgradePersistsInSessionWithoutChangingLife" classname="PontoCego.Tests.Polish021SceneTests" runstate="Runnable" seed="263322495" result="Passed" start-time="2026-10-19 22:37:42Z" end-time="2026-10-19 22:37:44Z" duration="1.255391" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[PONTO_GROUNDED_SIGNS_V2
+]]></output>
+            </test-case>
+            <test-case id="1075" name="MateusTasksHaveDifferentActions" fullname="PontoCego.Tests.Polish021SceneTests.MateusTasksHaveDifferentActions" methodname="MateusTasksHaveDifferentActions" classname="PontoCego.Tests.Polish021SceneTests" runstate="Runnable" seed="2037684719" result="Passed" start-time="2026-10-19 22:37:44Z" end-time="2026-10-19 22:37:45Z" duration="1.238743" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[PONTO_GROUNDED_SIGNS_V2
+]]></output>
+            </test-case>
+            <test-case id="1076" name="PrimaryObjectiveIsAvailableToHud" fullname="PontoCego.Tests.Polish021SceneTests.PrimaryObjectiveIsAvailableToHud" methodname="PrimaryObjectiveIsAvailableToHud" classname="PontoCego.Tests.Polish021SceneTests" runstate="Runnable" seed="973642692" result="Passed" start-time="2026-10-19 22:37:45Z" end-time="2026-10-19 22:37:46Z" duration="1.284948" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[PONTO_GROUNDED_SIGNS_V2
+]]></output>
+            </test-case>
+            <test-case id="1070" name="RescuedAdryanUsesChildFrames" fullname="PontoCego.Tests.Polish021SceneTests.RescuedAdryanUsesChildFrames" methodname="RescuedAdryanUsesChildFrames" classname="PontoCego.Tests.Polish021SceneTests" runstate="Runnable" seed="1863521087" result="Passed" start-time="2026-10-19 22:37:46Z" end-time="2026-10-19 22:37:47Z" duration="1.249135" asserts="0">
+              <properties>
+                <property name="_JOINTYPE" value="UnityCombinatorial" />
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[PONTO_GROUNDED_SIGNS_V2
+Saving results to: D:\The Amaral Game\V 1.0\Validation\Polish021-PlayMode.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

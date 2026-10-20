@@ -6,8 +6,11 @@ namespace PontoCego
 {
     [Serializable]public sealed class CampaignSave
     {
+        public int difficulty=1,difficultySchema=1;
+        public bool waypointValid;public float waypointX,waypointY;
         public string checkpointScene="01_Riberal";
-        public int checkpointStep,currency,armorLevel,flashLevel,allyLevel,completedStages;
+        public int checkpointStep,armorLevel,flashLevel,allyLevel,completedStages,staminaLevel;
+        public int currency=50;
         public int medkits=2;public bool pcAssembled;public int motherboardBombs;
         public bool openNeighborhood,deliveryActive,photoJobActive,sideMission,hasSidearm;
         public string mainMission="01_Riberal";
@@ -29,15 +32,15 @@ namespace PontoCego
         static void Load()
         {
             try{data=CanPersist&&PlayerPrefs.HasKey(Key)?JsonUtility.FromJson<CampaignSave>(PlayerPrefs.GetString(Key)):new CampaignSave();}
-            catch{data=new CampaignSave();}if(data==null)data=new CampaignSave();if(data.collected==null)data.collected=new List<string>();if(data.journal==null)data.journal=new List<string>();if(data.worldMission==null)data.worldMission="";if(data.worldDestination==null)data.worldDestination="";if(string.IsNullOrEmpty(data.mainMission))data.mainMission="01_Riberal";
+            catch{data=new CampaignSave();}if(data==null)data=new CampaignSave();if(data.collected==null)data.collected=new List<string>();if(data.journal==null)data.journal=new List<string>();if(data.difficultySchema==0){data.difficulty=1;data.difficultySchema=1;}if(data.worldMission==null)data.worldMission="";if(data.worldDestination==null)data.worldDestination="";if(string.IsNullOrEmpty(data.mainMission))data.mainMission="01_Riberal";
         }
-        public static void NewCampaign(bool quickDemo=false)
+        public static void NewCampaign(bool quickDemo=false,int difficulty=1)
         {
-            if(WorldEnvironment.DayNightCycle.Instance)WorldEnvironment.DayNightCycle.Instance.SetHour(16);demo=quickDemo;data=new CampaignSave{openNeighborhood=!quickDemo};if(quickDemo){data.checkpointScene="04_Emboscada";data.currency=180;data.medkits=3;}if(!quickDemo){data.checkpointScene=WorldHub.SceneName;Save();SceneManager.LoadScene(WorldHub.SceneName);}else{Save();Travel(data.checkpointScene);}
+            if(WorldEnvironment.DayNightCycle.Instance)WorldEnvironment.DayNightCycle.Instance.SetHour(16);demo=quickDemo;data=new CampaignSave{openNeighborhood=!quickDemo,difficulty=Mathf.Clamp(difficulty,0,2)};if(quickDemo){data.checkpointScene="04_Emboscada";data.currency=180;data.medkits=3;}if(!quickDemo){data.checkpointScene=WorldHub.SceneName;Save();SceneManager.LoadScene(WorldHub.SceneName);}else{Save();Travel(data.checkpointScene);}
         }
-        public static void StartSelectedMission(string id)
+        public static void StartSelectedMission(string id,int difficulty=1)
         {
-            demo=true;data=new CampaignSave{checkpointScene=WorldHub.SceneName,openNeighborhood=true,mainMission=id,worldMission=id,worldStep=0,currency=180,hasSidearm=id!="01_Riberal"&&id!="02_Gala"};Time.timeScale=1;SceneManager.LoadScene(WorldHub.SceneName);
+            demo=true;data=new CampaignSave{difficulty=Mathf.Clamp(difficulty,0,2),checkpointScene=WorldHub.SceneName,openNeighborhood=true,mainMission=id,worldMission=id,worldStep=0,currency=180,hasSidearm=id!="01_Riberal"&&id!="02_Gala"};Time.timeScale=1;SceneManager.LoadScene(WorldHub.SceneName);
         }
         public static void Continue(){demo=false;data=null;Load();Time.timeScale=1;
             if(Current.checkpointScene!="00_Menu"){Current.openNeighborhood=true;if(Current.checkpointScene!="25_Bairro"&&Current.checkpointScene!=WorldHub.SceneName){Current.worldMission=Current.checkpointScene;Current.worldStep=Current.checkpointStep;}Current.checkpointScene=WorldHub.SceneName;}

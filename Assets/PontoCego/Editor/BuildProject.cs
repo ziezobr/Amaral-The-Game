@@ -14,14 +14,15 @@ namespace PontoCego.Editor
         [MenuItem("Ponto Cego/2 • Build Windows")]
         public static void BuildWindows()
         {
-            var output = System.Environment.GetEnvironmentVariable("PONTO_RELEASE_OUTPUT") ?? "Builds/Demo0201";
+            var output = System.Environment.GetEnvironmentVariable("PONTO_RELEASE_OUTPUT") ?? "Builds/Demo0240";
             Directory.CreateDirectory(output);
-            PlayerSettings.bundleVersion="0.20.1";
+            PlayerSettings.bundleVersion="0.24.0";
             EditorBuildSettings.scenes=EditorBuildSettings.scenes.OrderBy(s=>s.path.EndsWith("00_Menu.unity")?0:1).ToArray();
             Debug.Log("BUILD_START_SCENE: "+EditorBuildSettings.scenes.First(s=>s.enabled).path);
             var report=BuildPipeline.BuildPlayer(new BuildPlayerOptions{scenes=EditorBuildSettings.scenes.Where(s=>s.enabled&&s.path.StartsWith(UrbanSceneBuilder.Root+"/Scenes/")).Select(s=>s.path).OrderBy(p=>p.EndsWith("00_Menu.unity")?0:1).ToArray(),
                 locationPathName=Path.Combine(output,"PontoCego.exe"),target=BuildTarget.StandaloneWindows64,options=BuildOptions.None});
             if(report.summary.result!=BuildResult.Succeeded)throw new Exception("Windows build failed: "+report.summary.result);
+            File.Copy("Packaging/PontoCegoUpdater.exe",Path.Combine(output,"PontoCegoUpdater.exe"),true);
             Debug.Log("PONTO_CEGO_WINDOWS_BUILD_OK");
         }
         public static void BuildAll(){Build();BuildWindows();}

@@ -4,7 +4,9 @@ namespace PontoCego
 {
     public sealed class StreetWalker:MonoBehaviour
     {
-        public Vector2[] route;public Sprite[] frames;public SpriteRenderer visual;public float speed=1.4f;int index;float wait;Rigidbody2D body;PlayerInputReader input;
+        public float VisualGaitCycle=>Mathf.Repeat(phase/4f,1);
+
+        public Vector2[] route;public Sprite[] frames;public SpriteRenderer visual;public float speed=1.4f;int index;float wait,phase;Rigidbody2D body;PlayerInputReader input;
         void Start(){body=GetComponent<Rigidbody2D>();input=FindAnyObjectByType<PlayerInputReader>();index=Random.Range(0,route.Length);}
         void FixedUpdate()
         {
@@ -20,7 +22,7 @@ namespace PontoCego
         void LateUpdate()
         {
             visual.sortingOrder=WorldSort.At(transform.position.y);
-            if(body.linearVelocity.sqrMagnitude>.1f){visual.flipX=body.linearVelocity.x<0;visual.sprite=frames[body.linearVelocity.y>.35f?3:1+Mathf.FloorToInt(Time.time*7)%2];}
+            if(body.linearVelocity.sqrMagnitude>.1f){phase+=Time.deltaTime*ReferenceActorAnimation.FramesPerSecond(body.linearVelocity.magnitude,false,3);visual.flipX=body.linearVelocity.x<0;int tick=Mathf.FloorToInt(phase)%4;visual.sprite=frames[body.linearVelocity.y>.35f?3:tick==0?1:tick==2?2:0];}
             else visual.sprite=frames[0];
         }
     }

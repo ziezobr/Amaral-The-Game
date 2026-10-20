@@ -28,6 +28,8 @@ namespace PontoCego
             if(team==CombatTeam.Player&&motor&&motor.Model!=null&&motor.Model.Dodging&&motor.Model.DodgeProgress<.72f)return false;
             var guard=GetComponent<EnemyAgent>();var ability=GetComponent<BossAbilities>();if(!ignoreDefense&&guard&&guard.role==EnemyRole.Cenoura&&!guard.Stunned&&!(ability&&ability.Recovering))amount*=.32f;
             if(!ignoreDefense&&guard&&guard.role!=EnemyRole.Cenoura)amount*=.88f;
+            if(!ignoreDefense&&GetComponent<EnemyVariety>() is EnemyVariety variety)amount=variety.AdjustIncoming(amount);
+            if(attacker==CombatTeam.Enemy&&team!=CombatTeam.Enemy)amount*=DifficultyRules.Incoming(DifficultyRules.Current);
             float before=Current;Current=Mathf.Max(0,Current-amount);float applied=before-Current;TemporaryHealth=Mathf.Max(0,TemporaryHealth-applied);LastDamageTime=Time.time;Damaged?.Invoke(this,applied);
             if(visual)FindAnyObjectByType<OfficeAudio>()?.Impact();
             immuneUntil=Time.time+(team==CombatTeam.Player ? .5f : team==CombatTeam.Ally ? .15f : 0f);

@@ -22,7 +22,7 @@ namespace PontoCego
         void Awake() { input = GetComponent<PlayerInputReader>(); }
         void Update()
         {
-            if (input.Paused) return;
+            if (input.Paused||MissionIntro2D.Showing) return;
             var dialogue=GetComponent<StoryDialogue>();
             if(dialogue && dialogue.Active)
             {
