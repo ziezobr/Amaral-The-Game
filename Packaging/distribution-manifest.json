@@ -1,11 +1,11 @@
 {
-  "version": "0.24.0",
-  "stagingCommit": "2ca5405f4bd5fd64dac918c9ebd357e9cb94d7df",
+  "version": "0.25.0",
+  "stagingCommit": "1b58cf591a38ac807cb4f441bbf4dffa5be821d0",
   "files": [
     {
-      "name": "Amaral-The-Game-0.24.0-Windows-Setup.exe",
-      "size": 144276293,
-      "sha256": "6b7acb06ff1cac3825bee1acd60b210e5c8acc710af8414ceed1fbc81ff62e8d",
+      "name": "Amaral-The-Game-0.25.0-Windows-Setup.exe",
+      "size": 168133566,
+      "sha256": "0cd2d825e053cea54e2aa7e6f5ceacc8a6850ecebc8dccfd3390307e868324e0",
       "chunks": [
         {
           "offset": 0,
@@ -69,15 +69,25 @@
         },
         {
           "offset": 141557760,
-          "length": 2718533,
+          "length": 11796480,
           "path": "parts/0/0012"
+        },
+        {
+          "offset": 153354240,
+          "length": 11796480,
+          "path": "parts/0/0013"
+        },
+        {
+          "offset": 165150720,
+          "length": 2982846,
+          "path": "parts/0/0014"
         }
       ]
     },
     {
-      "name": "Amaral-The-Game-0.24.0-Unity-Source.zip",
-      "size": 290036255,
-      "sha256": "7cf4a7f6a4e6b5a4ffe5fcb7d63beb32cd2b112b089e23cd88f8e2bb58c6433e",
+      "name": "Amaral-The-Game-0.25.0-Windows-Portable.zip",
+      "size": 195715428,
+      "sha256": "cd7edfbd4468b2aa1182c0433284b00c096ad5903f251761c9aed9415fdd3296",
       "chunks": [
         {
           "offset": 0,
@@ -161,55 +171,15 @@
         },
         {
           "offset": 188743680,
-          "length": 11796480,
+          "length": 6971748,
           "path": "parts/1/0016"
-        },
-        {
-          "offset": 200540160,
-          "length": 11796480,
-          "path": "parts/1/0017"
-        },
-        {
-          "offset": 212336640,
-          "length": 11796480,
-          "path": "parts/1/0018"
-        },
-        {
-          "offset": 224133120,
-          "length": 11796480,
-          "path": "parts/1/0019"
-        },
-        {
-          "offset": 235929600,
-          "length": 11796480,
-          "path": "parts/1/0020"
-        },
-        {
-          "offset": 247726080,
-          "length": 11796480,
-          "path": "parts/1/0021"
-        },
-        {
-          "offset": 259522560,
-          "length": 11796480,
-          "path": "parts/1/0022"
-        },
-        {
-          "offset": 271319040,
-          "length": 11796480,
-          "path": "parts/1/0023"
-        },
-        {
-          "offset": 283115520,
-          "length": 6920735,
-          "path": "parts/1/0024"
         }
       ]
     },
     {
-      "name": "Amaral-The-Game-0.24.0-Windows-Portable.zip",
-      "size": 166568684,
-      "sha256": "58ddc701cdc3420af7a942114c56132865523b8feb14b18d9e3ae810fbb60e1c",
+      "name": "Amaral-The-Game-0.25.0-Unity-Source.zip",
+      "size": 400672489,
+      "sha256": "31e08ce80a99bd5cf4cd8502dab6a75461d0260c6ec9946a107acbea5ad467c9",
       "chunks": [
         {
           "offset": 0,
@@ -283,8 +253,103 @@
         },
         {
           "offset": 165150720,
-          "length": 1417964,
+          "length": 11796480,
           "path": "parts/2/0014"
+        },
+        {
+          "offset": 176947200,
+          "length": 11796480,
+          "path": "parts/2/0015"
+        },
+        {
+          "offset": 188743680,
+          "length": 11796480,
+          "path": "parts/2/0016"
+        },
+        {
+          "offset": 200540160,
+          "length": 11796480,
+          "path": "parts/2/0017"
+        },
+        {
+          "offset": 212336640,
+          "length": 11796480,
+          "path": "parts/2/0018"
+        },
+        {
+          "offset": 224133120,
+          "length": 11796480,
+          "path": "parts/2/0019"
+        },
+        {
+          "offset": 235929600,
+          "length": 11796480,
+          "path": "parts/2/0020"
+        },
+        {
+          "offset": 247726080,
+          "length": 11796480,
+          "path": "parts/2/0021"
+        },
+        {
+          "offset": 259522560,
+          "length": 11796480,
+          "path": "parts/2/0022"
+        },
+        {
+          "offset": 271319040,
+          "length": 11796480,
+          "path": "parts/2/0023"
+        },
+        {
+          "offset": 283115520,
+          "length": 11796480,
+          "path": "parts/2/0024"
+        },
+        {
+          "offset": 294912000,
+          "length": 11796480,
+          "path": "parts/2/0025"
+        },
+        {
+          "offset": 306708480,
+          "length": 11796480,
+          "path": "parts/2/0026"
+        },
+        {
+          "offset": 318504960,
+          "length": 11796480,
+          "path": "parts/2/0027"
+        },
+        {
+          "offset": 330301440,
+          "length": 11796480,
+          "path": "parts/2/0028"
+        },
+        {
+          "offset": 342097920,
+          "length": 11796480,
+          "path": "parts/2/0029"
+        },
+        {
+          "offset": 353894400,
+          "length": 11796480,
+          "path": "parts/2/0030"
+        },
+        {
+          "offset": 365690880,
+          "length": 11796480,
+          "path": "parts/2/0031"
+        },
+        {
+          "offset": 377487360,
+          "length": 11796480,
+          "path": "parts/2/0032"
+        },
+        {
+          "offset": 389283840,
+          "length": 11388649,
+          "path": "parts/2/0033"
         }
       ]
     }
