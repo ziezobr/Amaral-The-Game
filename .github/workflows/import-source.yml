@@ -1,4 +1,4 @@
-name: Publicar demo Windows 0.24.0
+name: Publicar demo Windows 0.25.0
 on:
   workflow_dispatch:
   push:
@@ -7,7 +7,7 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: publish-demo-0240
+  group: publish-demo-0250
   cancel-in-progress: false
 jobs:
   publish:
@@ -27,7 +27,7 @@ jobs:
         run: |
           import json, os, pathlib
           data=json.loads(pathlib.Path('Packaging/distribution-manifest.json').read_text())
-          assert data['version']=='0.24.0'
+          assert data['version']=='0.25.0'
           with open(os.environ['GITHUB_OUTPUT'],'a') as f:
               f.write('commit='+data['stagingCommit']+'\n')
       - uses: actions/checkout@v4
@@ -64,7 +64,7 @@ jobs:
         run: |
           import pathlib,zipfile
           root=pathlib.Path.cwd().resolve()
-          with zipfile.ZipFile('_release_output/Amaral-The-Game-0.24.0-Unity-Source.zip') as z:
+          with zipfile.ZipFile('_release_output/Amaral-The-Game-0.25.0-Unity-Source.zip') as z:
               for info in z.infolist():
                   path=pathlib.PurePosixPath(info.filename)
                   assert not path.is_absolute() and '..' not in path.parts and '.github' not in path.parts
@@ -77,23 +77,25 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add Assets Packages ProjectSettings Packaging Design Validation README.md .gitignore '*.md'
           if ! git diff --cached --quiet; then
-            git commit -m "Publicar projeto Unity completo da demo 0.24.0"
+            git commit -m "Publicar projeto Unity completo da demo 0.25.0"
             git push origin HEAD:main
           fi
       - name: Preparar notas da demo
         shell: python
         run: |
           from pathlib import Path
-          Path('_release_output/NOTES.md').write_text("""## Demo 2D 0.24.0 para Windows
+          Path('_release_output/NOTES.md').write_text("""## Demo 2D 0.25.0 para Windows
           Instalador e ZIP portátil anexados. Extraia o ZIP inteiro para jogar sem instalar.
 
           ## Novidades
-          Dificuldade História, Normal e Difícil antes de começar, com balanceamento salvo.
-          Introduções de missão no cenário, puláveis com E. Três trabalhos de bairro pelo celular.
-          Carros da rua dirigíveis. Trânsito cede passagem ao Uber em encontro frontal.
-          Mapa ampliado com waypoint e destino personalizado no Uber; embarque e viagem físicos.
-          Scroll alterna câmera preta, câmera rosa desbloqueada e mãos. Clique esquerdo usa a seleção.
-          Amaral tem 24 poses novas segurando a câmera rosa, sem câmera flutuando.
+          Arte 2D coerente para protagonistas, Adryan criança, Mateus, Higor e Pivô.
+          Oito tipos de pedestres, seis inimigos e oito modelos de carros redesenhados.
+          Locomoção com 24 poses interpoladas por direção, mantendo oito direções e quadros-chave.
+          São poses de animação 2D; não são 192 desenhos independentes de cada ataque.
+          Amaral alterna corpo com câmera preta, rosa e mãos vazias.
+          Recortes por contorno alfa completo, pés alinhados e bancos de arte por personagem.
+          Trânsito usa circuitos nas faixas à direita, curvas amostradas e partida com espaçamento.
+          Uber favorece a faixa correta e carros cedem pelo acostamento, sem desviar à esquerda.
 
           ## Atualizador
           O menu consulta as próximas releases, verifica SHA-256 e aplica a versão portátil com reinício.
@@ -101,8 +103,8 @@ jobs:
           O auxiliar Windows mantém cópia dos arquivos anteriores para recuperação.
 
           ## Verificação
-          70 testes de edição e 22 de execução aprovados, mais verificações adicionais dos contratos e Uber.
-          Revisão nativa 1080p de dificuldade, sprites, cutscene, mapa e Uber sem exceções no log.
+          75 testes de edição e 25 de execução aprovados, incluindo contratos, combate, coleta e viagem física do Uber.
+          Revisão nativa 1080p de sprites, movimento, equipamento, cutscene, mapa e Uber.
           O auxiliar de atualização foi exercitado com cópia e backup em uma instalação de teste.
           Demo em desenvolvimento. Instalador sem assinatura digital.
 
@@ -111,18 +113,18 @@ jobs:
       - name: Enviar arquivos e publicar a release
         shell: bash
         run: |
-          if gh release view v0.24.0 >/dev/null 2>&1; then
+          if gh release view v0.25.0 >/dev/null 2>&1; then
             echo "A release ja existe; recusando sobrescrever uma publicacao existente."
             exit 1
           fi
-          gh release create v0.24.0 --draft --target "$(git rev-parse HEAD)" --title "Amaral The Game — Demo 0.24.0 para Windows" --notes-file _release_output/NOTES.md
-          gh release upload v0.24.0 _release_output/*.exe _release_output/*.zip _release_output/SHA256SUMS.txt
-          gh release edit v0.24.0 --draft=false
+          gh release create v0.25.0 --draft --target "$(git rev-parse HEAD)" --title "Amaral The Game — Demo 0.25.0 para Windows" --notes-file _release_output/NOTES.md
+          gh release upload v0.25.0 _release_output/*.exe _release_output/*.zip _release_output/SHA256SUMS.txt
+          gh release edit v0.25.0 --draft=false
       - name: Confirmar anexos publicados
         shell: python
         run: |
           import json,pathlib,subprocess
-          release=json.loads(subprocess.check_output(['gh','api','repos/ziezobr/Amaral-The-Game/releases/tags/v0.24.0']))
+          release=json.loads(subprocess.check_output(['gh','api','repos/ziezobr/Amaral-The-Game/releases/tags/v0.25.0']))
           assert not release['draft']
           files=json.loads(pathlib.Path('Packaging/distribution-manifest.json').read_text())['files']
           assets={a['name']:a for a in release['assets']}
@@ -135,5 +137,5 @@ jobs:
           print('PUBLICACAO_VERIFICADA: '+release['html_url'])
       - name: Remover somente a branch temporaria de envio
         shell: bash
-        run: git push origin --delete release-upload-0240
+        run: git push origin --delete release-upload-0250
 
