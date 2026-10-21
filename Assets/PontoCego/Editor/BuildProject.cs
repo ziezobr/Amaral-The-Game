@@ -14,9 +14,9 @@ namespace PontoCego.Editor
         [MenuItem("Ponto Cego/2 • Build Windows")]
         public static void BuildWindows()
         {
-            var output = System.Environment.GetEnvironmentVariable("PONTO_RELEASE_OUTPUT") ?? "Builds/Demo0240";
+            var output = System.Environment.GetEnvironmentVariable("PONTO_RELEASE_OUTPUT") ?? "Builds/Demo0250";
             Directory.CreateDirectory(output);
-            PlayerSettings.bundleVersion="0.24.0";
+            PlayerSettings.bundleVersion="0.25.0";
             EditorBuildSettings.scenes=EditorBuildSettings.scenes.OrderBy(s=>s.path.EndsWith("00_Menu.unity")?0:1).ToArray();
             Debug.Log("BUILD_START_SCENE: "+EditorBuildSettings.scenes.First(s=>s.enabled).path);
             var report=BuildPipeline.BuildPlayer(new BuildPlayerOptions{scenes=EditorBuildSettings.scenes.Where(s=>s.enabled&&s.path.StartsWith(UrbanSceneBuilder.Root+"/Scenes/")).Select(s=>s.path).OrderBy(p=>p.EndsWith("00_Menu.unity")?0:1).ToArray(),

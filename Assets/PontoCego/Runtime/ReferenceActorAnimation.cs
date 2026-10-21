@@ -9,10 +9,11 @@ namespace PontoCego
         public static int StableDirection(Vector2 direction,int previous){float angle=previous*Mathf.PI/4;Vector2 old=new Vector2(-Mathf.Sin(angle),-Mathf.Cos(angle));return direction.sqrMagnitude<.001f||Vector2.Dot(direction.normalized,old)>Mathf.Cos(29*Mathf.Deg2Rad)?previous:DirectionIndex(direction);}
         public static int DirectionIndex(Vector2 direction)=>(Mathf.RoundToInt(Mathf.Atan2(-direction.x,-direction.y)/(Mathf.PI/4))+8)%8;
         public static int CycleFrame(float phase,int frames){if(frames<=1)return 0;int tick=Mathf.FloorToInt(phase);if(frames==3){int step=tick%4;return step==3?1:step;}return tick%frames;}
-        void Start(){body=GetComponent<Rigidbody2D>();player=GetComponent<PlayerMotor>();enemy=GetComponent<EnemyAgent>();combat=GetComponent<CombatPlayer>();ally=GetComponent<AllyAgent>();previous=transform.position;phase=Mathf.Abs(transform.position.x+transform.position.y)%1;}
+        void Start(){if(!GetComponent<DirectionalPose24>())gameObject.AddComponent<DirectionalPose24>();body=GetComponent<Rigidbody2D>();player=GetComponent<PlayerMotor>();enemy=GetComponent<EnemyAgent>();combat=GetComponent<CombatPlayer>();ally=GetComponent<AllyAgent>();previous=transform.position;phase=Mathf.Abs(transform.position.x+transform.position.y)%1;}
         void LateUpdate()
         {
             if(!visual||idle==null||idle.Length<8)return;if(enemy&&!enemy.Alive)return;
+            var martial=GetComponent<HigorMartialArts>();if(martial&&martial.AttackVisualActive){NormalizeHeight();return;}
             Vector2 measured=(transform.position-previous)/Mathf.Max(.001f,Time.deltaTime);previous=transform.position;
             if(ally&&ally.AttackVisualActive){NormalizeHeight();return;}
             if(combat&&Time.time-combat.AttackStarted<.30f){NormalizeHeight();return;}

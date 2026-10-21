@@ -19,8 +19,8 @@ namespace PontoCego
             if(!enabled||!body||route==null||route.Length<2)return false;
             if(yielding&&priority==cab)return true;
             Vector2 forward=(route[next]-body.position).normalized;var right=new Vector2(forward.y,-forward.x);
-            for(int i=0;i<4;i++)
-            {var candidate=body.position+right*(i%2==0?1.9f:-1.9f)-forward*(i<2?1.2f:3f);var delta=candidate-body.position;bool clear=true;
+            for(int i=0;i<2;i++)
+            {var candidate=body.position+right*(i==0?1.65f:0)-forward*(i==0?1.2f:2f);var delta=candidate-body.position;bool clear=true;
                 foreach(var hit in Physics2D.BoxCastAll(body.position,box.size*.9f,0,delta.normalized,delta.magnitude,LayerMask.GetMask("World")))if(hit.collider&&hit.rigidbody!=body&&(!hit.rigidbody||hit.rigidbody.bodyType==RigidbodyType2D.Static)){clear=false;break;}
                 if(clear){priority=cab;yieldPoint=candidate;yielding=true;return true;}}
             return false;
@@ -34,7 +34,7 @@ namespace PontoCego
                 if(!priority||Vector2.Distance(body.position,priority.position)>8){yielding=false;priority=null;}
                 else{var toward=yieldPoint-body.position;body.linearVelocity=toward.magnitude>.15f?toward.normalized*2.6f:Vector2.zero;return;}
             }
-            Vector2 delta=route[next]-body.position;if(delta.magnitude<.4f){next=(next+1)%route.Length;delta=route[next]-body.position;}
+            Vector2 delta=route[next]-body.position;if(delta.magnitude<.08f){next=(next+1)%route.Length;delta=route[next]-body.position;}
             Vector2 dir=delta.normalized;float target=speed;
             // Cast from the nose; never include this car in obstacle detection.
             float half=Mathf.Abs(dir.x)>.5f?box.size.x*.5f:box.size.y*.5f;
@@ -43,7 +43,7 @@ namespace PontoCego
             if(hitCount==obstacleHits.Length)target=0;
             for(int i=0;i<hitCount;i++){var hit=obstacleHits[i];if(!hit.collider||hit.collider.isTrigger||hit.rigidbody==body||hit.collider.transform.IsChildOf(transform))continue;if(hit.collider.gameObject.layer==8||hit.collider.GetComponentInParent<PlayerMotor>()||hit.collider.GetComponentInParent<StreetWalker>()||hit.collider.GetComponentInParent<CityTraffic>())target=Mathf.Min(target,Mathf.Max(0,(hit.distance-.4f)*2));}
             blocked=target<.2f?blocked+Time.fixedDeltaTime:0;
-            body.linearVelocity=Vector2.MoveTowards(body.linearVelocity,dir*target,7*Time.fixedDeltaTime);
+            float step=Mathf.Min(target,delta.magnitude/Time.fixedDeltaTime);body.linearVelocity=dir*step;
             int frame=Mathf.Abs(dir.x)>.5f?(dir.x>0?3:1):(dir.y>0?2:0);
             if(views!=null&&views.Length>=4){visual.sprite=views[frame];float length=3.25f;float scale=length/Mathf.Max(visual.sprite.bounds.size.x,visual.sprite.bounds.size.y);visual.transform.localScale=Vector3.one*scale;box.size=Mathf.Abs(dir.x)>.5f?new Vector2(3.25f,1.4f):new Vector2(1.4f,3.25f);}
         }

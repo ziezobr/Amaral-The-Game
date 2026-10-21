@@ -3,11 +3,22 @@ namespace PontoCego.Tests
 {
     public sealed class Features025PlayTests
     {
+        [UnityTest]public IEnumerator NewCitizensKeepEightModelsAndCameraFollowsAimWhileStrafing()
+        {
+            var walkers=Object.FindObjectsByType<StreetWalker>(FindObjectsInactive.Include);
+            Assert.AreEqual(8,walkers.Select(w=>w.GetComponent<ReferenceActorAnimation>().idle[0].name.Split('/')[0]).Distinct().Count());
+            foreach(var walker in walkers)foreach(var frame in walker.frames)Assert.That(frame.name,Does.StartWith("citizen"));
+            var cars=Object.FindObjectsByType<CityTraffic>();for(int i=0;i<cars.Length;i++)for(int j=i+1;j<cars.Length;j++)Assert.Greater(Vector2.Distance(cars[i].route[0],cars[j].route[0]),8,"Overlapping traffic spawn");
+            var player=Object.FindAnyObjectByType<PlayerMotor>();player.Body.position=new Vector2(-20,-30);player.transform.position=player.Body.position;
+            player.GetComponent<PlayerEquipment2D>().Select(PlayerEquipment.BlackCamera);player.GetComponent<PlayerInputReader>().Mobile(Vector2.right,Vector2.up,false,false,false,false);
+            yield return new WaitForSeconds(.2f);var actor=player.GetComponent<ReferenceActorAnimation>();Assert.Greater(player.Body.linearVelocity.x,.1f);
+            Assert.Greater(Vector2.Dot(player.GetComponent<PlayerAim>().Direction,Vector2.up),.9f);Assert.That(actor.walk.Skip(12).Take(3),Does.Contain(actor.visual.sprite));
+        }
         [UnitySetUp]public IEnumerator Setup(){Time.timeScale=1;GameSession.ExploreNeighborhood("01_Riberal");yield return null;yield return null;var input=Object.FindAnyObjectByType<PlayerInputReader>();input.SetPaused(false);input.SetGameplayLocked(false);}
         [UnityTest]public IEnumerator WheelSkipsLockedPinkAndFistsUseLeftClick()
         {
             var player=Object.FindAnyObjectByType<PlayerMotor>();var equipment=player.GetComponent<PlayerEquipment2D>();Assert.That(equipment,Is.Not.Null);GameSession.Current.collected.Remove("weapon:xuxa");equipment.Select(PlayerEquipment.BlackCamera);equipment.Cycle(1);Assert.That(equipment.Selected,Is.EqualTo(PlayerEquipment.Fists));equipment.Cycle(1);Assert.That(equipment.Selected,Is.EqualTo(PlayerEquipment.BlackCamera));
-            GameSession.Current.collected.Add("weapon:xuxa");yield return null;equipment.Select(PlayerEquipment.PinkCamera);yield return null;yield return null;Assert.That(player.GetComponent<ReferenceActorAnimation>().visual.sprite.name,Does.Contain("câmera rosa nas mãos"));Assert.That(player.GetComponent<PlayerAim>().cameraProp.GetComponent<SpriteRenderer>().enabled,Is.False,"Do not draw a duplicate camera");
+            GameSession.Current.collected.Add("weapon:xuxa");yield return null;equipment.Select(PlayerEquipment.PinkCamera);yield return null;yield return null;Assert.That(player.GetComponent<ReferenceActorAnimation>().visual.sprite.name,Does.StartWith("amaral-pink / coerente026"));Assert.That(player.GetComponent<PlayerAim>().cameraProp.GetComponent<SpriteRenderer>().enabled,Is.False,"Do not draw a duplicate camera");
             equipment.Select(PlayerEquipment.Fists);float previous=player.GetComponent<CombatPlayer>().AttackStarted;player.GetComponent<PlayerInputReader>().Mobile(Vector2.zero,Vector2.down,false,false,false,true);yield return null;yield return null;Assert.That(player.GetComponent<CombatPlayer>().AttackStarted,Is.GreaterThan(previous));
         }
         [UnityTest]public IEnumerator StreetCarsCanBeDrivenAndExited()

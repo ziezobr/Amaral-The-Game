@@ -11,7 +11,7 @@ namespace PontoCego.Editor
         public static void Export()
         {
             EditorSceneManager.OpenScene("Assets/PontoCego/Urban/Scenes/26_PatosWorld.unity");
-            string folder="Validation/SpriteAudit022";Directory.CreateDirectory(folder);
+            string folder="Validation/SpriteAudit026";Directory.CreateDirectory(folder);
             foreach(var a in UnityEngine.Object.FindObjectsByType<ReferenceActorAnimation>(FindObjectsInactive.Include).GroupBy(a=>a.idle[0].name.Split('/')[0]).Select(g=>g.First()))
                 Page(folder,a.idle[0].name.Split('/')[0].Trim(),a.idle.Concat(a.walk).Concat(a.run??Array.Empty<Sprite>()).Concat(a.idleCycle??Array.Empty<Sprite>()).ToArray(),8);
             var player=UnityEngine.Object.FindAnyObjectByType<DirectionalCombatSprites>();Page(folder,"Ataques_Amaral",player.poses,8);

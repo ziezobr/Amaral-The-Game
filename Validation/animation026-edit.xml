@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="3" result="Passed" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-21 00:08:40Z" end-time="2026-10-21 00:08:40Z" duration="0,1065352">
+  <test-suite type="TestSuite" id="1000" name="Ponto Cego" fullname="Ponto Cego" runstate="Runnable" testcasecount="73" result="Passed" start-time="2026-10-21 00:08:40Z" end-time="2026-10-21 00:08:40Z" duration="0.106535" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1091" name="PontoCego.Tests.EditMode.dll" fullname="D:/The Amaral Game/V 1.0/Library/ScriptAssemblies/PontoCego.Tests.EditMode.dll" runstate="Runnable" testcasecount="73" result="Passed" start-time="2026-10-21 00:08:40Z" end-time="2026-10-21 00:08:40Z" duration="0.089136" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="1360" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1092" name="PontoCego" fullname="PontoCego" runstate="Runnable" testcasecount="73" result="Passed" start-time="2026-10-21 00:08:40Z" end-time="2026-10-21 00:08:40Z" duration="0.087202" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1093" name="Tests" fullname="PontoCego.Tests" runstate="Runnable" testcasecount="73" result="Passed" start-time="2026-10-21 00:08:40Z" end-time="2026-10-21 00:08:40Z" duration="0.086492" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1001" name="Animation026Tests" fullname="PontoCego.Tests.Animation026Tests" classname="PontoCego.Tests.Animation026Tests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-21 00:08:40Z" end-time="2026-10-21 00:08:40Z" duration="0.080212" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1002" name="AnimationHasTwentyFourPosesForEachOfEightDirections" fullname="PontoCego.Tests.Animation026Tests.AnimationHasTwentyFourPosesForEachOfEightDirections" methodname="AnimationHasTwentyFourPosesForEachOfEightDirections" classname="PontoCego.Tests.Animation026Tests" runstate="Runnable" seed="1293819031" result="Passed" start-time="2026-10-21 00:08:40Z" end-time="2026-10-21 00:08:40Z" duration="0.030023" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1003" name="ClosedRoadHasOppositeRightHandLanesAndRoundedCorners" fullname="PontoCego.Tests.Animation026Tests.ClosedRoadHasOppositeRightHandLanesAndRoundedCorners" methodname="ClosedRoadHasOppositeRightHandLanesAndRoundedCorners" classname="PontoCego.Tests.Animation026Tests" runstate="Runnable" seed="1915095000" result="Passed" start-time="2026-10-21 00:08:40Z" end-time="2026-10-21 00:08:40Z" duration="0.017332" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1004" name="DeadEndDoesNotProduceUTurnThroughOpposingTraffic" fullname="PontoCego.Tests.Animation026Tests.DeadEndDoesNotProduceUTurnThroughOpposingTraffic" methodname="DeadEndDoesNotProduceUTurnThroughOpposingTraffic" classname="PontoCego.Tests.Animation026Tests" runstate="Runnable" seed="1000815628" result="Passed" start-time="2026-10-21 00:08:40Z" end-time="2026-10-21 00:08:40Z" duration="0.001240" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Saving results to: D:\The Amaral Game\V 1.0\Validation\animation026-edit.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

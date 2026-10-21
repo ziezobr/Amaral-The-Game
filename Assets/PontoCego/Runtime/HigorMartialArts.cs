@@ -6,6 +6,7 @@ namespace PontoCego
     {
         public Sprite[] frames;public SpriteRenderer visual;Rigidbody2D body;float clock;int strike;EnemyAgent target;PlayerInputReader input;
         public int ComboStep=>strike; public int FinishedCombos{get;private set;}
+        public bool AttackVisualActive=>target&&body&&body.linearVelocity.sqrMagnitude<.1f&&clock<.3f;
         void Start(){body=GetComponent<Rigidbody2D>();input=FindAnyObjectByType<PlayerInputReader>();}
         void FixedUpdate()
         {

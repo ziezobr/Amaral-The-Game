@@ -7,7 +7,7 @@ namespace PontoCego
     public sealed class PlayerEquipment2D:MonoBehaviour
     {
         public PlayerEquipment Selected{get;private set;}
-        public Sprite pinkIcon;public Sprite[] pinkIdle,pinkWalk;
+        public Sprite pinkIcon;public Sprite[] pinkIdle,pinkWalk,fistIdle,fistWalk;public bool blackHeldInBody;
         PlayerInputReader input;PlayerAim aim;ReferenceActorAnimation actor;Sprite black;Vector3 propScale;bool obtained;
         public bool CameraSelected=>Selected!=PlayerEquipment.Fists;
         public bool PinkSelected=>Selected==PlayerEquipment.PinkCamera;
@@ -29,13 +29,15 @@ namespace PontoCego
         public void RefreshVisual()
         {
             if(!aim||!aim.cameraProp)return;var prop=aim.cameraProp.GetComponent<SpriteRenderer>();if(DriveableCar.Current||TaxiService.Instance&&TaxiService.Instance.TripActive){prop.enabled=false;return;}
-            bool held=PinkSelected&&pinkIdle!=null&&pinkIdle.Length==8&&actor;
-            prop.enabled=CameraSelected&&!held&&!DriveableCar.Current;prop.sprite=PinkSelected?pinkIcon:black;
+            var selectedIdle=PinkSelected?pinkIdle:CameraSelected&&blackHeldInBody&&actor?actor.idle:fistIdle;
+            var selectedWalk=PinkSelected?pinkWalk:CameraSelected&&blackHeldInBody&&actor?actor.walk:fistWalk;
+            bool held=actor&&(PinkSelected||Selected==PlayerEquipment.Fists||blackHeldInBody)&&selectedIdle!=null&&selectedIdle.Length==8;
+            prop.enabled=CameraSelected&&!held&&!blackHeldInBody&&!DriveableCar.Current;prop.sprite=PinkSelected?pinkIcon:black;
             aim.cameraProp.localScale=PinkSelected&&pinkIcon?Vector3.one*(.38f/Mathf.Max(.01f,pinkIcon.bounds.size.y)):propScale;
             if(held&&!GetComponent<CombatPlayer>().Attacking)
             {
-                int dir=ReferenceActorAnimation.DirectionIndex(aim.Direction);var body=GetComponent<Rigidbody2D>();int count=pinkWalk==null?0:pinkWalk.Length/8;
-                var sprite=body.linearVelocity.magnitude>.15f&&count>0?pinkWalk[dir*count+ReferenceActorAnimation.CycleFrame(Time.time*8,count)]:pinkIdle[dir];
+                int dir=ReferenceActorAnimation.DirectionIndex(aim.Direction);var body=GetComponent<Rigidbody2D>();int count=selectedWalk==null?0:selectedWalk.Length/8;
+                var sprite=body.linearVelocity.magnitude>.15f&&count>0?selectedWalk[dir*count+ReferenceActorAnimation.CycleFrame(actor.GaitCycle*(count==3?4:count),count)]:selectedIdle[dir];
                 if(sprite){actor.visual.sprite=sprite;actor.visual.flipX=false;actor.visual.transform.localScale=Vector3.one*(actor.idle[0].bounds.size.y/sprite.bounds.size.y);}
             }
         }
